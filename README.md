@@ -1,8 +1,9 @@
-# tbd
+# BEM_Thesis
 
-This repo contains the TEX files for my **TB** **D**issertation. I used
-the [ucetd][ucetd] template provided by the [UChicago Dissertation
-Office][site].
+This repo contains the TEX files for my Dissertation. I used
+the template provided by [John Blischak](https://github.com/jdblischak/tbd).
+
+From 4/28/20 until submission I will be updating files and some of the information will still be from John's thesis.
 
 The content is available under the [CC-BY 4.0 International][ccby]
 open source license. See file LICENSE for more details. For proper
