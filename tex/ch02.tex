@@ -1,980 +1,213 @@
 % Chapter 02
-\chapter{Mycobacterial infection induces a specific human innate immune response}\label{ch:tb}
+\chapter{Alternative polyadenylation mediates genetic regulation of gene expression}\label{ch:tb}
 \section[Abstract]{Abstract\footnotemark}
 
-The innate immune system provides the first response to infection and
-is now recognized to be partially
-pathogen-specific. \emph{Mycobacterium tuberculosis} (MTB) is able to
-subvert the innate immune response and survive inside
-macrophages. Curiously, only 5-10\% of otherwise healthy individuals
-infected with MTB develop active tuberculosis (TB). We do not yet
-understand the genetic basis underlying this individual-specific
-susceptibility. Moreover, we still do not know which properties of the
-innate immune response are specific to MTB infection. To identify
-immune responses that are specific to MTB, we infected macrophages
-with eight different bacteria, including different MTB strains and
-related mycobacteria, and studied their transcriptional response. We
-identified a novel subset of genes whose regulation was affected
-specifically by infection with mycobacteria. This subset includes
-genes involved in phagosome maturation, superoxide production,
-response to vitamin D, macrophage chemotaxis, and sialic acid
-synthesis. We suggest that genetic variants that affect the function
-or regulation of these genes should be considered candidate loci for
-explaining TB susceptibility.
 
-\footnotetext{Citation for chapter: John D Blischak, Ludovic Tailleux,
-  Amy Mitrano, Luis B Barreiro, and Yoav Gilad. Mycobacterial
-  infection induces a specific human innate immune
-  response. Scientific reports, 5:16882, 2015}
+%\ref{fig:response-eqtl}. 
+
+Little is known about co-transcriptional or post-transcriptional regulatory mechanisms linking noncoding variation to variation in organismal traits. To begin addressing this gap, we used 3' Seq to study the impact of genetic variation on alternative polyadenylation (APA) in the nuclear and total mRNA fractions of 52 HapMap Yoruba human lymphoblastoid cell lines. We mapped 602 APA quantitative trait loci (apaQTLs) at 10\% FDR, of which 152 were nuclear specific. Effect sizes at intronic apaQTLs are negatively correlated with eQTL effect sizes. These observations suggest genetic variants can decrease mRNA expression levels by increasing usage of intronic PAS. We also identified 24 apaQTLs associated with protein levels, but not mRNA expression. Finally, we found that 19\% of apaQTLs can be associated with disease. Thus, our work demonstrates that APA links genetic variation to variation in gene expression, protein expression, and disease risk, and reveals uncharted modes of genetic regulation.
+
+\footnotetext{Citation for chapter: Mittleman BE, Pott S, Warland S, Zheng T, Mu Z, Kaur M, Gilad Y, and Li YI. Alternative polyadenylation mediates genetic regulation of gene expression. 2020 June 25; eLife 2020;9:e57492;  DOI: 10.7554/eLife.57492 }
+
+
+\clearpage
+
 
 \section{Introduction}\label{ch02-introduction}
 
-The innate immune system provides the first line of defense against
-microbial pathogens. Broadly speaking, innate immune cells recognize
-foreign molecules through pattern recognition receptors (PRRs),
-e.g.~Toll-like receptors (TLRs), which bind to highly-conserved
-pathogenic motifs known as pathogen-associated molecular patterns
-(PAMPs) \citep{Hopkins2005, Mogensen2009}. In addition, innate immune
-cells recognize damage-associated molecular patterns (DAMPs) of host
-molecules released by infected cells \citep{Chen2010}. The initial
-innate response involves the release of proinflammatory cytokines and
-lipids to recruit and activate other immune cells, phagocytosis of the
-pathogen, and apoptosis \citep{Janeway2002}. If the infection
-persists, the phagocytes stimulate the adaptive immune system by
-presenting antigens to activate T and B cells. In contrast to the
-highly specific adaptive immune response, the innate immune response
-has traditionally been viewed as a general response to infection.
+Most genetic variants associated with complex traits are noncoding, suggesting that inter-individual variation in gene regulation plays a dominant role in determining phenotypic outcome. To investigate the function of trait-associated variants identified using genome-wide association studies (GWAS), studies have used regulatory quantitative trait loci (QTL) mapping to associate GWAS loci with variation in mRNA expression levels, DNA methylation levels, and other molecular phenotypes. Although many GWAS loci affect mRNA expression levels (i.e. are eQTLs), several recent discoveries highlight the pressing need for a better understanding of the genetic control of gene regulation, beyond that of just mRNA expression levels. For example, one recent study \citep{chun_limited_2017} found that the majority of autoimmune GWAS loci do not appear to affect mRNA expression levels. Two other studies observed that many genetic variants that affect protein expression levels (pQTLs) do not affect mRNA expression levels \citep{battle_genomic_2015, chick_defining_2016}. Specifically, Battle and colleagues found that about half of the cis-pQTLs they identified in human LCLs (146 out of 278, 52\%) did not appear to impact gene expression levels in the same lymphoblastoid cell lines (LCLs) \citep{battle_genomic_2015}. Altogether these findings indicate that there may be unknown or understudied regulatory mechanisms that link genetic variation to complex traits, and that these mechanisms are independent of changes in the amplitude of mRNA expression levels. Moreover, even when a disease-associated variant impacts mRNA expression levels, the mechanisms by which expression is affected is often unclear. Indeed, a third of all eQTLs identified in human LCLs are not associated with variation in chromatin as measured using assays for chromatin accessibility or for modification levels of several histone marks \citep{li_rna_2016}. These observations raise the possibility that understudied regulatory mechanisms mediate the effect of a substantial number of genetic variants on gene expression level.
 
-Yet, more recent work revealed that the innate immune system also
-produces a pathogen-specific response in addition to the general
-response \citep{Huang2001, Boldrick2002, Nau2002, Jenner2005}.
-Furthermore, this pathogen-specific innate response can in turn affect
-the specificity of the adaptive immune response by directing the
-differentiation of T cells into distinct subtypes \citep{Iwasaki2004}.
-That said, though we developed an appreciation for the importance of
-the specific innate immune response, we still do not know the extent
-to which the innate immune response differs between infections nor
-fully understand the consequences of specific innate immune responses
-for fighting pathogens. One of the first challenges is to distinguish
-the unique immune response to a specific pathogen from the large core
-more general response.
+One such understudied mechanism is alternative polyadenylation (APA). Well over half of all human protein coding genes encode multiple polyadenylation sites (PAS), resulting in the production of diverse mRNAs with alternative termination sites \citep{tian_alternative_2017, mayr_evolution_2016, shi_alternative_2012}. Unlike alternative mRNA splicing, which leads to changes in splice site selection, APA leads to changes in the transcript termination site, often resulting in 3' untranslated regions (UTRs) with different lengths. As 3' UTRs are densely packed with regulatory elements that impact mRNA stability, miRNA binding, and mRNA localization (reviewed in \citep{mayr_regulation_2017,tian_alternative_2017}), genetic control of APA may be a key mechanism by which genetic variants impact gene regulation, including mRNA expression levels, without affecting chromatin-level phenotypes such as promoter or enhancer activity. Moreover, proteins translated from different APA isoforms may differ in length and protein-protein interactions, and these differences can impact cellular phenotype. For example, globally increased usage of intronic PAS has been shown to increase risk for multiple myeloma and chronic lymphocytic leukemia \citep{lee_widespread_2018, singh_widespread_2018} through the translation of truncated mRNAs into truncated proteins, which impairs tumour-suppressive functions \citep{lee_widespread_2018, singh_widespread_2018}. 
 
-The pathogen-specific innate immune response is determined, at least
-in part, by the specificity of the PRRs of the host immune cell. Each
-PRR binds to its specific targets and activates certain downstream
-signaling pathways \citep{Kawai2009}. For example, treatment of mouse
-dendritic cells with lipopolysaccharide (LPS), which is found on the
-outer membrane of gram-negative bacteria, or with PAM3CSK4 (PAM),
-which is a synthetic lipoprotein that mimics those found on both
-gram-negative and gram-positive bacteria, induce different
-transcriptional response programs, because the two antigens are bound
-by TLR4 and TLR2, respectively \citep{Amit2009}. Different pathogens
-not only stimulate different PRRs, but they have also evolved
-different evasion mechanisms to manipulate the innate immune response
-\citep{Mogensen2009, Hornef2002, Brodsky2009, Diacovich2010}. These
-evasion strategies likely also contribute to the specificity of the
-response to different pathogens.
-
-In the context of evasion strategies, the case of \emph{Mycobacterium
-  tuberculosis} (MTB), the causative agent of tuberculosis (TB), is
-especially interesting. In order to increase its success inside
-alveolar macrophages - the primary cells that target MTB upon
-infection - MTB subverts the immune response through various
-mechanisms. MTB disrupts phagosomal maturation, thus preventing
-acidification by vesicular proton pumps and lysosomal fusion
-\citep{Sturgill-Koszycki1994, Hornef2002, Hestvik2005}, and delays
-stimulation of the adaptive immune system by inducing host expression
-of anti-inflammatory cytokines \citep{VanHeyningen1997,
-  Giacomini2001}. In order to achieve these manipulations, MTB must be
-able to secrete bacterial effectors from the phagosome into the
-cystosol where they can interact with host factors
-\citep{Stanley2013}. For this reason, the ESX-1 secretion system of
-MTB is critical for virulence because it permeabilizes the phagosome
-membrane \citep{VanderWel2007, Simeone2015}. Not only does this
-membrane permeabilization provide a means for bacterial molecules to
-access the cytosol, but at later timepoints MTB has been observed to
-have escaped into the cytosol \citep{Stanley2013}. One well-studied
-consequence of phagosomal permeability is the detection of MTB DNA in
-the cytosol by the host sensor cGAS (\emph{MB21D1}) and subsequent
-activation of the STING (\emph{TMEM173}) pathway \citep{Dey2015,
-  Collins2015, Watson2015, Wassermann2015}. These signaling events
-result in immune responses that are both beneficial and detrimental to
-MTB survival. On the one hand, the expression of anti-viral type I
-interferons are increased, a response which has been observed to
-benefit the growth of MTB and other bacteria \citep{Stanley2007}. On
-the other hand, MTB is targeted for destruction via autophagy, a key
-defense mechanism for fighting intracellular pathogens
-\citep{Watson2012}. Thus the survival or destruction of MTB inside the
-macrophage depends on complex interactions between secreted bacterial
-effectors and host immune factors.
-
-While the adaptive immune system is needed to prevent the spread of
-MTB and subsequent onset of TB, infected individuals do not become
-immunized against future MTB infections. This property may be related
-to the difficulty to develop an effective vaccine for adult TB (the
-current vaccine, bacillus Calmette-Gu\'{e}rin, BCG, is partly
-effective in children, much less so in adults) \citep{Wang2013}.
-
-Interestingly from a human genetics viewpoint, there are large
-inter-individual differences in susceptibility to developing TB. While
-it is estimated that roughly a third of the human population is
-latently infected with MTB, only approximately 10\% of healthy
-infected individuals will develop active TB (immunocompromised
-individuals, e.g.~HIV-infected, develop active TB at a much higher
-frequency) \citep{North2004}. Despite an inference for a strong
-individual genetic component to TB susceptibility, the genetic
-architecture remains largely unknown \citep{Kallmann1943,
-  Comstock1978, Cobat2010, Moller2010}.  There have been quite a few
-reports of candidate-gene associations, but genome wide scans have
-only identified two weak associations with disease susceptibility
-\citep{Thye2010, Yim2010, Thye2012}.
-
-To begin addressing this gap, we have previously investigated genetic
-variation that is associated with inter-individual differences in the
-transcriptional response of human phagocytes to infection with MTB
-\citep{Barreiro2012}. We found 102 and 96 genes that were associated
-with an expression QTL (eQTL) only pre- or post-infection,
-respectively. We refer to these loci as response eQTLs since their
-association with gene expression is affected by MTB
-infection. Interestingly, these response eQTLs were enriched for
-significant signal in a genome wide association study of TB
-susceptibility \citep{Thye2010}. However, it is unknown if the genes
-associated with these response eQTLs are induced specifically in
-response to infection with MTB or are a part of the core innate immune
-response.
-
-In order to characterize the innate immune response specific to MTB
-infection and better understand the role of the response
-eQTL-associated genes in the innate immune response, we infected
-macrophages isolated from a panel of six healthy individuals with a
-variety of bacteria. In addition to MTB, we chose both related
-mycobacteria and more distantly related bacteria.
+To evaluate the role of APA in mediating genetic effects on gene expression and disease, we sought to identify genetic variants associated with APA on a genome-wide scale. To date, the few studies that have used genome-wide methods to identify variants associated with APA (apaQTLs) have used existing RNA-seq data to infer PAS locations and usage \citep{li_genetic_2019, yoon_genetics_2012, yang_snp2apa_2019, bonder_systematic_2019, mariella_length_2019-1}. While using existing RNA-seq to study APA is economical, identifying PAS and estimating usage using RNA-seq are error-prone and often imprecise \citep{ha_qapa_2018}. Furthermore, using standard RNA-seq data alone to study APA is not informative with regards to whether inter-individual differences in PAS usages are the result of variation in transcriptional termination site choice, or isoform-specific decay or export. Here, we used 3' RNA-seq (3' Seq) to measure PAS usage in steady-state mRNA collected from whole cells as well as mRNA collected from the nucleus, which is comprised of a high proportion of nascent mRNA. This design allowed us to study the effect of genetic variation on isoform PAS at multiple stages of the mRNA lifecycle. Importantly, we collected these data from a panel of human lymphoblastoid cell lines (LCLs) that were previously profiled in great molecular detail, including measurements at the chromatin, RNA, and protein levels \citep{degner_dnase_2012, mcvicker_identification_2013, li_rna_2016, pickrell_understanding_2010}. Integrating the apaQTLs we identified with previously collected molecular data allowed us to study the impact of APA variation on the major steps of the gene regulatory cascade (Figure \ref{fig:3prime4APA}A). We use these data to show that genetic effects on APA can affect virtually all steps of gene regulation (mRNA expression level, translation rate, and protein expression level), and that such effects can impact protein expression, without affecting RNA expression.
 
 \section{Results}\label{ch02-results}
 
-\subsection{Bacterial infection induces large changes in gene
-expression}\label{bacterial-infection-induces-large-changes-in-gene-expression}
+\subsection{Alternative polyadenylation in human LCLs as defined using Nuclear and Total mRNA 3' Seq}\label{APA-LCL-total-nuc}
 
-To learn about the immune response to infection with different
-bacteria, with a particular emphasis on \emph{Mycobacterium
-  tuberculosis} (MTB), we investigated the \emph{in vitro} gene
-regulatory response of macrophages to infection with multiple MTB
-stains, related mycobacterial species, and other bacterial species
-(Table \ref{tab:bacteria}). Specifically, we infected cultured
-macrophages with either MTB H37Rv, which is a common strain often used
-in laboratory experiments \citep{Rivero-Lezcano2012}; MTB GC1237,
-which is a strain of the highly virulent Beijing family
-\citep{Alonso2011}; bacillus Calmette-Gu\'{e}rin (BCG), which is
-attenuated \emph{Mycobacterium bovis} used for vaccinations;
-\emph{Mycobacterium smegmatis}, which is non-pathogenic; or
-heat-killed MTB H37Rv. In order to compare the response to infection
-with mycobacteria to the response to infection with other bacteria, we
-also included infection treatments with \emph{Yersinia
-  pseudotuberculosis} (gram-negative), \emph{Salmonella typhimurium}
-(gram-negative), or \emph{Staphylococcus epidermidis} (gram-positive).
+To measure inter-individual variation in APA, we quantified PAS usage in a panel of 52 Yoruba HapMap LCLs. These same cell lines have been the subjects of multiple studies of gene regulation over the last decade \citep{degner_dnase_2012, mcvicker_identification_2013, li_rna_2016, pickrell_understanding_2010}. We applied 3' Seq to mRNA collected from whole cells (total mRNA fraction) of 52 LCLs and used a peak calling approach (Methods) to comprehensively identify PAS and estimate their usage (Figure \ref{fig:3prime4APA}B,C). Our approach obviates the need for existing annotations, which are biased towards highly expressed isoforms or isoforms expressed in well studied cell-types with higher RNA-seq coverage. In addition, to capture polyadenylated mRNA that may be under-represented or absent in the total mRNA fraction due to rapid turnover, we separately applied 3' Seq to mRNA from isolated nuclei (nuclear fraction) of the same 52 LCLs (Supplementary file 1). Because 3' Seq uses polyA priming to capture the location of polyadenylation sites and is therefore prone to internal priming at transcribed regions that are $A$-rich, we carefully filtered our data to ensure a minimal effect of mispriming on the set of PAS we considered (Method). Specifically, similar to methods previously described, we filtered both individual reads and PAS that map to genomic regions with 70\% A nucleotides or a stretch of 6 A's in the 10 nucleotides upstream \citep{sheppard_accurate_2013, tian_large-scale_2005}. After quality control and filtering, we defined the usage of each PAS in a sample as the ratio of the number of reads that map to the PAS to the number of reads that map to all PAS for the same gene (Figure \ref{fig:3prime4APA}C) (Methods). Thus, we measure the usage of a PAS as the fraction of transcripts using that PAS over the total number of transcripts from the same gene.
 
-\begin{table}
-\centering
-\begin{tabular}{@{}llll@{}}
-\toprule Abbr. & Name & Description & Gram staining* \\ \midrule none
-& control & Mock infection & N/A \\ Rv & MTB H37Rv & A common
-laboratory strain of MTB & acid-fast \\ Rv+ & heat-inactivated MTB
-H37Rv & Dead MTB H37Rv & acid-fast \\ GC & MTB GC1237 & More virulent
-strain of MTB & acid-fast \\ BCG & bacillus Calmette-Gu\'{e}rin &
-Vaccine (attenuated \emph{M. bovis}) & acid-fast \\ Smeg &
-\emph{Mycobacterium smegmatis} & Non-pathogenic mycobacterium &
-acid-fast \\ Yers & \emph{Yersinia pseudotuberculosis} & Facultative
-intracellular pathogen & Negative \\ Salm & \emph{Salmonella
-  typhimurium} & Facultative intracellular pathogen & Negative
-\\ Staph & \emph{Staphylococcus epidermidis} & Extracellular pathogen
-& Positive \\ \bottomrule
-\end{tabular}
-\caption[Description of bacteria.]{\textbf{Description of bacteria.}
-  *Mycobacteria are unable to be gram stained due to the low
-  permeability of their cell walls. They are more closely related
-  evolutionarily to gram-positive bacteria than
-  gram-negative. However, their thick cells walls share features of
-  gram-negative bacteria, e.g. a ``pseudoperiplasm'' similar to the
-  gram-negative periplasm \citep{Hett2008}.}
-\label{tab:bacteria}
-\end{table}
 
-We infected monocyte-derived macrophages from six individuals with the
-bacteria described above (including a non-infected control) and
-extracted RNA at 4, 18, and 48 hours post-infection (see Methods;
-Supplementary Fig. \ref{fig:ch02-study-design}). We assessed RNA
-quality using the Agilent Bioanlyzer (Supplementary Table
-\ref{tab:ch02-s6}) and sequenced the RNA to estimate gene expression
-levels. Detailed descriptions of our data processing, quality control
-analyses, and statistical modeling are available in the Methods
-section. Briefly, we mapped the short RNA-seq reads to the human
-genome (hg19) using the Subread algorithm \citep{Liao2013}, discarded
-reads that mapped non-uniquely, and counted the number of reads mapped
-to each protein-coding gene. We normalized the read counts using the
-weighted trimmed mean of M-values algorithm (TMM)
-\citep{Robinson2010}, corrected for confounding ``batch'' effects
-(Supplementary Fig. \ref{fig:pca}), and used limma+voom
-\citep{Smyth2004, Smyth2005, Law2014} to test for differential
-expression (DE) between cultures infected with each bacteria and their
-time-matched controls (Supplementary Table \ref{tab:ch02-s2}). Using
-this approach we initially observed the following general patterns: at
-four hours post-infection, only \emph{Y. pseudotuberculosis} and
-\emph{S. typhimurium} elicitepd a strong transcriptional response
-(Fig.  \ref{fig:differential-expression}A); at 18 hours
-post-infection, all the bacteria had elicitepd a strong immune
-response (Fig. \ref{fig:differential-expression}A-B); and at 48 hours
-post-infection, all the bacteria continued stimulating the immune
-response (Fig. \ref{fig:differential-expression}A), however, many of
-the DE genes were not shared between the 18 and 48 hour timepoints
-(Fig. \ref{fig:differential-expression}C). Of note, at 48 hours
-post-infection we were unable to collect RNA from macrophages infected
-with \emph{S.  epidermidis} (see Methods).
+We identified 41,810 nuclear PAS in 15,043 genes with at least 5\% mean usage across the 52 LCL samples. We found that 67\% of the protein coding genes expressed in LCLs harbor multiple PAS, suggesting that APA can impact the regulation of most genes \citep{tian_alternative_2017,  mayr_evolution_2016, shi_alternative_2012}. Interestingly, we identified a slight negative correlation between the expression level of a gene and the number of PAS identified for the gene (Pearsons Correlation = -0.12, $p = 2.2 \times10^{-16}$ ). In particular, genes with a single PAS tend to be expressed more highly than genes with multiple PAS. This observation is counter-intuitive from a statistical perspective, and it shows that, in general, out ability to detect PAS was not limited by 3' Seq coverage (Supplementary Figure \ref{fig:ch02-pas-exp}, Methods). We found that the polyA binding protein motif (AATAAA), also known as the polyadenylation signal site, is the most strongly enriched motif in the 50bp regions upstream of our PAS (hypergeometric test, $p < 10^{-391}$).
+
+ We observed that PAS in the 3' UTR are more likely to have a polyadenylation signal compared with intronic PAS ($p < 10^{-16}$, difference of proportion t-test, 75.0\% vs 24.8\%,) (Figure \ref{fig:3prime4APA}D, Supplementary Figure \ref{fig:SS}) and that nearly half (48.3\%) of all 41,810 PAS we identified are located in 3' UTRs (19.4x enrichment) \citep{singh_widespread_2018}. Nevertheless, despite an overall depletion of PAS in introns (0.35x genome-wide levels), we found that the number of PAS in introns is notable (12,793/41,810; 30.6\%) (Figure \ref{fig:3prime4APA}E, Supplementary Figure \ref{fig:totaUsage}).  While signal sites were more highly enriched near 3' UTR PAS than intronic PAS, PAS in introns show clear enrichment of polyadenylation motif 10--50 bp upstream of the cleavage site compared to background intronic sequences (24.8\% vs 0.24\% $p < 10^{-16}$, difference of proportion t-test, Figure \ref{fig:3prime4APA}D).  Thus, the recognition of intronic polyadenylation signals is a general mechanism that can result in premature termination of transcription. 
+ 
+ We  tested the hypothesis that the intronic PAS we identified correspond to truncated mRNA transcripts that escaped telescripting, whereby the U1 snRNP protects introns from premature cleavage and polyadenylation \citep{kaida_u1_2010, berg_u1_2012, oh_u1_2017}. Because the main role of U1 snRNP is to bind and recognize 5' splice sites, the telescripting model predicts that weaker 5' splice sites can result in decreased U1 snRNP affinity for an intron and thus higher rates of early cleavage and polyadenylation. We estimated 5' splice site strength for all intron using MaxEntScore \citep{yeo_maximum_2004} and found that introns with the weakest 5' splice sites harbored more PAS than introns with stronger 5' splice sites (1.5x fold difference, first decile vs remaining deciles, hypergeometric test $p = 8.07\times10^{-87}$, Supplementary Figure \ref{fig:splicesite}, Methods) \citep{tian_widespread_2007}. Moreover, we found that the top 10\% of most highly used intronic PAS have weaker 5' splice sites than introns with lowly used PAS or a random set of introns (Mean MaxEntScore 6.43 vs 7.26 vs 7.48, $p=1.4\times10^{-3}$, Wilcoxon rank sum test). These observations are consistent with the hypothesis that telescripting protects nascent transcripts from early cleavage and polyadenylation in introns, and that the intronic PAS we observe result from transcripts that escape telescripting \citep{kaida_u1_2010, berg_u1_2012, oh_u1_2017}.
+
+
+We observed that intronic PAS have on average lower usage across individuals than PAS located in 3' UTRs (16.9\% vs 46.2\%). Lower usage of intronic PAS may be explained by weaker polyadenylation signals at intronic PAS compared to 3' UTR PAS or by the impact of telescripting on intronic polyadenylation. However, we hypothesized that some intronic PAS have low usage because premature polyadenylation at intronic sites can produce short-lived transcripts that are rapidly degraded and thus are under-represented in the total mRNA fraction. To test this hypothesis, we identified PAS that are used more often, or exclusively, in the nuclear fraction compared to the total mRNA fraction. By comparing PAS usage estimated in the nuclear and total mRNA fractions from all 52 individuals, we identified at 10\% FDR 591 PAS in 585 genes that are used at least 20\% more in the nuclear compared to the total mRNA fraction. Of these 591 PAS, 134 were found to be used by 1\% or less of the transcripts in the total mRNA fraction, suggesting that these transcripts may be absent from the cytoplasm (Figure \ref{fig:3prime4APA}E, Supplementary Figure \ref{fig:locdPAS}, Methods). Notably, we found that 387 of the nuclear-enriched PAS are intronic (Supplementart Figure \ref{fig:locdPAS}), a large proportion of which (83.4\% vs 43\% for all PAS) are absent from a comprehensive annotation of PAS compiled from 78 human studies that used 3' Seq (Methods, Supplementary Figure  \ref{fig:compAnno}) \citep{wang_polya_db_2018}. While no other study has directly measured PAS usage in nuclei, a proportion of the nuclear enriched intronic sites have been identified in a number of human tissues (up to 10\%, Supplementary file 1). These findings suggest that mRNA transcripts are terminated and polyadenylated in introns at a higher frequency than generally appreciated, and that many of these isoforms escape detection from studies of total mRNA fraction owing to their rapid decay or their propensity to remain within the nucleus. 
 
 \begin{figure}
 \centering
-\includegraphics[width=5in]{img/ch02/fig-01-differential-expression.pdf}
-\caption[Differential expression analysis.]{\textbf{Differential
-    expression analysis.} We tested for differentially expressed genes
-  for each bacterial infection by comparing it to its time-matched
-  control. (A) We classified genes with q-value \textless{} 5\% as
-  differentially expressed. The mycobacteria are labeled in shades of
-  green. (B) As expected, there were large transcriptional changes 18
-  hours post-infection with MTB H37Rv. Genes with q-value \textless{}
-  5\% and absolute log\textsubscript{2} fold change greater than 0.5
-  are labeled green, those with q-value \textless{} 5\% and absolute
-  log 2 fold change less than 0.5 are labeled grey, and
-  non-differentially expressed genes are labeled black. (C) The
-  overlap in differentially expressed genes identified at 4, 18, and
-  48 hours post-infection with MTB H37Rv.  }
-\label{fig:differential-expression}
+\includegraphics[width=5in]{img/ch02/figure1.pdf}
+\caption[3' Sequencing of nuclei reliably captures alternative polyadenylation]{\small {\bf (A)} Schematic of how genetic variants affect phenotypes by percolating through gene regulatory layers (black arrows). We aimed to understand how genetic variation can mediate gene regulation through alternative polyadenylation (orange arrows). {\bf (B)} {\it (Left)} Schematic of Lexogen Reverse Quant Seq protocol for 3' Sequencing \citep{moll_quantseq_2014} {\it (Right)}Meta gene plot showing read coverage for five 3' Seq libraries collected from nuclei isolated from LCLs. {\bf (C)} Representation for how PAS usage is calculated. Read count for each PAS were divided by the total number of reads at all PAS for the gene. {\bf (D)} {\it (Main)} Stacked density of canonical (AATAAA, AATTAA) and other polyadenylation signal sites (AAAAAA, AAAAAG, AATACA, AATAGA, AATATA, ACTAAA, AGTAAA, CATAAA, GATAAA, TATAA) upstream of identified PAS.} 
+\label{fig:3prime4APA}
 \end{figure}
 
 
-\subsection{Joint analysis identifies bacteria-specific response
-genes}\label{joint-analysis-identifies-bacteria-specific-response-genes}
+% Continues caption on next page. Requires package ccaption.
+\begin{figure}[!htb]
+\contcaption{(continued) {\it (Inset)} Proportion of PAS in different genomic regions with a polyadenylation signal site 10-50bp upstream of cleavage site. The red dotted line represents the proportion of signal site in random 40bp windows, i.e. the intronic background. {\bf (D)} The blue line represents the number of PAS identified as the stringency of the usage cutoff increases. The orange and green lines represent the proportion of PAS in the 3' UTR and introns, respectively. The proportion of intronic PAS increases as the usage cutoff decreases, implying that a disproportionate number of intronic PAS are used at low frequencies.}
+\end{figure}
+  
+  
 
-In order to learn about variation in the innate immune response to
-bacterial infection, we identified genes whose regulation was altered
-by treatment with specific bacteria at specific timepoints. We first
-used a naïve approach whereby we determined all the pairwise overlaps
-between lists of DE genes across treatments (Supplementary Table
-\ref{tab:ch02-s7}). The caveat of this strategy is that incomplete
-power can result in overestimating the difference between
-treatments. In order to account for incomplete power to detect DE
-genes when performing multiple pairwise comparisons, we performed a
-joint Bayesian analysis, which we implemented using the R/Bioconductor
-package Cormotif \citep{Wei2015} (see Methods for more details). Using
-this approach, we classified genes into regulatory patterns based on
-their expression levels following each of the bacterial infections.
 
-First, we examined the data across all the bacteria-time combinations.
-Initially we built a model that classified genes into one of 14
-separate patterns based on their expression levels after each
-infection relative to their expression level in the non-infected
-control (Supplementary Fig. \ref{fig:joint-all-k14}). However, we
-found that a model with only six expression patterns
-(Fig. \ref{fig:joint-all}; Supplementary Tables
-\ref{tab:ch02-s3},\ref{tab:ch02-s4}), where a subset of the original
-14 patterns are combined, is more intuitive from a biological
-perspective; thus we proceeded with the reduced model. Broadly
-speaking, we classified genes as responding in the early, middle, or
-late stages of infection, and we characterized the response as
-temporary or sustained. Pattern ``non-DE'' includes 4,245 genes whose
-expression levels were unchanged in all the experiments. Pattern
-``Yers-Salm'' includes 1,414 early response genes whose expression
-levels changed at four hours post-infection with either
-\emph{Y. pseudotuberculosis} or \emph{S. typhimurium}, but not after
-infection with other bacteria. The genes in this pattern are enriched
-for gene ontology (GO) annotations related to type I interferon
-signaling (e.g. \emph{SP100}, \emph{IFI35}, \emph{STAT2}), antigen
-presentation (\emph{HLA-A}, \emph{PSME1}, \emph{CTSS}), and apoptosis
-(\emph{CASP8}, \emph{TRADD}, \emph{FADD}) (Supplementary Table
-\ref{tab:ch02-s5}). Pattern ``18 h'' includes 3,201 middle response
-genes whose expression levels changed exclusively at 18 hours
-post-infection in response to all bacteria and is enriched for GO
-annotations related to apoptosis (e.g. \emph{E2F1}, \emph{TP53},
-\emph{WWOX}). Pattern ``48 h'' includes 1,204 late response genes
-whose expression levels changed at 48 hours and is enriched for GO
-annotations related to phagocytosis (e.g. \emph{MFGE8},
-\emph{COLEC12}) and tumor necrosis factor-mediated signaling
-(e.g. \emph{STAT1}, \emph{TRAF2}, \emph{TNFRSF14}). Pattern ``18 \& 48
-h'' includes 1,926 middle-sustained response genes whose expression
-levels changed at 18 and 48 hours and is enriched for GO annotations
-related to the regulation of phagocytosis (e.g. \emph{CD36}) and TLR
-signaling (\emph{TLR1}, \emph{TLR2}, \emph{MYD88}). Lastly, pattern
-``All'' includes 738 early-sustained genes whose expression levels
-changed after infection with all the bacteria across all three
-timepoints and is enriched for GO annotations related to type I
-interferon signaling (e.g. \emph{IRF1}, \emph{SOCS1}, \emph{IFIT3}),
-cytokine secretion (\emph{TNF}, \emph{IL10}, \emph{LILRB1}), and
-apoptosis (e.g. \emph{IRF7}, \emph{BCL2A1}, \emph{MCL1}).
+\subsection{Genetic loci associated with variation in APA}\label{apa-QTLs}
+
+Having established that APA can contribute to the generation of complex transcript isoforms, we sought to identify genetic loci associated with inter-individual variation in APA. We normalized each PAS usage ratio using LeafCutter  \citep{li_annotation-free_2018} and tested {\it cis}-associations between genetic variants and PAS usage, correcting for batch and the top principal components (Methods, Supplementary Figure \ref{fig:QQplots},Supplementary Figure \ref{fig:propPASdAPA},Supplementary Figure \ref{fig:PCA}). Using 3' Seq data from the nuclear fraction, we identified 602 nuclear apaQTLs in 479 genes at 10\% FDR. In the total mRNA fraction, we identified 443 apaQTLs in 353 genes at 10\% FDR. For example, individuals with the C/C genotype (rs11032578) show higher usage of an intronic PAS in the {\it ABTB2} gene compared to individuals that are heterozygous C/T or homozygous T/T (Figure \ref{fig:qtlFigure}A). In both fractions, apaQTL lead SNPs are enriched near the PAS they most strongly correlate with and near the 3' ends of gene bodies (Figure \ref{fig:qtlFigure}B, Supplementary Figure \ref{fig:totQTLloc}). The proximity of the apaQTL lead SNPs to PAS may suggest that genetic variants that affect polyadenylation signal motifs drive most of the genetic effects on APA. Although we observed an enrichment of apaQTLs in signal motifs, genetic variants that alter signal motifs are unlikely to explain the majority of apaQTLs (Supplementary Figure \ref{fig:totQTLloc}).
+
+Our study design provides the unique opportunity to evaluate the likely mechanisms by which genetic variation controls PAS usage. While previous studies have demonstrated that genetic variants can impact PAS usage, it has been difficult to discern whether the variation in PAS usage is primarily driven by genetic effects on cleavage and polyadenylation (Figure \ref{fig:qtlFigure}C, Model 1), or on the mRNA lifecycle (e.g. by impacting miRNA binding sites and decay) (Figure \ref{fig:qtlFigure}C, Model 2). We reasoned that if genetic effects functioned primarily by affecting post-transcriptional regulation such as decay or export, then this effect would be detectable in the total mRNA fraction, but would be smaller or undetectable in the nuclear mRNA fraction (Supplementary file 1). Interestingly, we found that only 97 apaQTLs (of 443 apaQTLs, 21.9\%) identified in the total mRNA fraction were not detected in the nuclear mRNA fractions and these associations are much weaker than shared apaQTLs (Supplementary Figure \ref{fig:totSpeWeak}). We thus suspect that we currently lack statistical power to detect most of these 97 apaQTLs in the nuclear mRNA fraction. To estimate sharing of apaQTLs across the two mRNA fractions, we used Storey's $\pi_0$ statistics and found that the vast majority of apaQTLs identified in the total mRNA fractions were estimated to also affect PAS usage in the nuclear mRNA fraction ($\pi_{1}$=0.87, Supplementary Figure \ref{fig:QTLshare}). In addition, we found that the genetic effect sizes on PAS usage were very similar across the two mRNA fractions ($r^{2}$ = 0.66; $p = 10^{-16}$, Figure \ref{fig:qtlFigure}D, Supplementary Figure \ref{fig:apaQTLcorr}). Altogether these observations show that most genetic variants impact PAS usage by affecting polyadenylation site choice. Supporting this notion, we found weak or no enrichment of apaQTLs in sites bound by RNA binding proteins as identified using eCLIP data from ENCODE (Supplementary file 1).
 
 \begin{figure}
-\centering \includegraphics[width=5in]{img/ch02/fig-02-joint-all.pdf}
-\caption[Joint Bayesian analysis.]{\textbf{Joint Bayesian analysis.}
-  (A) Joint analysis of gene expression data from all three timepoints
-  with Cormotif \citep{Wei2015} identified six expression patterns:
-  ``non-DE'', ``Yers-Salm'', ``18 h'', ``48 h'', ``18 \& 48 h'', and
-  ``All''. The shading of each box represents the posterior
-  probability that a gene assigned to the expression pattern (row) is
-  differentially expressed in response to infection with a particular
-  bacteria (column), with black representing a high posterior
-  probability and white a low posterior probability. (B) Each data
-  point is the mean log\textsubscript{2} fold change in expression
-  (absolute value) in response to infection with the given bacteria
-  for all the genes assigned to the particular expression pattern.}
-\label{fig:joint-all}
+\centering \includegraphics[width=5in]{img/ch02/figure2.pdf}
+\caption[Identify genetic variation driving differences in polyadenylation as apaQTLs]{\small {\bf (A)} An apaQTL in the {\it ABTB2} gene impact usage of an intronic PAS. {\it (Top)} Gene track and identified PAS. Each bar represents a potential isoform. The red bar corresponds to the isoform most strongly associated with the apaQTL. The vertical dotted line represents the position of the lead apaQTL SNP. {\it (Bottom)} Boxplot of polyadenylation site usage at each PAS by genotype listed according to the isoform order above. The C allele increases usage of the intronic PAS. {\bf (B)} ({\it Left})  Location of the lead nuclear apaQTL SNPs relative to their corresponding PAS. ({\it Right}) Meta gene plot showing the distribution of apaQTL SNPs in the annotated gene body, where 0 represents the transcription start site and 1 represents the annotated transcription end site.} 
+\label{fig:qtlFigure}
 \end{figure}
 
-Next, we tested for more specific patterns by performing Cormotif
-separately on the data from the middle (18 h) and late (48 h) stages
-of infection. At 18 hours post-infection, we identified five separate
-expression patterns (Fig. \ref{fig:joint-18h}; Supplementary Tables
-\ref{tab:ch02-s3},\ref{tab:ch02-s4}). Pattern ``non-DE'' includes
-5,268 genes whose expression levels were unchanged across all
-infections. Pattern ``All'' includes 4,424 genes whose expression
-levels were affected by all infections (e.g. \emph{IL24}, \emph{IRF2},
-\emph{TLR2}). Pattern ``MTB'' includes 177 genes whose expression
-levels changed specifically in response to infection with mycobacteria
-(e.g. \emph{NCF2}, \emph{TNFSF13}, \emph{CSF1}). These genes had a
-high posterior probability of being DE 18 hours after infection with
-MTB H37Rv, heat-killed H37Rv, MTB GC1237, and BCG.  Furthermore, the
-gray shading for \emph{M. Smegmatis} (Fig. \ref{fig:joint-18h}A)
-signified an intermediate posterior probability for DE. In essence,
-this pattern is a merger of two sets of genes that were not large
-enough to be separated: one set that was DE across all five
-mycobacteria and another that was only DE after infection with the MTB
-strains and the closely-related BCG, but not
-\emph{M. Smegmatis}. Pattern ``Virulent'', in contrast, includes 1,165
-genes whose expression levels were less strongly changed after
-infection with heat-inactivated MTB H37Rv or the attenuated vaccine
-strain BCG compared to the other bacteria (e.g.  \emph{IL1R1},
-\emph{IRF1}, \emph{PILRB}). Also the genes in this category only have
-an intermediate probability of responding to the non-pathogenic
-\emph{M. smegmatis}. Lastly, pattern ``Yers-Salm'' includes 1,694
-genes whose expression levels changed preferentially after infection
-with \emph{Y. pseudotuberculosis} or \emph{S.  typhimurium}
-(e.g. \emph{TLR8}, \emph{TGFB1}, \emph{IL18}).
+
+\begin{figure}[!htb]
+ \contcaption{(continued) {\bf (C)} Two mechanistic models for how genetic variants can affect PAS usage. ({\it Model 1}) Genetic variation acts directly on PAS choice. In this case, the apaQTL will be identified with similar effect sizes in both nuclear and total mRNA fractions, or smaller effect size in the total mRNA fraction.  ({\it Model 2}) Genetic variation acts through a post transcriptional mechanism. For example, one mRNA isoform is subject to decay. In this case, the apaQTL will be identified only in the total mRNA fraction, or will be identified in the total mRNA fraction with a larger effect size than in the nuclear mRNA fraction.{\bf (D)} Effect sizes of apaQTLs originally identified at 10\% FDR in the nuclear mRNA fraction plotted against the effect sizes ascertained in the total mRNA fraction. Regression line is shown in blue and $y = x$ line is shown in black.}
+ \end{figure}
+ 
+ 
+ 
+
+\subsection{Impact of apaQTLs on gene expression levels}\label{apa-QTLs-expression}
+
+
+While we believe that nearly all genetic variants impact PAS usage by affecting polyadenylation site choice and not isoform-specific decay or export, this model is not incompatible with a model in which genetic variants can sometimes impact expression by affecting APA. For example, a genetic variant might increase the relative production of an isoform that is less stable, in which case total transcript levels would decrease. Therefore, next, we asked whether genetic variants could impact gene expression levels by direct effects on APA. We hypothesized that this mode of genetic regulation may be prevalent, in particular for genes with intronic PAS, because isoforms using intronic PAS are often subject to rapid decay. In this model, the genetic effect changes the relative production of isoforms with different relative stabilities rather than specifically modulating the stability of an isoform e.g. by increasing affinity for microRNA binding in the 3' UTR.
+
+To test this hypothesis, we focused on the set of 602 apaQTLs that we identified in the nuclear mRNA fraction, representing genetic variants that impact PAS choice. Our hypothesis predicts that genetic variants that increase intronic PAS usage should decrease gene expression levels. In line with this prediction, we found a negative correlation between the genetic effect sizes for intronic PAS usage and mRNA expression levels ($p = 8.97 \times 10^{-7}$, Figure \ref{fig:apaandexpression}A, Supplementary Figure \ref{fig:3anooutlier}). Thus, our analysis suggests a widespread mechanism whereby genetic variants decrease mRNA expression levels by increasing choice of isoforms with premature PAS that are subject to rapid decay. Of interest, we found that 13 apaQTLs that were detected only in the nuclear fraction are also eQTLs, which highlights the importance of considering early stages of the mRNA lifecycle to uncover eQTL mechanisms.
+
+To further investigate the contribution of APA to gene expression, we sought to understand the relationship between apaQTLs and a set of eQTLs that we previously classified as those with explained putative mechanisms, explained eQTLs (1164 eQTLs, $\sim$ 60\%) or as unexplained eQTLs (801 eQTLs, $\sim$ 40\%) using data from the same LCLs \citep{li_rna_2016}. The eQTLs with explained putative mechanisms were associated with chromatin-level phenotypes including DNase-I hypersensitivity, histone marks, or DNA methylation, and thus are likely to be mechanistically explained by effects mediated by chromatin-level phenotypes (e.g. enhancer or promoter activity). To test whether apaQTLs might account for unexplained eQTLs, we first asked whether genes with unexplained eQTLs were more likely to also harbor apaQTLs than compared to genes with explained eQTLs. Indeed, we found a significantly higher enrichment of low p-value associations with APA for genes with unexplained eQTLs ($p = 0.01$, Figure \ref{fig:apaandexpression}B, Supplementary Figure \ref{fig:totunexp}) and significantly larger absolute apaQTL effect sizes for unexplained eGene compared to explained eGenes (0.35 vs. 0.3, Wilcoxon Rank sum test, $p=6.6 \times 10^{-4}$). We also found that apaQTLs exhibited an association with chromatin states that was more similar to the unexplained eQTLs than the explained eQTLs. In particular, apaQTLs and unexplained eQTLs were more likely to lie in regions of transcription elongation or are associated with weak transcription, and less likely to lie in enhancers or promoters than explained eQTLs (Supplementary Figure \ref{fig:chromHMM}, Methods). Overall, we estimated that 17.3\% of otherwise unexplained eQTLs were associated with PAS usage (see Methods). For example, an unexplained eQTL for \textit{C10orf88} (rs7904973) colocalizes with an apaQTL associated with increased usage of an intronic PAS (Figure \ref{fig:apaandexpression}C). More generally, we found that eQTLs and apaQTLs colocalize for the majority of genes that had both (Methods, Supplementary file 1). These observation thus highlights APA as one important mechanism by which genetic variation impacts gene expression independent from enhancers and promoters. 
+  
 
 \begin{figure}
-\centering \includegraphics[width=5in]{img/ch02/fig-03-joint-18h.pdf}
-\caption[Joint Bayesian analysis - 18 hours
-  post-infection.]{\textbf{Joint Bayesian analysis - 18 hours
-    post-infection.} (A) Joint analysis of gene expression data from
-  18 hours post-infection with Cormotif identified five expression
-  patterns: ``Yers-Salm'', ``Virulent'', ``MTB'', ``non-DE'', and
-  ``All''. (B) Example genes from the different expression patterns.}
-\label{fig:joint-18h}
+\centering \includegraphics[width=5in]{img/ch02/figure3.pdf}
+\caption[apaQTLs provide mechanistic evidence eQTLs ]{\small {\bf (A)} Scatter plot of intronic apaQTL effect sizes plotted against their eQTL effect sizes shows negative correlation. {\bf (B)} Quantile-quantile (Q-Q) plot for apaQTLs shows that apaQTLs are more highly enriched in unexplained eGenes (purple dots) compared to explained eGenes (red dots). {\bf (C)} Example of an apaQTL that is also an unexplained eQTL for {\it C10orf88}. {\it (Top)} Gene track and identified PAS in the {\it C10orf88} gene. The red bar corresponds to the isoform most strongly associated with the apaQTL. The vertical dotted line represents the position of the strongest apaQTL SNP. {\it (Middle)} Zoomed version of track represented above. {\it (Bottom)} Boxplot of polyadenylation site usage at each PAS by genotype listed according to isoform order above. {\bf (D)} {\it (Top)} LocusZoom plot for eQTL associations for the {\it C10orf88} gene. ({\it Bottom)} Locus zoom plot for apaQTL associations. Interestingly, the lead apaQTL and eQTL SNP, rs7904973, has been linked to increased LDL cholesterol through GWAS \cite{klarin_genetics_2018}.}
+\label{fig:apaandexpression}
 \end{figure}
 
-At 48 hours post-infection, we also discovered five expression
-patterns (Fig. \ref{fig:joint-48h}; Supplementary Tables
-\ref{tab:ch02-s3},\ref{tab:ch02-s4}). While many of the patterns have
-similar specificities to those observed at 18 hours post-infection,
-there is only little overlap across timepoints with respect to the
-genes comprising the patterns. For example, pattern ``Yers-Salm'' at
-48 hours includes 1,582 genes whose expression levels changed strongly
-after infection with \emph{Y. pseudotuberculosis} or
-\emph{S. typhimurium} (e.g. \emph{HLA-DPB1}, \emph{IL10RB},
-\emph{CD248}), but only 263 of these genes are also in the
-corresponding pattern when we considered the data from the 18 hour
-timepoint. Similarly, at the 48 hour timepoint, pattern ``MTB''
-includes 288 genes whose expression levels changed preferentially
-after infection with mycobacteria (e.g. \emph{CCL1}, \emph{ATP6V1A},
-\emph{IL27RA}), but only 33 of these genes are in the corresponding
-pattern at the 18 hour timepoint. Pattern ``Virulent'' includes 14
-genes whose expression levels were not changed after infection with
-heat-inactivated MTB H37Rv or the attenuated vaccine strain BCG
-(e.g. \emph{MAP3K4}, \emph{SEMA4G}, \emph{BTG1}), and only one of
-these also belongs to the pattern ``Virulent'' at 18 hours
-post-infection.
 
-\begin{figure}
-\centering \includegraphics[width=5in]{img/ch02/fig-04-joint-48h.pdf}
-\caption[Joint Bayesian analysis - 48 hours
-  post-infection.]{\textbf{Joint Bayesian analysis - 48 hours
-    post-infection.} (A) Joint analysis of gene expression data from
-  48 hours post-infection with Cormotif identified five expression
-  patterns: ``Yers-Salm'', ``Virulent'', ``MTB'', ``non-DE'', and
-  ``All''. (B) Example genes from the different expression patterns.}
-\label{fig:joint-48h}
-\end{figure}
+\subsection{APA mediates gene regulation independently of mRNA expression levels}\label{APA-independent-expression}
 
-\subsection{Infection-induced response eQTLs are shared across
-bacterial
-infections}\label{infection-induced-response-eqtls-are-shared-across-bacterial-infections}
+Previous joint analyses of molecular QTLs suggested that functional genetic variants tend to affect gene regulation in a simple and straightforward manner: first impacting chromatin activity, then mRNA expression, and finally protein expression \citep{li_rna_2016, battle_genomic_2015}. However, because isoforms with different 3' UTRs have been shown to vary in terms of their translation efficiency, we hypothesized that apaQTLs can impact ribosome occupancy and protein expression levels without affecting mRNA expression levels \citep{floor_tunable_2016-1}. To test this possibility, we asked whether apaQTLs are enriched among genes without a known eQTL, but that are associated with a ribosome occupancy QTL (riboQTL) or a protein expression QTL (pQTL). Indeed, we found that apaQTLs are enriched among genes with a ribosome QTL (rGenes; Wilcoxon rank sum test $p=0.01$) and genes with a pQTL (pGenes; $p = 0.0006$) compared to genes with no molecular association (Figure \ref{fig:expInd}A, Supplementary Figure \ref{fig:totpgene}) \cite{li_rna_2016, battle_genomic_2015}. In addition, we observed a small but significant positive correlation between individual variance in APA usage and ribosome occupancy  (correlation = 0.15, $p <2.2\times10^{-16}$, Supplementary file 1), supporting a model in which APA impacts translation efficiency.
 
-Using the gene expression patterns we identified by applying the joint
-analysis approach, we investigated the specificity of previously
-identified response eQTLs to infection with MTB H37Rv
-\citep{Barreiro2012}. Since the response eQTLs were identified at 18
-hours post-infection, we investigated the distribution of genes
-associated with response eQTLs among the five patterns we found at
-that timepoint (Fig. \ref{fig:response-eqtl}A). Only one gene
-associated with a response eQTL was also DE specifically in response
-to MTB (\emph{CMAS}). Otherwise, most of the response eQTL-associated
-genes were classified as either DE following infection with all
-bacteria or not DE in any infection. That a large proportion of the
-genes associated with response eQTLs were not DE in any of these
-experiments is likely due to the fact that the eQTL study was
-performed in dendritic cells whereas our data were collected from
-macrophages. Overall, our observations suggest that most of the
-previously identified response eQTLs are genetic variants that affect
-the human innate immune response to bacterial infection in general,
-and not specifically the response to MTB H37Rv.
+In total, we found 24 apaQTLs that affect protein expression, but not mRNA expression (Table \ref{tab:ch02-s1}). Of these, five apaQTLs were significantly associated with ribosome occupancy (Table \ref{tab:ch02-s1}). This finding is particularly noteworthy because nearly all genetic effects on ribosome occupancy have been proposed to be mediated by effects on mRNA expression \citep{battle_genomic_2015}. Yet, here we provide direct evidence that APA can mediate genetic effects on ribosome occupancy without affecting mRNA expression levels. For example, the apaQTL in the {\it EIF2A} gene that is associated with a switched usage of two 3' UTR PAS, colocalizes with a pQTL and a ribosome occupancy QTL (Figure \ref{fig:expInd}B, Supplementary Figure \ref{fig:locuszoom}), but is not associated with {\it EIF2A} mRNA levels (Figure \ref{fig:expInd}B). Interestingly, the QTL in {\it EIF2A} affects usage of two PAS in the same 3' UTR implying that the protein sequence encoded by the two isoforms are identical. Thus, the regulatory associations uncovered at {\it EIF2A} cannot simply be explained by differences in protein isoform stability. Moreover, while differences in 3' UTR are often assumed to play a regulatory function by influencing decay \citep{mayr_regulation_2017}, mechanisms involving RNA decay cannot be operational in this case because steady-state mRNA expression is unchanged. Instead, differences between the two isoforms may reflect differential binding of factors that impact translation \citep{yamashita_translational_2017}, or differential rates of translation re-initiation at the end of a translation cycle \citep{rogers_ribosome_2017}. 
 
-To provide further broad support for the interpretation that the
-response eQTL genes are important for the innate response to bacterial
-nfection in general, we considered the log\textsubscript{2} fold
-change in expression values following infection
-(Fig. \ref{fig:differential-expression}). For each gene, we calculated
-the mean log\textsubscript{2} fold change in expression level across
-the eight bacterial infections at the 18 hour timepoint. Next, we
-compared the absolute values of the log\textsubscript{2} fold change
-in expression between genes associated with response eQTLs, genes
-associated with general eQTLs (i.e.~genes associated with an eQTL pre-
-and post-infection), and genes not found to be associated with an
-eQTL.  Since there was a large difference in the number of genes in
-these three classes, we subsampled genes from each and calculated the
-mean of the absolute values (and repeated this process 1000 times). We
-found that the expression level of genes associated with response
-eQTLs is altered to a larger degree (significantly higher effect size;
-\emph{P} \textless{} 2.2 x e\textsuperscript{-16};
-Fig. \ref{fig:response-eqtl}B) following infection compared to the
-genes in the other two classes.
+We identified 19 pQTLs that were associated with APA but not steady-state gene expression or ribosome occupancy levels. Two previous studies also reported the discovery of pQTLs that were not eQTLs \citep{battle_genomic_2015, chick_defining_2016}. In both studies, the authors proposed that some genetic effects on protein expression levels were mediated by changes in the protein sequence or by changes in the expression level of interacting proteins, which would manifest post-translationally. Our finding reveals yet another mode of genetic regulation of protein expression level by APA (e.g. by affecting recruitment of interacting proteins). Thus, these findings provide clear evidence that APA can affect protein expression levels without affecting gene expression levels. Altogether, our findings suggest complex modes of gene regulation independent of mRNA expression driven by variation in APA.
+
 
 \begin{figure}
 \centering
-\includegraphics[width=5in]{img/ch02/fig-05-response-eqtl.pdf}
-\caption[Response eQTLs at 18 hours post-infection.]{\textbf{Response
-    eQTLs at 18 hours post-infection.} (A) We counted the number of
-  response eQTLs from Barreiro et al. \citep{Barreiro2012} (179 out of
-  the 198 were also expressed in our study) in each of the five gene
-  expression patterns at 18 hours post-infection
-  (Fig. \ref{fig:joint-18h}).  (B) We compared the mean
-  log\textsubscript{2} fold change in expression across the 8
-  bacterial infections at the 18 hour timepoint for three classes of
-  genes: response eQTL genes (red), general eQTL genes (purple), and
-  non-eQTL genes (yellow) (see Methods for details).  }
-\label{fig:response-eqtl}
+\includegraphics[width=5in]{img/ch02/figure4.pdf}
+\caption[apaQTLs explain expression independent rQTLs and pQTLs] {\small {\bf (A)} Quantile-quantile (Q-Q) plot for apaQTLs separated by genes in previously detected rQTLS (red) and pQTLs (purple) that are not eQTLs. Black points are apaQTL genes with no pQTL, rQTL, or eQTL. {\bf (B)}{\it (Top)} Gene track and identified PAS in the {\it EIF2A} gene. The red bar corresponds to the isoform most strongly associated with the apaQTL. The vertical dotted line represents the position of the strongest apaQTL SNP. {\it (Middle)} Zoomed version of track represented above. {\it (Bottom Left)} Boxplot of polyadenylation site usage at each PAS by genotype listed according to isoform order above.  {\it (Top Right)} Boxplot showing normalized mRNA expression for {\it EIF2A} by genotype at the apaQTL SNP (rs9820529).   {\it (Bottom Right)} Boxplot showing normalized protein expression for {\it EIF2A} by genotype at the apaQTL SNP (rs9820529).}
+\label{fig:expInd}
 \end{figure}
+
+
+\subsection{APA mediates genetic effects on complex traits}\label{APA-traits}
+
+Genetic variation may impact disease risk through APA. We asked whether common variants in the regions around PAS, i.e. regions enriched for apaQTLs, are enriched in disease heritability. Using LDscore regression to estimate the heritability enrichment of 35 traits in 1kb regions centered around PAS, we found that 14 of the tested traits were significantly enriched (\ref{fig:ldregress}). Of note, genetic variation around PAS was estimated to tag 15.35\% of the SNP heritability for rheumatoid arthritis (7.88 fold enrichment, $p = 0.0025$). We further asked whether we could identify specific apaQTLs associated with phenotype. Indeed, 19.3\% of apaQTLs (including SNPs in LD with $r^{2} > 0.9$) are significantly associated with at least one trait in the UCSC GWAS catalog (Methods) \citep{kent_human_2002}. For example, an apaQTL that colocalizes with the eQTLs in the C10orf88 gene (rs7904973) has been associated with increased LDL cholesterol \citep{klarin_genetics_2018}, suggesting that eQTLs mediated by APA can impact organismal phenotype. Taken together, we propose that APA is a complex regulatory mechanism relevant to our understanding of how genetic variation can affect disease. Thus, comprehensive maps of apaQTLs can enhance our ability to interpret GWAS loci, particularly when the implicated variants are not eQTLs \citep{joehanes_integrated_2017, lee_widespread_2018}. For example, an apaQTL in the {\it ELL2} gene (rs56219066) is correlated with increased usage of an intronic PAS and is associated with risk for multiple myeloma \citep{swaminathan_variants_2015}. Interestingly, multiple myeloma is among the cancer types in which widespread dysregulation of intronic APA has been documented previously \citep{singh_widespread_2018, lee_widespread_2018}.
+
+
 
 \section{Discussion}\label{ch02-discussion}
 
-\subsection{Bayesian analysis identified mycobacteria-specific
-response
-genes}\label{bayesian-analysis-identified-mycobacteria-specific-response-genes}
+Obtaining a comprehensive understanding of the mechanisms that affect gene regulation is crucial for the functional interpretation of noncoding genetic variation. Yet, existing studies that examine the role of genetic variation on APA are generally characterized by two important shortcomings. Firstly, the study of inter-individual variation in PAS usage have been mostly restricted to APA in the 3' UTRs \citep{li_genetic_2019, yoon_genetics_2012, yang_snp2apa_2019}, leaving genetic variants that impact PAS usage in other regions, e.g. intronic PAS, understudied. Secondly, nearly all existing studies use standard RNA-seq to estimate PAS usage, which not only limits the accuracy of usage quantification, but also makes it difficult to disentangle the contribution of co-transcriptional mechanisms to APA regulation from post-transcriptional mechanisms such as isoform-specific decay. In this study, we overcome these shortcomings by applying 3' Seq to total and nuclear mRNA fractions separately to directly measure PAS usage including that of PAS in intronic regions. 
 
-In order to identify general and treatment-specific gene regulatory
-responses, we performed a joint Bayesian analysis of the data using
-Cormotif \citep{Wei2015}. By jointly analyzing the data, as opposed to
-comparing overlaps between independent lists of differentially
-expressed genes generated using an arbitrary cutoff, we minimized the
-identification of specific responses due to false negatives
-(i.e.~genes that appear to be differentially expressed in response to
-a subset of bacterial infections when in reality the response is
-similar across all the infections). Similar to previous observations
-\citep{Huang2001, Boldrick2002}, we found a large core transcriptional
-response to infection. However, we also identified a novel subset of
-genes whose regulation is preferentially altered in response to
-infection with mycobacteria but not to the other bacteria we
-tested. Since these responses are unique to infection with
-mycobacteria (at least in the context of our study design), they may
-be promising candidates for future studies that focus on the
-mechanisms by which mycobacteria successfully subvert the human innate
-immune response. Since this study does not extend to investigation of
-mechanisms, we do not have empirical data with which to prioritize
-such possible candidate genes. Yet, the reported functions of many of
-these genes often suggest mechanisms that are relevant, and often
-quite specific, to MTB infection. Prioritizing candidate genes in this
-way is not statistically valid, and one can argue (and indeed, this
-has been shown \citep{Pavlidis2012}) that any list of genes can be
-scrutinized to yield ``interesting relevant stories''. We therefore
-offer these details in the context of a discussion (rather than
-``results''), to provide one set of alternative explanations for our
-findings, and generate ideas for further investigations.
+It is worthwhile to note here that despite the many advantages of using 3' Seq to identify and quantity APA isoforms, 3' Seq experiments are known to be susceptible to mispriming, which occurs when polydT primers designed to recognize the polyA-tail of transcripts anneal to adenosine stretches within a transcript, thus introducing false positive polyadenylation sites. While we used stringent criteria to reduce the effect of mispriming, we found that a small proportion of PAS used in this study may be the result of mispriming. In particular, we found an enrichment of adenosine nucleotides at a subset of intronic PAS which were discovered in our study and not previously annotated, suggesting that 10--20\%{} of unannotated intronic PAS may be false positives (Supplementary file 1). To ensure that these false positive PAS do not affect the validity of our analyses, we performed the main analyses presented in this study after removing unannotated intronic PAS and found that our conclusion were robust to the small number of potential false positive intronic PAS (Supplementary file 1) \citep{wang_polya_db_2018}. 
 
-For example, when we focused on the mycobacteria-specific regulatory
-response 18 hours post-infection, we noticed an intriguing number of
-genes that are involved in phagosome maturation (Supplementary
-Fig. \ref{fig:phago}). Broadly speaking, phagocytosed bacteria are
-killed by vesicular proton pumps, which lower the pH inside the
-phagosome, and lysosomal fusion. This process occurs once a phagosome
-has matured through a series of steps mediated by the exchange of Rab
-GTPases \citep{Vergne2004, Mortellaro2009}. A unique property of
-mycobacteria is their ability to survive inside the macrophage by
-inhibiting phagosome maturation \citep{Hestvik2005}. As part of this
-strategy, the bacterium recruits \emph{RAB22A} to MTB-containing
-phagosomes \citep{Roberts2006}. Indeed, we found the \emph{RAB22A}
-gene to be upregulated in response to infection with mycobacteria
-(Supplementary Table \ref{tab:ch02-s4}). Similar GTPases whose
-regulation was altered following mycobacterial infections include
-\emph{RAP2A} (upregulated), \emph{RAB3A} and \emph{RAB33A} (both
-downregulated). In addition, the vesicular (v)-ATPase subunit
-\emph{ATP6V1D} was exclusively upregulated in response to
-mycobacterial infection. Thus, the mycobacteria-specific response we
-identified includes genes putatively involved in mycobacteria-specific
-survival mechanisms.
 
-An additional intriguing example involves the \emph{NCF2} gene. This
-is a potential candidate gene whose expression level was affected
-specifically by infection with mycobacteria at 18 hours
-post-infection.  Neutrophil cytosolic factor 2 (\emph{NCF2}, also
-known as \emph{p67phox}) is a subunit of the phagocyte NAPDH oxidase,
-which is responsible for generating reactive oxygen species used to
-fight intracellular pathogens \citep{Ehrt2001, Myers2003, Babior2004,
-  Bustamante2011, Kim2011c, Deffert2014}. These reactive oxygen
-species may also serve a signaling role in activating other immune
-cell types to ensure proper granuloma formation and killing of
-mycobacteria \citep{Deffert2014a}. Loss-of-function mutations in
-subunits of the NAPDH oxidase cause chronic granulomatous disease
-(CGD) \citep{Deffert2014}, which is characterized by the formation of
-granulomas throughout the body due to the inability of phagocytes to
-kill the ingested pathogens.  In contrast to wild type animals, mice
-with mutations in subunits of the phagocyte NAPDH oxidase develop
-tuberculosis after infection with the vaccine strain, BCG
-\citep{Deffert2014a}. Humans who are administered the vaccine before
-being diagnosed with CGD also develop the disease \citep{Deffert2014}.
+By collecting data from both total and nuclear mRNA factions, we were able to study the effects of genetic variation on polyadenylation at multiple stages of the mRNA lifecycle, and to distinguish putative regulatory mechanisms by noting the stages at which the genetic effects on APA were observed.  For example, genetic variants can impact steady-state isoform ratio either co-transcriptionally by affecting PAS choice during transcription (Figure \ref{fig:qtlFigure}C top), or  post-transcriptionally by affecting binding of miRNAs or RNA-binding proteins and consequently isoform decay (Figure \ref{fig:qtlFigure}C bottom). We found that the vast majority of genetic variants that affect PAS usage ratio in total mRNA fraction, were also found to have similar effect sizes on PAS usage ratio in the nucleus. This observation implies that inter-individual variation in steady-state APA levels can generally be explained by variation in co-transcriptional mRNA processing, or mRNA processing that occur soon after transcription. 
 
-At 48 hours post-infection (Fig. \ref{fig:joint-48h}), the
-mycobacteria-specific response was enriched with genes annotated
-(based on GO) as having a role in ``response to vitamin D''
-(Supplementary Table \ref{tab:ch02-s5}; Supplementary
-Fig. \ref{fig:vitD}). Individuals with low circulating levels of
-vitamin D are more susceptible to developing tuberculosis
-\citep{Zodpey2007, Nnoaham2008}, and vitamin D has been investigated
-as a supplemental therapy for the treatment of tuberculosis, though
-with mixed results \citep{Martineau2007, Lucas2014, Xia2014,
-  Kearns2015}. Vitamin D has been found to be important for innate
-immune cells to fight MTB \citep{Liu2006, Verway2013, Xu2014};
-however, it is also an important pathway for generic bactericidal
-activity \citep{Hewison2011}. Consistent with its role in the innate
-immune response, both the enzyme that converts vitamin D to its active
-form (\emph{CYP27B1}) and its receptor (\emph{VDR}) are upregulated in
-response to any of the infections (pattern ``All'';
-Fig. \ref{fig:joint-48h}). Yet, the regulation of other genes involved
-in the response to vitamin D was only affected by infection with MTB.
-\emph{PIM1}, a serine/threonine kinase that binds the VDR and enhances
-transcription of its target genes \citep{Maier2012}, is upregulated in
-response to the mycobacteria (pattern ``MTB'',
-Fig. \ref{fig:joint-48h}). Interestingly, the increased expression
-level of \emph{PIM1} in T-cells was successfully used in a six-gene
-classifier of patients with active versus latent TB infections
-\citep{Jacobsen2011}. Another gene, the chemokine \emph{CXCL10} (also
-known as interferon gamma-induced protein 10 or IP-10), is also
-upregulated in response to mycobacterial infection (pattern ``MTB'',
-Fig. \ref{fig:joint-48h}). Discordant with the observed increase in
-expression of \emph{CYP27B1}, \emph{VDR}, and \emph{PIM1} in response
-to infection, treatment with vitamin D usually leads to the reduction
-of \emph{CXCL10} expression and secretion in multiple cell types
-\citep{Gysemans2005, Adorini2005, Scolletta2013}. In fact,
-supplementation with vitamin D decreased serum levels of CXCL10 in TB
-patients \citep{Coussens2012}. This suggests that the immunosuppresive
-effect of vitamin D signaling is insufficient to overcome the
-pro-inflammatory response to mycobacterial infection. This observation
-is in concordance with past studies which found increased expression
-of \emph{CXCL10}, as well as increased secretion level from
-macrophages, following infection with MTB \citep{Zhu2006,
-  Verway2013}. Interestingly, a polymorphism in \emph{CXCL10} was
-found to be associated with susceptibility to tuberculosis in a
-Chinese population \citep{Tang2009, Azad2012}. Overall, these
-observations provide support for the importance of vitamin D signaling
-for specifically fighting mycobacterial infections.
+There are several co-transcriptional mechanisms that may result in variation in PAS usage. For example, previous reports have suggested that variation in the polyadenylation signal site may cause variation in PAS usage. While we found that this was the case for a small number of examples, disruption of canonical signal motifs does not appear to be a major mechanism for generating apaQTLs, an observation that is also supported by a recent study on APA in GTEx data (Supplementary Figure \ref{fig:ssDisrupt}) \citep{li_genetic_2019}. Other possible co-transcriptional mechanisms involved in PAS choice include competition between the spliceosome and polyadenylation factors for example mediated by the spliceosomal RNA U1 \citep{oh_u1_2017}, and RNAP II pausing \citep{fusby_coordination_2016}. Indeed, recent studies have reported that sequence and chromatin context can pause or slow down RNAP II elongation across the gene body \citep{mayer_native_2015}, suggesting that variation in RNAPII pausing may impact PAS choice \citep{fusby_coordination_2016}. For example, in Drosophila melanogaster, paused RNAPII promotes the recruitment of ELAV on the pre-mRNA, which prevents usage of a proximal PAS \citep{oktaba_elav_2015}. In addition, Liu et al. observed a tissue-specific shift toward usage of proximal PAS sites in Drosophila melanogaster mutant for a slow elongation form of RNAPII \citep{liu_transcription_2017}. These findings further suggest that variants affecting RNAPII elongation rate could underlie the genetic effects on PAS usage we detected in this study. 
 
-Another gene of interest from the mycobacteria-specific expression
-pattern at 48 hours post-infection is chemokine (C-C motif) ligand 1
-(\emph{CCL1}), which stimulates migration of human monocytes
-\citep{Miller1992} (Fig. \ref{fig:joint-48h}B). Thuong et
-al. identified \emph{CCL1} as being induced to a greater extent in
-MTB-infected macrophages (4 hours post-infection) isolated from
-individuals with pulmonary TB compared to macrophages from individuals
-with latent TB infections \citep{Thuong2008}. Put together, our
-observations and those of Thuong and colleagues suggest that
-\emph{CCL1} is involved in the pathogenesis of TB. Further supporting
-this notion, Thuong et al. also found a genetic association between
-variants in the \emph{CCL1} region and TB susceptibility
-\citep{Thuong2008}. However to date, subsequent genetic association
-studies investigating \emph{CCL1} have reported mixed results
-\citep{Tang2011, Ozdemir2013}.
+Although our data suggest that apaQTLs do not generally impact rates of mRNA decay, e.g. by affecting miRNA or RBP binding motifs, we found clear evidence that apaQTLs may promote polyadenylation site choices that result in the production of isoforms with different rates of decay. For example, we observed that genetic variants that increase the usage of isoforms ending at intronic PAS tend to be associated with lower levels of gene expression. This observation is consistent with reports that isoforms with premature polyadenylation are often substrates for nonsense mediated decay or nonstop decay \citep{tian_alternative_2017, vasudevan_non-stop_2002}. More generally, our results suggest that apaQTLs can affect gene expression levels post-transcriptionally by impacting the production of isoforms with varying levels of stability. Importantly, our study highlights APA as an eQTL mechanism independent of promoters and enhancers. 
 
-One caveat of the joint Bayesian analysis is that we were not able to
-classify genes into unusual patterns (because this approach can only
-discover expression patterns shared by a large number of genes and, by
-definition, only few genes fall into ``unusual'' patterns). For
-example, unusual patterns of interest include changes in expression
-specifically in response to some but not all of the mycobacterial
-infections. One gene that satisfied this pattern is the dual
-specificity phosphatase 14 (\emph{DUSP14}). We specifically examined
-the expression data for this gene because it was previously associated
-with an MTB infection response eQTL in dendritic cells
-\citep{Barreiro2012}, and consequently when the eQTL results were used
-as a prior - \emph{DUSP14} was found to be significantly associated
-with TB susceptibility. Moreover, knocking down \emph{DUSP14}
-expression via siRNA in murine macrophages resulted in a lower
-bacterial load 90 hours post-infection with MTB H37Rv
-\citep{Jayaswal2010}. In our joint Bayesian analysis, \emph{DUSP14}
-was not classified as one of the genes whose regulation was altered in
-response to infection with mycobacteria. Yet, \emph{DUSP14} was
-upregulated at 18 hours post-infection with MTB H37Rv (q-value: 16\%),
-MTB GC1237 (q-value: 3\%), and BCG (q-value: 9\%); and downregulated
-post-infection with \emph{S. typhimurium} (q-value: 9\%)
-(Supplementary Fig. \ref{fig:dusp14}). Thus, our data lends further
-support for the role of \emph{DUSP14} as a TB susceptibility gene.
 
-\subsection{Little evidence for strain-specific transcriptional
-response to
-infection}\label{little-evidence-for-strain-specific-transcriptional-response-to-infection}
+While the effect of genetic variants on gene regulation is generally assumed to move linearly from chromatin, to mRNA, to protein level, our study reveals several complex modes of genetic regulation for both gene expression and protein expression levels by APA. Although we were unable to study the genome-wide effects of APA on protein expression owing to a scarcity of protein-level data, we identified several apaQTLs that affect protein, but not gene expression levels. These results strongly suggest that APA can affect protein expression levels without affecting gene expression levels, because our power to detect genetic effects on gene expression levels far exceeds that to detect genetic effects on protein expression levels. Furthermore, some of these pQTLs were associated with ribosomal occupancy and some were not, which implies multiple pathways by which genetic variants can impact protein expression levels through APA.
 
-There are six major families of MTB that differ in their geographic
-distribution and virulence \citep{Gagneux2006, Comas2009}. Strains
-from these families are known to differ in their growth rates inside
-macrophages \citep{Li2002}, expression levels of bacterial genes
-\citep{Homolka2010, Rose2013}, and cell wall lipid composition
-\citep{Krishnan2011}. Previous studies have found that different MTB
-strains induce different innate immune responses in human cell lines
-and other infection models \citep{Coscolla2010}. A dominate narrative
-is that MTB strains from East Asia, referred to as the Beijing family
-(Gagneux et al. classified it as MTB lineage 2 \citep{Gagneux2006}),
-are more virulent because they induce a lower proinflammatory immune
-response compared to the common laboratory strains \citep{Manca2001,
-  Manca2004, Reed2004, Tanveer2009, Wang2010}. However, other studies
-have reported the opposite, namely that Beijing strains induce a
-larger proinflammatory response \citep{Chacon-Salinas2005}, or a
-conflicting response in which various pro- and anti-inflammatory
-cytokines are differentially regulated \citep{Rocha-Ramirez2008,
-  Koo2012} compared to laboratory strains.
+In conclusion, there are many pathways through which genetic variants can impact gene regulation and, consequently, organismal phenotypes. While many studies have demonstrated the importance of gene expression regulation through promoters or enhancers, very few studies have focused on co- or post-transcriptional gene regulation. Our study shows that co- and post-transcriptional processes such as APA can mediate the effects of a substantial number of genetic variants on mRNA expression levels, protein expression levels, and risk for complex diseases.
 
-In our study, albeit with a small sample size, we found no marked
-differences between the transcriptional response to infection with MTB
-H37Rv or MTB GC1237, a Beijing strain (Supplementary
-Fig. \ref{fig:Rv-v-GC}; Supplementary Table
-\ref{tab:ch02-s8}). Furthermore, the pro-inflammatory cytokines
-\emph{TNF} and \emph{IL6} and the anti-inflammatory cytokine
-\emph{IL10} were strongly upregulated in response to both strains of
-MTB (Supplementary Fig. \ref{fig:ex-cytokines}). This observation is
-in concordance with Wu et al., who also reported no apparent
-difference in the transcriptional response of THP-1 cells to infection
-with MTB H37Rv versus multiple Beijing strains \citep{Wu2012}. Thus
-the increased virulence of the Beijing family of MTB strains may be
-due to mechanisms not assayed in this study such as
-post-transcriptional effects, cell-cell signaling, and environmental
-stimuli. It should be noted, however, that not all Beijing strains are
-equally virulent \citep{Dormans2004, Sinsimer2008} and that MTB H37Rv
-is a laboratory-adapted strain that has evolved independently in
-different laboratories \citep{Ioerger2010}.
-
-\subsection{Differences in response to virulent versus attenuated
-pathogens are not
-mycobacteria-specific}\label{differences-in-response-to-virulent-versus-attenuated-pathogens-are-not-mycobacteria-specific}
-
-To better understand the interaction between MTB and macrophages, we
-included in our study both virulent mycobacteria (MTB strains H37Rv
-and GC1237) and attenuated mycobacteria (heat-inactivated MTB H37Rv
-and the vaccine strain BCG). Overall, the response to infection with
-either virulent or attenuated mycobacteria was similar
-(Fig. \ref{fig:joint-18h},\ref{fig:joint-48h}). This observation was
-unsurprising because it has been previously demonstrated that
-infections with inactivated pathogens (in fact, even individual
-pathogen components) are able to largely recapitulate the
-transcriptional response to infection \citep{Huang2001, Boldrick2002,
-  Nau2002, Jenner2005}. In other words, as expected, the
-transcriptional response to infection is largely driven by the
-antigens present.
-
-Yet, the responses to inactivated pathogens or individual pathogen
-components in past studies were not identical to the responses to live
-pathogens, suggesting a potential role for bacterial manipulation of
-the immune response. For example, it is known that BCG lacks the locus
-containing the ESX-1 secretion system, which is critical for MTB
-virulence \citep{Behr1999, Pym2002, Hsu2003, Simeone2009}. In our
-study we also observed differences between the response to virulent
-and attenuated mycobacteria. Specifically, there are 1,165 genes in
-the expression pattern ``Virulent'' at 18 hours post-infection
-(Fig. \ref{fig:joint-18h}) and 14 genes that comprise of the
-``Virulent'' pattern at 48 hours post-infection
-(Fig. \ref{fig:joint-48h}). Importantly, these genes are also
-differentially expressed in response to the other virulent infections
-in our study, and thus they are not specifically due to the
-manipulations of the host cell by virulent mycobacteria.
-
-We attempted to identify a gene expression pattern that specifically
-represented differences in virulence only in the mycobacteria, yet we
-never saw such a pattern. It is important to note that had we simply
-performed a simple pairwise analysis of the overlap of DE genes
-between MTB and BCG infections, our results would be quite different
-(Supplementary Table \ref{tab:ch02-s7}). Yet, a pairwise analysis is
-misleading in the context of the entire study. Indeed, by accounting
-for incomplete power by using the joint Bayesian model and including
-other bacterial species, we avoided attributing many differentially
-expressed genes specifically to the differences in the immune evasion
-mechanisms used by MTB and BCG.  We conclude that either a larger
-sample size or a different experimental system is required to find
-specific differences between the response to infection with MTB and
-BCG.
-
-\subsection{Previously identified response eQTLs affect response to
-bacterial infection in
-general}\label{previously-identified-response-eqtls-affect-response-to-bacterial-infection-in-general}
-
-In a previous study, we identified response eQTLs that were associated
-with gene expression levels in MTB-infected human dendritic cells. We
-investigated the expression pattern of genes associated with the
-response eQTLs in our study. Using the five expression patterns
-identified by the joint Bayesian analysis at 18 hours post-infection,
-we examined the distribution of response eQTL genes and discovered
-that these genes were not enriched in the mycobacteria-specific
-expression pattern (Fig. \ref{fig:response-eqtl}A). Instead, many were
-differentially expressed across all the infections (pattern
-``All''). Thus, response eQTLs modulate the inter-individual response
-to infection with diverse types of bacteria.  That said, one gene was
-both associated with a response eQTL and specifically differentially
-expressed following mycobacterial infection.  Though this result does
-not represent a significant enrichment of response eQTL genes among
-those whose regulation was affected specifically by infection with
-MTB, the identity of the gene renders the observation
-intriguing. \emph{CMAS} (cytidine monophosphate N-acetylneuraminic
-acid synthetase), is an enzyme that is involved in the processing of
-sialic acid, which is then added to cell surface glycoproteins and
-glycolipids. Glycoproteins are known to be important in many functions
-of the immune response, including initial pathogen detection
-(e.g.~TLRs) and antigen presentation (e.g.~major histocompatibility
-complex (MHC) molecules) \citep{Wolfert2013, Johnson2013,
-  Crespo2013}. We suggest that this gene is an interesting candidate
-for further understanding both MTB pathogenesis and inter-individual
-susceptibility to tuberculosis.
-
-\subsection{Conclusions}\label{ch02-conclusions}
-
-By jointly considering data from multiple infection treatments, using
-a variety of bacteria, we have classified distinct innate immune
-transcriptional response patterns. The most inclusive pattern was a
-response to all the bacterial infections, indicating that the
-receptors that bind the diverse antigens present on the different
-bacteria converge to largely similar signaling pathways. We also found
-an expression response pattern specific to mycobacterial infections,
-the main focus of the current study. At 18 hours post-infection, the
-mycobacteria response pattern includes genes involved in phagosome
-maturation and the NAPDH oxidase subunit \emph{NCF2}. At 48 hours
-post-infection, it includes genes involved in the response to vitamin
-D and the chemokine \emph{CCL1}. We found that the response to
-infection with different MTB strains was highly similar. Furthermore,
-the differences we identified between the response to MTB and the
-vaccine strain BCG were not mycobacteria-specific, but likely
-represent a difference between the innate immune response to virulent
-and non-virulent (or attenuated) pathogens. Lastly, we identified a
-single gene, \emph{CMAS}, which is both associated with a response
-eQTL to MTB infection, and whose regulation is altered specifically
-when we infected the cells with mycobacteria. This gene is thus an
-especially promising candidate for future studies of TB
-susceptibility.
 
 \section{Methods}\label{ch02-methods}
 
-\subsection{Ethics Statement}\label{ch02-ethics-statement}
+\subsection{Cell Culture}\label{ch02-cell-culture}
 
-Buffy coats were obtained from healthy donors after informed consent.
-The blood collection protocols were approved by both the French
-Ministry of Research and a French Ethics Committee under the reference
-DC-2008-68 collection 2. The blood collection was carried out in
-accordance with these approved protocols by the Etablissement Français
-du Sang.
+We cultured 54 Epstein-Barr virus transformed LCLs under identical conditions at 37 C and 5\% CO2. These LCLs were derived from Yoruba individuals originally collected as part of the HapMap project \cite{international_hapmap_consortium_haplotype_2005}.The sampleIDs and Research Resource Identifiers (RRIDs) can be found in online version of paper (see chapter citation). Details for each cell line are found in Supplementary file 3. We grew cells in a glutamine depleted RPMI [RPMI 1640 1X from Corning (15-040-CM)], completed with 15\% FBS, 2mM GlutaMAX (from gibco (35050-061), 100 IU/ml Penicillin, and 100 ug/ml Streptomycin. After passaging them 3 times the lines were maintained at a concentration of $1\times10^{6}$ cells per mL. In preparation for extraction, we allowed the cells to grow until a concentration of $1\times10^{6}$ cells per mL was reached and then proceeded to extraction. \
 
-\subsection{Sample collection and macrophage
-differentiation}\label{sample-collection-and-macrophage-differentiation}
+\subsection{Collection and RNA extraction}\label{Collection-and-RNA-extraction}
 
-We collected buffy coats (\mytilde50 mL) from six healthy donors. Next
-we isolated peripheral blood mononuclear cells (PBMCs) via
-Ficoll-Paque centrifugation \citep{Rivero-Lezcano2012} and enriched
-for monocytes via positive selection with beads containing CD14
-antibodies \citep{Barreiro2012}. Then we differentiated the monocytes
-into macrophages by culturing for 6-7 days in RPMI buffer supplemented
-with macrophage colony-stimulating factor (M-CSF)
-\citep{Tailleux2003}.
+We collected 30 million cells from each line and divided them into two 15 million cell aliquots. We spun the cells down at 500 RPM at 4C for 2 min, and then washed the pellets with phosphate-buffered saline (PBS) and spun down again. After this we aspirated the PBS, leaving the cell pellet. All washing steps occurred on ice or in cooled centrifuges. At this point every cell line had two separate pellets each from an input of 15 million cells. From each line we took one of these pellets for nuclear isolation. We then carried out nuclear isolation using the nuclear isolation steps outlined by \citep{mayer_genome-wide_2016}. Once we washed and spun down the pellets in the nuclei wash buffer, we resuspended them in 700 ul of the QIAzol lysis reagent (Qiagen). We extracted both RNA cell pellets from the same line in the same batch using the miRNeasy kit (Qiagen) according to manufacture instructions, including the DNase step to remove potentially contaminated genomic DNA. Details for the collection such as cell viability and cell concentration at time of collection are found in Table \ref{tab:ch02-s2}. We checked the quality of the collected RNA using a nanodrop. RNA concentrations and absorbance levels from the collection are in Table \ref{tab:ch02-s2}.
 
-\subsection{Bacterial infection}\label{bacterial-infection}
+In order to verify fraction separation, we completed the Mayer and Churchman protocol to isolate chromatin and collected cell lysates for each step in the fractionation \citep{mayer_genome-wide_2016}. We performed western blots against both GAPDH (GAPDH antibody (6C5) Life Technologies AM4300) and the Carboxyl Terminal Domain of Pol-II (CTD) (Pol II CTD Ser5-P antibody, Active Motif, 61085). We ran each lysate on Mini-protean TGX precast gels (bioRad 456-1093) after digesting any remaining DNA molecules from the nuclear isolate with benzonase nuclease. We used Goat anti-Mouse IgG (H+L) (Invitrogen 32430) as a secondary antibody for the GAPDH antibody and Goat anti-Rat IgG (H +L) (Invitrogen 31470) as a secondary antibody for the CTD antibody. We diluted all antibodies in a 1:1000 dilution with blocking solution made from dry milk (LabScientific Lot 1267N Cat M0841). We show GAPDH isolated in the cytoplasm and CTD to the chromatin fraction (Supplementary Figure \ref{fig:western}).
 
-For each bacterial infection (Table \ref{tab:bacteria}), we treated
-the macrophages with a multiplicity of infection (MOI) of 2:1. After
-one hour, we washed the macrophages five times with phosphate-buffered
-saline (PBS) and treated them with gentamycin (50 $mu$g/$mu$L) to kill
-all extracellular bacteria.  After one hour of antibiotic treatment,
-we changed the medium to a lower concentration of gentamycin (5
-$mu$g/$mu$L), which marked the zero timepoint of the study. We allowed
-the cells to grow for 4, 18, or 48 hours before lysing them with
-QIAzol Lysis Reagent and then storing them at -80° C.  We chose these
-timepoints based on a previous analysis of the human transcriptional
-response to infection with MTB \citep{Tailleux2008}. No data is
-available for 48 hours post-infection with \emph{S.
-  epidermidis}. After escaping the macrophages upon cell death,
-sufficient \emph{S. epidermidis} were able to proliferate in the
-gentmycin-supplemented medium to contiminate the entire well by 48
-hours post-infection.
 
-\subsection{RNA extraction, library preparation, and
-sequencing}\label{rna-extraction-library-preparation-and-sequencing}
+\subsection{3' Sequencing library generation}\label{three-Sequencing-library-generation}
 
-We extracted RNA using the QIAgen miRNeasy kit. There were a total of
-13 batches of 12 samples each (6 individuals x 9 conditions x 3
-timepoints, minus 48 hours post-infection with
-\emph{S. epidermidis}). We designed the batches to maximally partition
-the variables of interest (individual, condition, timepoint) in order
-to minimize the introduction of biases due to batch processing
-\citep{Auer2010}. To assess RNA quality, we measured the RNA Integrity
-Number (RIN) with the Agilent Bioanalyzer (Supplementary Table
-\ref{tab:ch02-s6}). Importantly, there were no significant differences
-in the RIN (mean of 7.8 $\pm$ 2.0) between the bacterial infections or
-between the timepoints (Supplementary
-Fig. \ref{fig:rin-and-reads}B). In batches of 12 samples, we added
-barcoded adapters (Illumina TruSeq RNA Sample Preparation Kit v2) and
-sequenced 50 base pairs single end over multiple flow cells on the
-Illumina HiSeq 2500.
+We generated 108 single-end RNA 3'sequencing libraries from the total and nuclear RNA extract using the QuantSeq 3 ' mRNA-Seq Library Prep Kit \citep{moll_quantseq_2014} as directed by the manufacturer. We used 5ng of each sample as input. We submitted the libraries for sequencing on the Illumina NextSeq5000 at the University of Chicago Genomics Core facility using single end 50bp sequencing. 
 
-\subsection{Mapping, counting, and
-normalization}\label{mapping-counting-and-normalization}
+\subsection{3' Sequencing data processing}\label{three-Sequencing data processing}
 
-We mapped the short reads to the human genome (hg19) using the Subread
-algorithm \citep{Liao2013} and discarded those that mapped
-non-uniquely.  Next, we obtained the read counts for each Ensembl
-protein-coding gene (biotype: ``protein\_coding'') with the
-featureCounts algorithm, which sums the reads falling in the union of
-all exons of a gene and discards reads mapping to more than one gene
-\citep{Liao2014}. There were no significant differences in the number
-of mapped exonic reads (mean of 41.8 $\pm$ 21.2 million per sample)
-between the bacterial infections or between the timepoints
-(Supplementary Fig. \ref{fig:rin-and-reads}A). We removed genes with
-fewer than one count per million exonic reads in fewer than six
-samples.  To account for differences in the read counts at the
-extremes of the distribution, we normalized the samples using the
-weighted trimmed mean of M-values algorithm (TMM)
-\citep{Robinson2010}.
+We mapped 3'  Seq reads to hg19 \citep{church_modernizing_2011} using STAR RNA-seq aligner \citep{dobin_star_2013} using default settings with the WASP mode to filter out reads mapping with allelic bias \citep{van_de_geijn_wasp_2015}. Similar to previously published 3'  Seq methods, we accounted for internal priming by filtering reads preceded by 6 Ts in a row or 7 of 10 Ts in the 10 bases directly upstream of the mapping position in the reference genome \citep{tian_large-scale_2005, sheppard_accurate_2013, beaudoing_patterns_2000}. We verified the individual identity of all bam files using VerifyBamID \citep{jun_detecting_2012}. Due to low confidence in the identity of 2 individuals, they were removed from all analysis. Raw read and mapped read statistics after accounting for internal priming can be found in Table \ref{tab:ch02-s2} ( Supplementary Figure \ref{fig:nucMap},Supplementary Figure \ref{fig:TotalMap},Supplementary Figure \ref{fig:NucMapCount},Supplementary Figure \ref{fig:TotMapCount}).
 
-\subsection{Differential expression
-analysis}\label{differential-expression-analysis}
+\subsection{Identification and characerization of PAS}\label{Identification-and-characerization-of-PAS}
 
-To assess the quality of the data, we performed principal components
-analysis (PCA) of the TMM-normalized log\textsubscript{2}-transformed
-counts per million (CPM). PC2 separated the samples by timepoint, but
-PC1 was associated with the RIN score and the processing batch
-(Supplementary Fig. \ref{fig:pca}A). After the effects of RIN score
-and processing batch were removed with the function removeBatchEffect
-from the limma package \citep{Ritchie2015}, PC1 separated the samples
-by timepoint and PC2 separated the infected and control samples
-(Supplementary Fig. \ref{fig:pca}B). We protected the variables of
-interest (individual, bacteria, timepoint) when regressing the effects
-of RIN score and processing batch by including them in the linear
-model used by removeBatchEffect. However, the result was similar if
-they were not protected since the variables of interest were
-partitioned across the processing batches (Supplementary
-Fig. \ref{fig:pca}C). All figures displaying expression data were
-generated using the batch-corrected data.
+We merged all mapped reads and called peaks using an inclusive method, identifying all regions of the genome with non-zero read counts in 90\% percent of libraries and an average read count of greater than 2 counts. This resulted in 138,181 peaks. We assigned each of these peaks to a genic location according to NCBI Refseq annotations for 5' UTRS, 3' UTRs, exons, introns, and regions 5kb downstream of annotated genes downloaded from the UCSC table browser \citep{kent_human_2002}. When a region mapped to multiple genes we used a hierarchical model, similar to the method used by Lin et al. \citep{lin_-depth_2012} to assign the peak to a gene annotations. Our method prioritizes annotations in the following order: 3' UTRs, 5kb downstream of genes, exons, 5'  UTRs, and introns. To further verify absence of PAS detected as a result of internal priming we removed PAS with 6A's or 70\% As in the 15 basepairs downstream of the site. We next utilized a gene level noise filter to account for non-uniform read coverage across the genome. We created a usage score for each PAS based on of the number of reads mapping to the PAS over the number of reads mapping to any PAS associated with the same gene. We filtered out peaks with a mean usage of less than 5\% in both the total and nuclear libraries. After this filter, we were left with 35,032 PAS in the total mRNA fraction and 39,164 PAS in the nuclear fraction. The merged set with PAS from both fractions used for PAS QC is available on GEO and has 41,810 PAS. We compared our set of PAS to the human PolyADB release 3.2 annotation \citep{wang_polya_db_2018}(Supplementary Figure  \ref{fig:compAnno}). We explored the relationship between number of PAS detected and gene expression using TPM estimates from YRI LCLs after removing very lowly expressed genes (less than 1 TPM) \citep{lappalainen_transcriptome_2013}. We calculated the 5' splice site strength using the MaxEntScore tool, for each of the introns in our annotation \citep{yeo_maximum_2004}. We binned the introns by decile according to the scores and evaluated the distribution of the introns containing PAS. We also used the scores for the introns containing PAS to investigate the relationship between PAS usage and 5' splice site strength.
 
-To confirm that the transcriptional response to MTB infection in our
-study was consistent with previous observations, we compared our MTB
-infected samples and their time-matched controls to the MTB infected
-samples and zero timepoint control from Tailleux et al., 2008
-\citep{Tailleux2008}. Despite differences in the technology used to
-assay gene expression (RNA-seq versus microarray) and the method used
-to isolate the macrophages (positive versus negative selection), we
-still observed a common transcriptional signature of infection using
-PCA (Supplementary Fig. \ref{fig:tailleux2008}).
+\subsection{PAS Signal site enrichment and locations}\label{PAS-Signal-site-enrichment-and-locations}
 
-For the standard analysis, we tested for differential expression using
-limma+voom \citep{Smyth2004, Smyth2005, Law2014} because it has been
-shown to perform well with sufficient sample size (n \textgreater{}= 3
-per condition) \citep{Rapaport2013, Soneson2013}. Based on the PCA
-results, we included RIN score and processing batch as covariates in
-the model. We corrected for multiple testing with the Benjamini \&
-Hochberg false discovery rate (FDR) \citep{Benjamini1995} and
-considered genes with q-value less than 5\% to be differentially
-expressed.
+We used the Homer findMotifsGenome.pl script  with the -size -300,100  option to identify binding motifs in the 50bp upstream of each PAS \citep{heinz_simple_2010}. As a background, we used genome shuffle to randomly chose the same number of 50bp regions. To explore the location of the signal site relative to the PAS (most 3' end of each identified peak), we determined the relative position of previously described potential signal sites to this position \citep{beaudoing_patterns_2000}. We then extended each PAS 100bp upstream and identified the starting position of each of the 12 PAS signal site variations identified by Beaudoing et al. without allowing for sequence mismatch  \citep{beaudoing_patterns_2000}. 
 
-Since we were interested in the shared and differential response to
-infection with the different bacteria, we performed a joint Bayesian
-analysis using the Cormotif algorithm \citep{Wei2015}. Cormotif shares
-information across experiments, in this case infections, to identify
-the main patterns of differential gene expression (which it refers to
-as \emph{correlation motifs}) and assigns each gene to one of these
-gene expression patterns. One caveat of the Cormotif algorithm is that
-is does not distinguish the direction of the effect across
-infections. In other words, a gene that is assigned to an expression
-pattern could be differentially expressed in different directions
-across the infections.  However, in this data set, this was rarely
-observed (Supplementary Table \ref{tab:ch02-s9}).
 
-In practice, we had to make several modifications when using Cormotif.
-First, since the method was developed for microarray data, we used the
-batch-corrected TMM-normalized log\textsubscript{2}-transformed CPM as
-input. Second, the method assumes independence between the
-experiments, and we only have one control per timepoint. However,
-since this dependence will cause genes to be more likely to be either
-uniformly differentially expressed across all the infections or
-uniformly unchanged, this caveat is conservative to our results of
-gene expression patterns that are specific to subgroups of the
-bacterial infections.  Third, the current version of the method
-(v1.14.0) does not return the cluster likelihoods, i.e.~the likelihood
-that a gene belongs to each of the gene expression patterns. To
-facilitate downstream analyses with these sets of genes, we modified
-the original code to additionally return this information. Lastly,
-Cormotif is non-deterministic. Thus to obtain consistent results, we
-ran each test 100 times and kept the result with the largest maximum
-likelihood estimate.
+\subsection{Differential Isoform analysis}\label{Differential-Isoform-analysis}
 
-We tested for enrichment of gene ontology (GO) biological processes
-among the genes in the gene expression patterns using topGO
-\citep{Alexa2006}. We tested for significance with the Fisher's Exact
-Test, used the weight01 algorithm from topGO to account for the
-correlation among GO categories due to its graph structure, and
-considered significant any category with p-value less than 0.01.
+We mapped 3' Seq reads to all PAS peaks with mean coverage of 5\% in the total or nuclear fraction libraries. This results in 41,813 annotated sites. We assigned reads to PAS using the featureCounts tool with the -O flag to assign reads to all overlapping features \citep{liao_featurecounts_2014}. We ran the leafcutter\_ds.R script on chromosomes 1-22 separately using the cellular fraction label as the sample group identifier \citep{li_annotation-free_2018}.  This analysis tests 9790 genes and resulted in 8227 genes with significant (FDR 10\%) isoform level differences between the total and nuclear cellular fraction. We called differentially used PAS as sites with a $\Delta$ polyadenylation site usage ($\Delta$ PAU) greater than 0.2 or less than -0.2. In our analysis a positive $\Delta$PAU corresponds to increase usage in the total cellular fraction while a negative $\Delta$ PAU corresponds to increased usage in the nuclear fraction. 
 
-\subsection{Analysis using previously identified response
-eQTLs}\label{analysis-using-previously-identified-response-eqtls}
+\subsection{apaQTL calling in both fractions}\label{apaQTL-calling-in-both-fractions}
 
-We downloaded the list of response eQTL genes from Supplementary Table
-3 from Barreiro et al. \citep{Barreiro2012}. Of the 198 response eQTL
-genes discovered in the dendritic cells in that study, 179 of the
-genes were also expressed in the macrophages from this study. In order
-to compare the differential expression results of the response eQTL
-genes to other genes, we used the log\textsubscript{2} fold changes in
-expression estimated by limma \citep{Ritchie2015}. First, we
-calculated the mean log\textsubscript{2} fold change at 18 hours
-post-infection for each gene across the eight bacteria. Second, we
-converted these mean estimates to their absolute values. Third, we
-subsampled 100 genes from each of the three categories (response eQTL,
-general eQTL, and non-eQTL genes) and calculated the mean of the
-absolute values. We performed this subsampling 1000 times
-(Fig. \ref{fig:response-eqtl}B). Fourth, we performed t-tests to
-compare the distribution of response eQTL genes to either that of the
-general eQTL genes or the non-eQTL genes.
+We used the leafcutter prepare\_phenotype\_table.py script with default settings to normalize the PAS usage ratios across individuals within each fraction. This method also outputs the top principal components (PCs) of the data to use as covariates. We plotted the proportion of variation explained by each PC in order to identify the number of PCs to include in the analysis (Figure 2.13). We included the top 4 PCs as well as the library preparation batch as the covariates. We plotted the proportion of variance explained by a number of cofactors in each of the top 10 PCs. (Supplementary Figure \ref{fig:PCA}) The top four PCs correlate most strongly with the cell count at collection (Supplementary Figure  \ref{fig:PCA}). We used the same genotypes from Li et al. 2016\citep{li_rna_2016}, available at http://eqtl.uchicago.edu/jointLCL/genotypesYRI.gen.txt.gz \citep{li_rna_2016}. We removed individual NA19092 due to lack of genotype information in this file, bringing our sample size to 51 individuals for this part of the analysis. Only SNPs with a MAF $>$ 5\% in our sample were included. We used FastQTL to map apaQTLs in cis (25kb on either side) with 1000 permutations to select the top SNP-PAS association \citep{ongen_fast_2016}. We called apaQTLs in each fraction as variants passing 10\% FDR (Benjamini-Hockberg) after permutations. In order to plot interpretable effect sizes for each association we computed nominal PAS:SNP associations for the pre-normalized PAS ratios.
+
+
+\subsection{Association of apaQTLs with chromatin states}\label{Association-of-apaQTLs-with-chromatin-state}
+
+We downloaded the GM12878 chromatin HMM annotations for Hg19 from the UCSC table browser \citep{kent_human_2002}. We overlapped the eQTLs identified and published in Li et al. 2016\citep{li_rna_2016} as well as the total and nuclear fraction apaQTLs with these categories. We calculated 95\% confidence intervals for each measurement by sampling the number of QTLs in the set with replacement 1000 times (Supplementary Figure  \ref{fig:chromHMM}). 
+
+
+\subsection{apaQTL overlap with eQTLs}\label{apaQTL-overlap-with-eQTLs}
+We obtained the set of explained and unexplained eQTLs from Li et al. 2016 \citep{li_rna_2016}. In order to test whether genes with an unexplained eQTL are more likely to be explained by variation in APA, we separated the permuted apaQTL association (top snp per PAS) into three categories: unexplained eGene, explained eGene, non eGenes. We tested for significant enrichment of apaQTLs in each category using one-sided Wilcoxon rank sum tests. In order to test if each explained and unexplained eQTLs described in Li et al. 2016\citep{li_rna_2016} overlaps with an apaQTL, we extracted the nominal associations for each eQTL gene-SNP pair from the apaQTL data in both fractions. In order to account for multiple PAS associations for each pair, we selected the most significant p-value and used a Bonferroni correction to account for the number of PAS tested in the gene. We consider an eQTL as explained by an apaQTL if the corrected p-value is less than 0.05 but report the values for a range of cutoffs in Supplementary Figure \ref{fig:popExp}.We performed colocalization with the R coloc package \citep{wallace_statistical_2012}. The Bayes Factor colocalization method reports Bayes Factors for 4 alternative hypotheses. PP0: No association with either trait, PP1: No association with trait 1, PP2: No association with trait 2, PP3: Association with trait 1 and trait 2, two independent SNPs, and PP4: Association with trait 1 and trait 2, one shared SNP. If causal SNPs for an apaQTL and an eQTL is the same SNP, then PP4 is expected to be large (greater than 0.5). We accounted for incomplete power using the method described in Ongen et al. (Supplementary file 1) \citep{ongen_estimating_2017}.
+
+
+\subsection{apaQTLs overlap with ribosome specific and protein specific QTLs}\label{apaQTLs-ribosome-specific-protein-specific-QTLs}
+The list of protein specific QTL genes can be found in the supplementary information from Battle et al. 2015\citep{battle_genomic_2015}. In order to show that genes with an eQTL and protein specific QTLs are likely to be associated with APA, we separated the permuted apaQTL association (top snp per PAS) into three categories: eGene, pGene, or neither pGene nor eGene. We performed the same analysis with rGenes, eGenes, and neither rGenes nor eGenes. We tested for significant enrichment with one sided Wilcoxon rank sum tests (Figure \ref{fig:expInd}A, Supplementary Figure \ref{fig:totpgene}). 
+
+
+\subsection{Identification of molecular QTL associations}\label{Identification-molecular-QTL-associations}
+We sought to test if SNPs identified as apaQTLs are significantly associated with other molecular phenotypes previously tested in the same panel of LCLs. We tested for associations between the genotypes used in this study and each gene for each phenotype with fastqtl using the top 5 PCs calculated in Li et al. 2016 as covariates \citep{li_rna_2016}. We used normalized RNA expression, RiboSeq values, and protein levels, published in Li et al. 2016 \citep{li_rna_2016}. 
+
+
+\subsection{PAS heritability estimates and apaQTL overlap with GWAS Catalog}\label{PAS-heritability-estimates-GWAS-Catalog}
+\subsection*{PAS heritability estimates and apaQTL overlap with GWAS Catalog}
+We downloaded GWAS summary statistics from both Astle et al. and Okada et al. \citep{astle_allelic_2016, okada_genetics_2014} We augmented our PAS sites by 500bp on either side and ran LD score regression using methods described in Bulik-Sullivan et al. \citep{bulik-sullivan_ld_2015} We downloaded the CRCh37hg19 GWAS catalog for UCSC table browser \citep{kent_human_2002}. We identified SNPs in LD with the nuclear apaQTLs using the LDproxy tool from LDlink with YRI as the population \citep{machiela_ldlink_2015}. We filtered all results to SNPs with an r2 greater than 0.9. We overlapped the full set with the GWAS catalog using pybedtools. 
+
+
 
 \subsection{Data and code
 availability}\label{ch02-data-and-code-availability}
 
-The data have been deposited in NCBI's Gene Expression Omnibus
-\citep{Edgar2002} and are accessible through GEO Series accession
-number GSE67427
-(\url{http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE67427}).
-Supplementary Table \ref{tab:ch02-s1}, which contains the gene
-expression data, and Supplementary Table \ref{tab:ch02-s2}, which
-contains the differential expression results from limma, are available
-from our lab website: \url{http://giladlab.uchicago.edu}. The code is
-available at \url{https://bitbucket.org/jdblischak/tb}.
+Fastq files and PAS annotations are available at GEO under accession GSE138197 \url{https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE138197}. All reproducible scripts and software versions can be found at \url{https://brimittleman.github.io/apaQTL/} A versioned release of the github is available through Zenodo with doi:10.5281/zenodo.3905372 \url{https://zenodo.org/record/3905372#.XvKD4S2ZMXp}
 
 \section{Acknowledgments}\label{ch02-acknowledgments}
 
-We thank Matthew Stephens and Bryce van de Geijn for advice on the
-statistical analyses, and all members of the Gilad lab for helpful
-discussions. This work was supported by grant AI087658 to YG and
-LT. JDB was partially supported by National Institutes of Health Grant
-T32 GM007197.
+We thank N. Gonzalez, J.P. Staley, M.C. Ward for comments on the manuscript. \textbf{Funding}: This work was supported by the US National Institutes of Health (R01GM130738 to  Y.I.L). B.E.M. supported by T32 GM09197 to the University of Chicago and F31HL149259 to B.E.M. from National Heart, Lung, And Blood Institute of the National Institutes of Health. SP was in part supported by the National Center for Advancing Translational Sciences of the NIH (K12 HL119995). This work was completed in part with resources provided by the University of Chicago Research Computing Center.
 
 \section{Author Contributions}\label{ch02-author-contributions}
 
-YG, LT, and LBB conceived of the study and designed the
-experiments. LT performed the infection experiments. JDB extracted the
-RNA and analyzed the data. AM prepared the sequencing libraries. LBB
-and YG supervised the project. JDB and YG wrote the paper with input
-from all authors.
+ Y.I.L. conceived of the project. B.E.M, S.W. and S.P. performed the experiments. B.E.M analyzed the data with help from Y.I.L, S.P., T.Z., Z.M. and M.K. B.E.M. drafted the manuscript with input from Y.G., Y.I.L, and S.P. S.P., Y.G. and Y.I.L. supervised this project. 
 
+\clearpage
 \section{Supplementary Information}\label{ch02-supplementary-information}
 
 \subsection{Supplementary Figures}\label{ch02-supplementary-figures}
@@ -982,316 +215,347 @@ from all authors.
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=5in]{img/ch02/fig-S01-study-design.png}
-\caption[Study design.]{\textbf{Study design.} We infected
-  monocyte-derived macrophages isolated from six healthy donors with
-  the bacteria described in Table \ref{tab:bacteria}. We isolated RNA
-  for sequencing at 4, 18, and 48 hours post-infection.}
-\label{fig:ch02-study-design}
+\includegraphics[width=5in]{img/ch02/Fig1_figuresupplement1.pdf}
+\caption[Relationship between Number of PAS and gene expression]{\textbf{Relationship between Number of PAS and gene expression} Relationship between number of PAS identified in our study and gene expression levels (TPM) as measured from GEUVADIS YRI LCLs \citep{lappalainen_transcriptome_2013}. Genes with mean TPM $<$ 1 across individuals were considered not expressed and thus were removed for this analysis.}
+\label{fig:ch02-pas-exp}
 \end{figure}
+\clearpage
 
 \begin{figure}[!htb]
-\centering \includegraphics[width=5in]{img/ch02/fig-S02-pca.pdf}
-\caption[Principal components analysis (PCA) of uncorrected and
-  batch-corrected expression values.]{\textbf{Principal components
-    analysis (PCA) of uncorrected and batch-corrected expression
-    values.} (A) PCA of the TMM-normalized
-  log\textsubscript{2}-transformed counts per million (CPM). Infected
-  and control samples are not well separated.  PC2 separates the
-  samples by timepoint. (B) PCA of the TMM-normalized
-  log\textsubscript{2}-transformed CPM after removing the effects of
-  RIN score and processing batch. PC1 separates the samples by
-  timepoint. PC2 separates the infected and control samples. (C) PCA
-  of the TMM-normalized log\textsubscript{2}-transformed CPM after
-  removing the effects of RIN score and processing batch without
-  protecting the variables of interest (individual, bacteria,
-  timepoint).}
-\label{fig:pca}
+\centering \includegraphics[width=5in]{img/ch02/Fig1_figuresupplement2.pdf}
+\caption[Distribution of signal sites upstream of PAS. Supplement to Figure 2.1D]{\textbf{Distribution of signal sites upstream of PAS. Supplement to Figure 2.1D} {\bf (A)} Stacked density plot showing the signal site distribution for PAS in 3' UTR. Other signal sites are AAAAAA, AAAAAG, AATACA, AATAGA, AATATA, ACTAAA, AGTAAA, CATAAA, GATAAA, TATAAA. {\bf (B)} Stacked density plot showing the signal site distribution for PAS in introns. Other signal sites are AAAAAA, AAAAAG, AATACA, AATAGA, AATATA, ACTAAA, AGTAAA, CATAAA, GATAAA, TATAAA.}
+\label{fig:SS}
 \end{figure}
+\clearpage
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=5in]{img/ch02/fig-S03-joint-all-k14.pdf}
-\caption[Joint Bayesian analysis with 14 expression
-  patterns.]{\textbf{Joint Bayesian analysis with 14 expression
-    patterns.} (A) Cormotif \citep{Wei2015} estimates the number of
-  expression patterns (i.e.~motifs, using their terminology) to use by
-  calculating the Bayesian information criterion (BIC) and the Akaike
-  information criterion (AIC). These criteria penalize models for
-  additional parameters to avoid overfitting. The model with the
-  lowest BIC/AIC is considered the best fit, which in this context is
-  the model with 14 expression patterns. (B) Joint analysis with
-  Cormotif. The shading of each box represents the posterior
-  probability that a gene assigned to the expression pattern (row) is
-  differentially expressed in response to infection with a particular
-  bacteria (column), with black representing a high posterior
-  probability and white a low posterior probability.}
-\label{fig:joint-all-k14}
+\includegraphics[width=5in]{img/ch02/Fig1_figuresupplement3.pdf}
+\caption[Proportion of PAS in 3' UTRs and introns as predicted from total 3' Seq. Additional figures corresponding to Figure 2.1E.]{\textbf{Proportion of PAS in 3' UTRs and introns as predicted from total 3' Seq. Additional figures corresponding to Figure 2.1E.} Number of PAS identified with usage larger than the usage cutoff (x axis) in the total mRNA fraction (purple). Proportion of PAS in introns when PAS are filtered by total usage (green). Proportion of PAS in 3' UTRs when PAS are filtered by total usage (orange).}
+\label{fig:totaUsage}
 \end{figure}
-
-% Continues caption on next page. Requires package ccaption.
-\begin{figure}[!htb]
-  \contcaption{(continued) The expression patterns have the following
-    interpretations: ``non-DE'' - Genes that do not respond to
-    infection; ``Yers-Salm-4h'' - Genes that respond 4 hours
-    post-infection with \emph{Y. pseudotuberculosis} or
-    \emph{S. typhimurium}; ``Yers-Salm-18h'' - Genes that respond 18
-    hours post-infection with \emph{Y. pseudotuberculosis} or
-    \emph{S. typhimurium}; ``4h'' - Genes that respond to 4 hours
-    post-infection with any bacteria; ``non-MTB'' - Genes that respond
-    at 4, 18, and 48 hours post-infection to bacteria that are not MTB
-    or BCG (attenuated \emph{M. bovis}); ``Virulent-18h'' - Genes that
-    respond 18 hours post-infection with virulent bacteria;
-    ``Virulent-18h+Yers-Salm-4h'' - Genes that respond 18 hours
-    post-infection with virulent bacteria and 4 hours post-infection
-    with \emph{Y. pseudotuberculosis} or \emph{S. typhimurium};
-    ``18h+Yers-Salm-48h'' - Genes that respond 18 hours post-infection
-    with any bacteria and 48 hours post-infection with \emph{Y.
-      pseudotuberculosis} or \emph{S. typhimurium}; ``48h'' - Genes
-    that respond 48 hours post-infection with any bacteria;
-    ``48h+Yers-Salm-4h'' - Genes that respond 48 hours post-infection
-    with any bacteria and 4 hours post-infection with \emph{Y.
-      pseudotuberculosis} or \emph{S. typhimurium}; ``4\&18h'' - Genes
-    that respond 4 and 18 hours post-infection with any bacteria;
-    ``18\&48h'' - Genes that respond 18 and 48 hours post-infection
-    with any bacteria; ``18\&48h+Yers-Salm-4h'' - Genes that respond
-    18 and 48 hours post-infection with any bacteria and 4 hours
-    post-infection with \emph{Y. pseudotuberculosis} or
-    \emph{S. typhimurium}; ``All'' - Genes that respond at 4, 18, and
-    48 hours post-infection with any bacteria.}
-\end{figure}
+\clearpage
 
 \begin{figure}[!htb]
-\centering \includegraphics[width=5in]{img/ch02/fig-S04-phago.pdf}
-\caption[Expression of genes involved in phagosome
-  maturation.]{\textbf{Expression of genes involved in phagosome
-    maturation.} \emph{RAB22A}, \emph{RAP2A}, and \emph{ATP6V1D} are
-  upregulated in response to infection with mycobacteria at 18 hours;
-  whereas, \emph{RAB3A} and \emph{RAB33A} are downregulated (pattern
-  ``MTB'' in Fig. \ref{fig:joint-18h}).}
-\label{fig:phago}
+\centering \includegraphics[width=5in]{img/ch02/Fig1_figuresupplement4.pdf}
+\caption[Intronic PAS 5' Splice site strength]{\textbf{Intronic PAS 5' Splice site strength} Intronic PAS are enriched in introns with the weakest 5' splice sites. Splice site strengths for all introns were calculated using MaxEntScore \citep{yeo_maximum_2004}}.
+\label{fig:splicesite}
 \end{figure}
+\clearpage
 
 \begin{figure}[!htb]
-\centering \includegraphics[width=5in]{img/ch02/fig-S05-vitD.pdf}
-\caption[Expression of genes involved in vitamin D
-  signaling.]{\textbf{Expression of genes involved in vitamin D
-    signaling.}  \emph{VDR} and \emph{CYP27B1} are upregulated at 48
-  hours post-infection with all bacteria (pattern ``All'' in Fig.
-  \ref{fig:joint-48h}). \emph{PIM1} and \emph{CXCL10} are upregulated
-  at 48 hours post-infection with the mycobacteria (pattern ``MTB'' in
-  Fig. \ref{fig:joint-48h}).}
-\label{fig:vitD}
+\centering \includegraphics[width=5in]{img/ch02/Fig1_figuresupplement5.pdf}
+\caption[Location of PAS differentially used]{\textbf{Location of PAS differentially used} We adapted LeafCutter to identify genes with significant differential usage of PAS between the total and nuclear fraction. The majority of PAS preferentially used in the nuclear fraction are intronic, whereas the majority of PAS preferentially used in the total fraction lie in the 3' UTR. }
+\label{fig:locdPAS}
 \end{figure}
+\clearpage
+
 
 \begin{figure}[!htb]
-\centering \includegraphics[width=5in]{img/ch02/fig-S06-dusp14.pdf}
-\caption[Expression of \emph{DUSP14} at 18 hours
-  post-infection.]{\textbf{Expression of \emph{DUSP14} at 18 hours
-    post-infection.} \emph{DUSP14} is an example of an interesting
-  gene not identified with our approach. At 18 hours, it is
-  upregulated after infection with MTB H37Rv (q-value: 16\%), MTB
-  GC1237 (q-value: 3\%), and BCG (q-value: 9\%) (the change in
-  heat-inactivated MTB H37Rv had a q-value of 26\%); and downregulated
-  post-infection with \emph{S. typhimurium} (q-value: 9\%).  Because
-  it did not fit well into one of the main patterns of gene expression
-  identified at 18 hours post-infection, it was classified as the
-  ``non-DE'' pattern.}
-\label{fig:dusp14}
+\centering \includegraphics[width=5in]{img/ch02/Fig1_figuresupplement6.pdf}
+\caption[Comparison of our 3'-Seq PAS to previous PAS annotations]{\textbf{Comparison of our 3' Seq PAS to previous PAS annotations} {\bf (A)} Distribution of distance between PAS and closest annotated site in the annotation database (PolyA\_DB release 3.2) \citep{wang_polya_db_2018}. {\bf (B)} Scatter plot showing the number of PAS we identified in our study (X axis) versus the number of PAS in the PolyA database (Y axis) separated by genomic location (colors). {\bf (C)} Scatter plot showing the number of nuclear-specific PAS we identified in our study versus the number of PAS in the PolyA database separated by genomic location (colors). The vast majority of nuclear-specific PAS are intronic. {\bf (D)} Proportion of PAS present in the PolyA database by usage in nuclear (green) or total (orange) mRNA fraction.}
+\label{fig:compAnno}
 \end{figure}
+\clearpage
+
 
 \begin{figure}[!htb]
-\centering \includegraphics[width=5in]{img/ch02/fig-S07-Rv-v-GC.pdf}
-\caption[Little difference in transcriptional response to infections
-  with different MTB strains.]{\textbf{Little difference in
-    transcriptional response to infections with different MTB
-    strains.} Few statistically significant differences were
-  identified when explicitly testing gene expression levels
-  post-infection with MTB H37Rv and MTB GC1237 at 4, 18, or 48 hours
-  post-infection (top, middle, and bottom panels, respectively). The
-  volcano plots (left) display the -log\textsubscript{10} transformed
-  p-value versus the log\textsubscript{2} fold change in expression
-  level. The MA plots (right) display the log\textsubscript{2} fold
-  change in expression level versus the average expression level. Most
-  of the genes are labeled black indicating that their FDR value is
-  greater than 5\%. Two genes (labeled green) at 4 hours
-  post-infection had a q-value \textless{} 0.05 and
-  log\textsubscript{2} fold change greater than 0.5 (see Supplementary
-  Table \ref{tab:ch02-s8}).}
-\label{fig:Rv-v-GC}
+\centering \includegraphics[width=5in]{img/ch02/Fig2_figuresupplement1.pdf}
+\caption[Q-Q plots for apaQTLs]{\textbf{Q-Q plots for apaQTLs} {\bf (A)} Q-Q plot for nuclear apaQTLs, plotting adjusted p-values of the top SNP PAS associations. {\bf (B)} Q-Q plot for total apaQTLs, plotting adjusted p-values of the top SNP PAS associations.}
+\label{fig:QQplots}
 \end{figure}
+\clearpage
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=5in]{img/ch02/fig-S08-ex-cytokines.pdf}
-\caption[Response of example cytokines to infection with different MTB
-  strains.]{\textbf{Response of example cytokines to infection with
-    different MTB strains.} The log\textsubscript{2} fold change in
-  expression of the pro-inflammatory cytokines \emph{TNF} and
-  \emph{IL6} and the anti-inflammatory cytokine \emph{IL10} is similar
-  post-infection with MTB H37Rv or MTB GC1237. \emph{TNF} and
-  \emph{IL6} are upregulated at all three timepoints; whereas,
-  \emph{IL10} is upregulated only at 4 hours post-infection.}
-\label{fig:ex-cytokines}
+\includegraphics[width=5in]{img/ch02/Fig2_figuresuplement2.pdf}
+\caption[Proportion of PAS tested with an apaQTL]{\textbf{Proportion of PAS tested with an apaQTL} Proportion of PAS in different genomic locations with a significant apaQTL. The numbers above each bar represent the number of identified apaQTL for each location. }
+\label{fig:propPASdAPA}
 \end{figure}
+\clearpage
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=5in]{img/ch02/fig-S09-rin-and-reads.pdf}
-\caption[Distribution of the number of exonic reads and RNA quality
-  scores (RIN) across variables of interest.]{\textbf{Distribution of
-    the number of exonic reads and RNA quality scores (RIN) across
-    variables of interest.} (A) The number of exonic reads is evenly
-  distributed across the bacterial infections, timepoints, and
-  individuals. (B) The RIN scores are evenly distributed across the
-  bacterial infections and timepoints; however, the RIN does vary
-  between the individuals.  The p-values are from an F-test.}
-\label{fig:rin-and-reads}
+\includegraphics[width=5in]{img/ch02/Fig2_figuresupplement3.pdf}
+\caption[Analysis of the PCs of APA usage]{\textbf{Analysis of the PCs of APA usage} {\bf (A)} Proportion of variance explained in the 10 first PCs by experimental variables in nuclear APA usage. We used a linear model to look at correlation between PC and each covariate. {\bf (B)} Proportion of variance explained in the 10 first PCs by experimental variables in total APA usage. We used a linear model to look at correlation between PC and each covariate. {\bf (C)} Proportion of variance explained by each PC in APA usage. Vertical line represents the number of PCs used as covariates in our apaQTL analysis.}
+\label{fig:PCA}
 \end{figure}
+\clearpage
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=5in]{img/ch02/fig-S10-tailleux2008.pdf}
-\caption[Comparison to Tailleux et al., 2008.]{\textbf{Comparison to
-    Tailleux et al., 2008.} We compared our RNA-seq data to the
-  microarray data of Tailleux et al., 2008 \citep{Tailleux2008} to
-  confirm a consistent signature of infection.  From our experiment,
-  we used the batch-corrected TMM-normalized
-  log\textsubscript{2}-transformed counts per million (CPM) from the
-  MTB H37Rv infected macrophages at 4, 18, and 48 hours post-infection
-  and their time-matched controls. From their experiment, we used the
-  log\textsubscript{2}-transformed quantile-normalized data from the
-  MTB H37Rv infected macrophages at 4, 18, and 48 hours post-infection
-  as well as the zero timepoint non-infection control. In addition to
-  the difference in technology, the macrophages were isolated via
-  positive selection in our study and negative selection in
-  theirs. Despite these differences, we still observe a common
-  transcriptional signature of infection when performing principal
-  components analysis (PCA). (A) PC1 is the expected batch effect
-  between the two experiments. (B) Plotting PC2 versus PC3, the
-  infected samples at 18 and 48 hours (when there is a strong
-  transcriptional response; see
-  Fig. \ref{fig:differential-expression}A) from the two different
-  studies cluster together. The quantile-normalized data from Tailleux
-  et al., 2008 \citep{Tailleux2008} is available at
-  \url{https://bitbucket.org/jdblischak/tb-data}.}
-\label{fig:tailleux2008}
+\includegraphics[width=5in]{img/ch02/Fig2_figuresupplement4.pdf}
+\caption[apaQTLs in both fractions are associated with PAS near SNP and at the transcription end site.  Supplement to Figure 2.2B and 2.2C.]{\textbf{apaQTLs in both fractions are associated with PAS near SNP and at the transcription end site.  Supplement to Figure 2.2B and 2.2C.} {\bf (A)} Histogram showing the distribution of the distance between lead apaQTL SNP and the PAS, separated by mRNA fraction. {\bf (B)} Histogram showing the distribution of the distance between lead apaQTL SNP and gene features, where 0 represents annotated TSS and 1 represents annotated TES, separated by mRNA fraction.}
+\label{fig:totQTLloc}
 \end{figure}
+\clearpage
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=5in]{img/ch02/Fig2_figuresupplement5.pdf}
+\caption[Signal site disruption]{\textbf{Signal site disruption} {\bf (A)} Q-Q plot showing the nuclear apaQTL p-values for SNP in signal sites upstream of 3' UTR PAS compared to matched SNPs (equal distance) upstream of a set of 3' UTR PAS without identified signal sites. {\bf (B)} Similar to panel A, but for total apaQTLs.}
+\label{fig:ssDisrupt}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=5in]{img/ch02/Fig2_figuresupplement6.pdf}
+\caption[Total mRNA specific apaQTLs show weaker association than do shared apaQTLs]{\textbf{Total mRNA specific apaQTLs show weaker association than do shared apaQTLs} {\bf (A)} Boxplot showing the -log10(p-value) of the nominal total apaQTL associations separated by whether the association is also identified in the nuclear mRNA fraction. ApaQTLs that are total-specific have significantly weaker associations. {\bf (B)} Scatter plot showing the relationship between the -log10(p-valued) of the apaQTL associations in both mRNA fractions for total mRNA apaQTLs. Dots and densities are colored by whether the apaQTL is total-specific or shared. Total-specific apaQTLs are likely not detected in the nuclear fraction due to a lack of power.}
+\label{fig:totSpeWeak}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=5in]{img/ch02/Fig2_figuresupplement7.pdf}
+\caption[apaQTL sharing between fractions]{\textbf{apaQTL sharing between fractions} {\bf (A)}	 Histogram showing the P-value distribution of the apaQTL associations between the lead total apaQTL SNP and the corresponding PAS ascertained using our 3'-Seq data from the nuclear mRNA fraction. Values were calculated based on PAS tested in both fractions (403 of 443). Results are robust to using all PAS $(pi_1=0.842)$ {\bf (B)} Histogram showing the P-value distribution of the apaQTL associations between the lead nuclear apaQTL SNP and the corresponding PAS ascertained using our 3'-Seq data from the total mRNA fraction. Values calculated based on PAS tested in both fractions. (483 of 602) Results are robust to using all PAS $(pi_1=0.825)$}
+\label{fig:QTLshare}
+\end{figure}
+\clearpage
+
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=5in]{img/ch02/Fig2_figuresupplement8.pdf}
+\caption[Correlation of effect sizes for apaQTLs discovered in total and nuclear mRNA fractions]{\textbf{Correlation of effect sizes for apaQTLs discovered in total and nuclear mRNA fractions} {\bf (A)} Normalized effect sizes ascertained in total mRNA and nuclear fraction of total apaQTLs tested in both fractions. {\bf (B)} Normalized effect sizes ascertained in total mRNA and nuclear fraction for nuclear apaQTLs tested in both fractions.}
+\label{fig:apaQTLcorr}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=5in]{img/ch02/Fig3_figuresupplement1.pdf}
+\caption[Figure 2.3A without outlier SNP]{\textbf{Figure 2.3A without outlier SNP} Scatter plot showing the relationship between intronic nuclear apaQTL effect size and eQTL effect size after removing outlier SNPs (Filtered for SNPs with eQTL effect size $<$ -2.0).}
+\label{fig:3anooutlier}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=5in]{img/ch02/Fig3_figuresupplement2.pdf}
+\caption[Overlap between apaQTLs in total fraction and eQTLs, supplement to Figure 2.3B]{\textbf{Overlap between apaQTLs in total fraction and eQTLs, supplement to Figure 2.3B} QQ-plot showing the total apaQTL (adjusted) p-values separated by whether the gene harbors an explained (red) or unexplained (blue) eQTLs. We observe an enrichment for low apaQTL association p-values in genes with eQTLs compared to all tested genes (black). }
+\label{fig:totunexp}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=5in]{img/ch02/Fig3_figuresupplement3.pdf}
+\caption[Proportion of apaQTLs and eQTLs by Chromatin state]{\textbf{Proportion of apaQTLs and eQTLs by Chromatin state} Bar plot showing the proportion of apaQTLs located in each of the 12 chromatin states from chromHMM. We find that the location profile of apaQTLs is more similar to that of unexplained eQTLs than that of explained eQTLs. Error bars represent the 95\% confidence interval for each point estimate from bootstrapping 1,000 times.}
+\label{fig:chromHMM}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=5in]{img/ch02/Fig4_figuresupplement1.pdf}
+\caption[Overlap between apaQTLs in total fraction and eQTLs, rQTLs and pQTLs supplement to Figure 2.4A]{\textbf{Overlap between apaQTLs in total fraction and eQTLs, rQTLs and pQTLs supplement to Figure 2.4A} {\bf (A)} QQ-plot showing the total apaQTL (adjusted) p-values separated by whether the corresponding gene has a ribosome occupancy QTL (red) or an eQTL (red). We see an enrichment for low apaQTL p-values in genes with either association. {\bf (B)} QQ-plot showing the total apaQTL (adjusted) p-values separated by whether the corresponding gene has a protein expression QTL (red) or an eQTL (red). We see an enrichment for low apaQTL p-values in genes with either association.}
+\label{fig:totpgene}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=5in]{img/ch02/Fig4_figuresupplement2.pdf}
+\caption[LocusZoom plots for EIF2A molecular associations, Supplement to Figure 2.4B]{\textbf{LocusZoom plots for EIF2A molecular associations, Supplement to Figure 2.4B} LocusZoom plots for EIF2A apaQTL in Figure 4b along with associations with RNA expression, ribosome occupancy (ribo-seq), and protein expression as determined using normalized data from Li et al. 2016 \citep{li_rna_2016}. LD patterns were colored according to the HapMap YRI lines.}
+\label{fig:locuszoom}
+\end{figure}
+\clearpage
+
+
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=5in]{img/ch02/Fig4_figuresupplement3.pdf}
+\caption[LD Score regression enrichment estimates suggest that APA regulation is likely relevant for complex human phenotypes]{\textbf{LD Score regression enrichment estimates suggest that APA regulation is likely relevant for complex human phenotypes} {\bf (A)} Percent of heritability explained by SNPs within 1kbp around each PAS.}
+\end{figure}
+
+
+\begin{figure}[!htb]
+ \contcaption{(continued) Error bars represent +/- 1 standard deviation.Blood phenotype statistics published in Astle et el \citep{astle_allelic_2016}. Rheumatoid arthritis statistics were obtained from Okada et al \citep{okada_genetics_2014}. {\bf (B)} Enrichment of heritability explained by SNPs within 1kbp around PAS for the phenotypes analyzed.}
+\label{fig:ldregress}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=5in]{img/ch02/Fig1_figuresupplement7.pdf}
+\caption[Western Blots to demonstrate cell fractionation]{\textbf{Western Blots to demonstrate cell fractionation} {\bf (A)} Western blot against Carboxyl terminal domain of RNA Polymerase II, photo captured at 10 second exposure. Blot is not used for quantification, but to validate cell fractionation. {\bf (B)} Western blot against GAPDH to mark glycolysis in cytoplasm, photo captured at 25 second exposure time. Blot is not used for quantification, but to validate cell fractionation. Figure panels are modeled off Mayer and Churchman 2016, Figure 2 \citep{mayer_genome-wide_2016}}
+\label{fig:western}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=5in]{img/ch02/Fig1_figuresupplement8.pdf}
+\caption[3'-Seq read mapping proportions for the nuclear mRNA fraction]{\textbf{3'-Seq read mapping proportions for the nuclear mRNA fraction} Proportion of reads that map to the genome (mapped) and the proportion of final reads used for analysis are cleanly mapped (Clean Mapped) by nuclear mRNA library. Cleanly mapped reads are reads that mapped successfully and passed the filtering for mispriming (MP) as described in the Methods.}
+\label{fig:nucMap}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=5in]{img/ch02/Fig1_figuresupplement9.pdf}
+\caption[3'-Seq read mapping proportions for the total mRNA fraction]{\textbf{3'-Seq read mapping proportions for the total mRNA fraction} Proportion of reads that map to the genome (mapped) and the proportion of final reads used for analysis that are cleanly mapped (Clean Mapped) by total mRNA library. Cleanly mapped reads are reads that mapped successfully and passed the filtering for mispriming (MP) as described in the Methods.}
+\label{fig:TotalMap}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=5in]{img/ch02/Fig1_figuresupplement10.pdf}
+\caption[3'-Seq reads mapping counts for the nuclear mRNA fraction ]{\textbf{3'-Seq reads mapping counts for the nuclear mRNA fraction } Total number of reads that map to the genome (mapped) and the number of final reads used for analysis that are cleanly mapped (Clean Mapped) by nuclear mRNA library. Cleanly mapped reads are reads that mapped successfully and passed the filtering for mispriming (MP) as described in the Methods.}
+\label{fig:NucMapCount}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=5in]{img/ch02/Fig1_figuresupplement11.pdf}
+\caption[3'-Seq reads mapping counts for the total mRNA fraction]{\textbf{3'-Seq reads mapping counts for the total mRNA fraction} Total number of reads that map to the genome (mapped) and the number of final reads used for analysis that are cleanly mapped (Clean Mapped) by total mRNA library. Cleanly mapped reads are reads that mapped successfully and passed the filtering for mispriming (MP) as described in the Methods.}
+\label{fig:TotMapCount}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=5in]{img/ch02/Fig3_figuresupplement4.pdf}
+\caption[Proportion of eQTLs explained by apaQTLs]{\textbf{Proportion of eQTLs explained by apaQTLs} Proportion of eQTLs putatively explained by apaQTLs separated by fraction. Expression QTLs could be explained by apaQTLs identified from both fractions. This observation is robust to apaQTL association p-value cutoffs. We observed that apaQTLs explain a slightly higher proportion of previously unexplained eQTLs. Explained/Unexplained status of each eQTL was determined previously in Li et al. 2016 \citep{li_rna_2016}}
+\label{fig:popExp}
+\end{figure}
+\clearpage
+
+\section{Supplementary file 1}\label{ch02-Supplementary file 1} 
+
+\subsection{3' Sequencing of nuclear mRNA captures mRNA species independent of mRNA decay}\label{ch02-decay}
+
+To ensure that applying 3' Seq on the nuclear mRNA fraction would reflect polyadenylation usage of transcripts that have yet to be subject to decay, we verified that the nuclear mRNA 3' Seq captures features of nascent mRNA species prior to and independent from mRNA decay. To this end, we tested whether the ratio of nuclear to total mRNA 3' Seq reads correlates with measures of RNA decay. We reasoned that if nuclear mRNA captures mRNA species before they are subject to decay, then genes with more nuclear reads relative to total reads should have higher rates of mRNA decay. We used 4sU-seq (30m) data and RNA decay measurements collected in the same panel of lymphoblastoid cell lines (LCLs) as was used in this study as a proxy for mRNA rates of decay. The RNA decay and 4sU data were originally collected and processed in Pai et al. 2012 \citep{pai_contribution_2012} and Li et al. 2016 \citep{li_rna_2016}, respectively. We further used RNA sequencing data collected in the same LCLs as used in this study and details regarding data processing can be found in Li et al. 2016 \citep{li_rna_2016}. 
+
+We computed a score reflecting the nascent transcription rate for each gene as the normalized 4sU count over the sum of the RNA-seq and 4sU counts. This is because 4sU captures nascent mRNA that were metabolically labelled with a modified uridine. After a fixed amount of time (30min in this case), the modified transcripts are sequenced. A positive correlation between 4sU/RNA and nuclear/total 3' Seq across genes suggests that the nuclear 3' Seq captures polyadenylation usage at an earlier stage of the mRNA lifecycle. 
+
+In Li et al 2016, the authors presented a relationship between the same nascent transcription rate and a measure relative mRNA decay rate. They reported a negative correlation between nascent transcription and relative decay, whereby genes with faster nascent transcription also show faster rates of decay. We show a similar relationship between decay rate and our ratio of nuclear 3' Seq to nuclear and total mRNA 3' Seq, suggesting that we are capturing mRNA transcripts prior to mRNA decay in the nuclear fraction. To compute the correlations, we used the summary of the lm function in R. 
+
+Together, these correlations show that nuclear fraction 3' Seq captures information that is not captured in 3' Seq from the total mRNA fraction, and importantly, that the difference is biologically rather than technically driven. Thus, we were able to use 3' Seq data from both nuclear and total mRNA fraction to study how genetic effects regulate APA at multiple stages of the mRNA lifecycle.  In particular, the observed difference between APA in nuclear versus total mRNA fraction supports the notion that if genetic effects were detectable only in the total mRNA fraction, we should suspect that the genetic effect drives variation in post-transcriptional regulation such as decay or export. This assumption is based on the premise that mRNA from the total fraction better reflect mRNA diversity subsequent to decay and export. Because we do not see many examples of genetic effects only identified in the total mRNA fraction, we propose that nearly all genetic effect drive variation in APA co-transcriptionally. 
+
+\begin{figure}
+\centering \includegraphics[width=5in]{img/ch02/figureAppendix1.pdf}
+\caption[Relationship between 3' Seq and nascent transcription]{ \textbf{Relationship between 3' Seq and nascent transcription}  {\bf (A)}Nuclear 3' Seq captures polyadenylation of nascent transcripts. The ratio of new mRNA to steady-state mRNA (x axis) are plotted against the ratio of 3' Seq reads from the nuclear fraction to 3' Seq reads from the total mRNA fraction (y axis). Slope, R2, pvalue from a linear regression.  {\bf (B)} Nuclear 3' Seq captures polyadenylation of mRNA independent of mRNA decay. The relative decay rate of each gene (x axis) are plotted against the ratio of 3' Seq reads from the nuclear fraction to 3' Seq reads from the total mRNA fraction (y axis). Slope, R2, pvalue from a linear regression.}
+\label{fig:Supplementaryfile1-Fig1}
+\end{figure}
+
+
+\subsection{Intronic polyadenylation in other human tissues}\label{ch02-intronic-other-tissues}
+
+In this study we used LCLs because of the rich molecular phenotyping that has been performed on the same cell lines. By collecting 3' Seq from cell nuclei we uncovered many more intronic PAS than expect. However, we are currently unable to validate whether these PAS are used in other human tissues because we are the first, to the best of our knowledge, to perform 3' Seq on mRNA from isolated nuclei in human cells.
+
+That said, in order to estimate the extent to which intronic PAS we identified in the nuclear fraction are used in other human cell types, we turned to other APA studies that used a similar method to identify whole cell PAS. We reasoned that because total mRNA captures a small fraction of nuclear mRNA, it may be possible to use total mRNA to quantify the extent of intronic alternative polyadenylation in nuclei. For example, we found that 387 intronic PAS that were highly used in LCL nuclear mRNA were also detectable in LCL total mRNA. We can thus ask what fraction of these 387 intronic PAS also show evidence of usage in other cell-types from data collected by other studies on PAS. As baseline, we used 3' Seq usage data collected by Lianoglou et al., which include LCLs and four other cell-types (Breast, Ovary, Testes, Stem Cells). We found that about 10\% of the 387 intronic PAS showed detectable usage in total 3' seq from LCLs collected by the Lianoglou study \citep{lianoglou_ubiquitously_2013}. By contrast, around 5\% of the intronic PAS showed usage in Breast, and Testes. Usage of 3' Seq data from another study performed by Derti and colleagues suggest that nearly 10\% of the 387 PAS showed detectable usage \citep{derti_quantitative_2012}. Thus, these results suggest that there is at most a 2-fold difference in alternative polyadenylation in nuclei in other cell-types. While a 2-fold difference may appear large, we expect different cell-types to use different PAS depending on the specific genes that are expressed. 
+
+\begin{figure}
+\centering \includegraphics[width=5in]{img/ch02/figureAppendix2.png}
+\caption[Intronic PAS Discovered in other tissues]{\textbf{Intronic PAS Discovered in other tissues} Intronic PAS enriched in the nuclear mRNA fraction of LCLs as detected in the total mRNA fraction of other human tissues. Barplot showing the percent of nuclear intronic PAS (of 387) discovered in whole cell 3' Seq from Derti et al. \citep{derti_quantitative_2012}, or Lianoglou et al. \citep{lianoglou_ubiquitously_2013}  Bar for each tissue is colored by study in which the data was collected.}
+\label{fig:Supplementaryfile1-Fig2}
+\end{figure}
+
+
+
+\subsection{RNA binding motifs}\label{ch02-RBPs}
+
+3' UTRs are hotspots for RNA binding protein (RBP) motifs. When bound, RBPs can affect post transcriptional gene regulatory processes such as translation efficiency and nuclear export. We wanted to investigate whether genetic variants can impact APA by affecting binding of RBPs. To do this, we asked whether 3' UTRs with an apaQTL were more likely to be bound by an RBP than expected by chance. We downloaded eCLIP data for 25 RBPs collected by the ENCODE project in human K562 cells. We identified several RBPs enriched for genes with apaQTLs associated with 3' UTR PAS, but the overall enrichments were weak and are unlikely to explain the mechanism that underlie most apaQTLs. We did not see a similar enrichment for genes with intronic PAS apaQTLs. Interestingly, we found that the RNA binding proteins with the strongest enrichments are FUS and SAFB. These are intriguing result given the known function of FUS as a splice factor that guide nuclear export. We next asked if a genetic variant could be identified as an apaQTL due to differentially effects on one isoform but not the others. While we do not expect this to be the case genome wide, we do expect a small number of examples where a QTL could affect binding of an RBP and therefore isoform-specific post-transcriptional gene regulation.  We identified 37 nuclear and 26 total apaQTLs overlapping eCLIP peaks. Of note, two apaQTLs disrupt binding for UPF1 which is a critical factor for nonsense mediated decay. A caveat to this analysis is the cell type specificity of RBP binding. eCLIP data is not available for LCLs. 
+
+
+\begin{figure}
+\centering \includegraphics[width=5in]{img/ch02/figureAppendix3.pdf}
+\caption[Enrichment for RNA binding in K652 cells]{\textbf{Enrichment for RNA binding in K652 cells}{\bf (A)}Enrichment for K562 cell RBP binding in 3' UTRs of genes with apaQTLs most strongly associated with a PAS in 3' UTRs compared to genes without apaQTL {\bf (B)} Enrichment for K562 cell RBP binding in 3' UTRs of genes with apaQTLs most strongly associated with an intronic PAS compared to genes without apaQTL }
+\label{fig:Supplementaryfile1-Fig3}
+\end{figure}
+
+
+\subsection{Correlation between variance in ribosome occupancy and variance in APA }\label{ch02-var-ribo}
+
+
+Variation in 3' UTR length can drive variation in translation efficiency. We wanted to test if this effect can be seen at the level of inter individual variation without requiring the existence of a QTL. We reasoned that if APA plays a role in modulating translation efficiency, then we would expect a correlation between APA variance and ribosome occupancy variance. When we correlated the variance in usage for the most highly used PAS for each gene, we see a weak but significant positive correlation between APA variance and ribosome occupancy variance (Correlation = 0.15, $p <2.2\times10^{-16}$).   
+
+\begin{figure}
+\centering \includegraphics[width=5in]{img/ch02/figureAppendix4.png}
+\caption[Variance in APA and Ribosome Occupancy]{\textbf{Variance in APA and Ribosome Occupancy} Individual usage variance of the most highly used PAS in each gene (x axis) correlates with individual variance in ribosome occupancy (y axis) as measured in Li et al 2016.\citep{li_rna_2016}}
+\label{ffig:Supplementaryfile1-Fig4}
+\end{figure} 
+
+
+\subsection{Colocalization}\label{ch02-coloc}
+
+
+In the main text we assert that APA can explain a proportion of the unexplained eQTLs, i.e. chromatin independent eQTLs. We primarily relied on correlation in order to draw this conclusion. However, to strengthen our claim, we used colocalization to ask if apaQTLs might generally be causal for the correlated eQTLs. To quantify the amount of colocalization between our apaQTLs and eQTLs, we used the COLOC package to test whether the apaQTL and eQTL associations share a causal SNP. The COLOC package estimates Bayes Factors for 4 alternative hypotheses. PP0: No association with either trait, PP1: No association with trait 1, PP2: No association with trait 2, PP3: Association with trait 1 and trait 2, two independent SNPs, and PP4: Association with trait 1 and trait 2, one shared SNP. If causal SNPs for an apaQTL and an eQTL is the same SNP, then PP4 is expected to be large > 0.5. One limitation of COLOC is that it is very sensitive to sample size and tend to assign large posterior probability to PP0, PP1, PP2 when either of the QTL mapping suffer from low power. This is because QTL mapping suffer from low power due to very small sample sizes compared to GWASs, for which coloc was designed for. To overcome this limitation, we used the ratio PP4/(PP3+PP4) to assess the colocalization probability instead of PP4/(PP0+PP1+PP2+PP3+PP4). To further increase power in our analysis, we used summary statistics from eQTLs identified on Geuvadis YRI LCL sample (n = 90) and used coloc to find colocalization between the eQTL signal and apaQTLs for the polyadenylation site (PAS) that is the most significant for the same gene. We expect this to be a lower bound for the actual number of colocalized eQTL-apaQTL SNPs because only one PAS for each gene is tested. Overall, we found that 33 genes had both and apaQTL and an eQTL and for which PP3+PP4 from coloc was 0.2 or greater. We found that the vast majority of genes (26, 78.8\%) had a PP4/(PP3+PP4) value greater than 0.5, which indicates that the apaQTL and eQTL are more likely to share a causal SNP than not. Thus, we conclude that most apaQTLs that are determined to be eQTLs are likely to be causal, and further likely explain all the SNP effect on gene expression.
+
+
+\begin{figure}
+\centering \includegraphics[width=5in]{img/ch02/figureAppendix5.png}
+\caption[Colocalization of apaQTLs and eQTLs]{\textbf{Colocalization of apaQTLs and eQTLs} The apaQTL and eQTLs for the large majority of genes that have both are more likely to colocalize than not. Histogram of number of genes with an apaQTL and eQTL for different values of PP4/(PP3 +PP4).}
+\label{ffig:Supplementaryfile1-Fig5}
+\end{figure} 
+
+\subsection{Evaluating the robustness of our finding to false positives caused by mispriming}\label{ch02-MP-robust}
+
+We took various measures to ensure that misprimed reads are not included in our analysis. For example, we include filters both at the read and PAS level according to previous reports using the same experimental protocol (methods). In order to test if mispriming could still be responsible for the PAS we identified, we have looked at the base composition around our PAS. The results are below with 10 base pairs up and downstream of the PAS (PAS are at position 10 on plot). We have separated PAS based on their location and on whether the PAS is annotated in polyADB. We found a very similar base pair composition for all PAS except for intronic PAS that are unannotated in polyA DB. This suggests there may be some amount of mispriming for intronic PAS that are not annotated in the polyA DB. By quantifying the increase in A at nearby position around unannotated intronic PAS relative to annotated intronic PAS, we estimate that up to 20\% of our unannotated intronic PAS may be explained by mispriming. 
+
+
+\begin{figure}
+\centering \includegraphics[width=5in]{img/ch02/figureAppendix6.png}
+\caption[Base Composition around PAS]{\textbf{Base Composition around PAS} Position weight matrices representing base composition 10 bps upstream and downstream of identified PAS separated by location and presence/absence of site in polyA DB.}
+\label{fig:Supplementaryfile1-Fig6}
+\end{figure} 
+
+
+However, we believe that the vast majority of unannotated intronic PAS are likely to be real. To support this view, we found that of the 9,605 unannotated intronic PAS, 24.6\% have a canonical polyadenylation signal site upstream of the PAS. This matched the fraction of intronic PAS that are annotated, and is significantly higher than background (which is about 0.24\%). Furthermore, the location of the canonical polyadenylation signal site relative to the PAS location follows the expected distribution, which is 10-30bp upstream.   
+
+
+\begin{figure}
+\centering \includegraphics[width=5in]{img/ch02/figureAppendix7.png}
+\caption[Signal site distribution for intronic unannotated PAS]{\textbf{Signal site distribution for intronic unannotated PAS} Stacked histogram of polyadenylation signal sites upstream of unannotated intronic PAS. Distribution similar in shape and structure to that in Figure 2.1D. }
+\label{fig:Supplementaryfile1-Fig7}
+\end{figure} 
+
+
+While we would argue that a 20\% rate of mispriming is reasonably low, and removing more PAS would lead to many false negatives, we nevertheless decided to rerun our analysis after removing intronic PAS that have not been previously annotated, to make sure that our results are robust to misprimed contaminates. We re-calculated the correlation between intronic effect sizes and eQTL effect sizes and found that the correlation is stronger than when the unannotated PAS are included (349 vs 357). This suggests that mispriming may be increasing noise. 
+
+\begin{figure}
+\centering \includegraphics[width=5in]{img/ch02/figureAppendix8.png}
+\caption[Figure 2.3A without unannotated intronic PAS]{\textbf{Figure 2.3A without unannotated intronic PAS} Scatter plot of intronic apaQTL effect sizes after removing associations with unannotated intronic PAS plotted against their eQTL effect sizes. Supplemental to Figure 2.3A. }
+\label{fig:Supplementaryfile1-Fig8}
+\end{figure} 
+
+
+
+We also found that the proportion of eQTLs that are significant apaQTLs does not change dramatically (18\% vs 17.3\% of unexplained eQTLs using the 0.05 cutoff).
+
+\begin{figure}
+\centering \includegraphics[width=5in]{img/ch02/figureAppendix9.png}
+\caption[Proportion eQTL explained without unannotated intronic PAS]{\textbf{Proportion eQTL explained without unannotated intronic PAS} Proportion of putatively explained by apaQTLs separated by fraction after removing associations with unannotated intronic PAS. Expression QTLs could be explained by apaQTLs identified from both fractions. This observation is robust to apaQTL association p-value cutoffs. We observed that apaQTLs explain a slightly higher proportion of previously unexplained eQTLs. Explained/Unexplained status of each eQTL was determined previously in Li et al. 2016.\citep{li_rna_2016}}
+\label{fig:Supplementaryfile1-Fig9}
+\end{figure} 
+
+Lastly, we found that nearly all apaQTLs that are not eQTLs but are associated with differences in translation and protein expression are not affected by the removal of unannotated intronic PAS (20 vs 25). Together these analyses suggest that even if our set of intronic PAS include some false positives, these PAS do not drive the main conclusions of our work.  
+
+
 
 \clearpage
-\subsection{Supplementary Tables}\label{ch02-supplementary-tables}
+\section{Supplementary Tables}\label{ch02-supplementary-tables}
 
 \begin{table}[!htb]
-\caption[Gene expression matrix.]{\textbf{Gene expression matrix.}
-  (see supplementary file associated with this dissertation) Contains
-  the batch-corrected log\textsubscript{2} counts per million for the
-  12,728 Ensembl genes analyzed in this study for each of the 156
-  samples. The column names are in the format
-  ``individual.infection.time''. It can also be downloaded from
-  \url{http://giladlab.uchicago.edu} or
-  \url{https://bitbucket.org/jdblischak/tb-data}.}
+\caption[Expression Independent eQTLs]{\textbf{Expression Independent eQTLs} 
+(see supplementary file associated with this
+  dissertation) apaQTL whose lead SNP is nominally associated with protein expression levels but not expression. Table includes p-value and slope for the associated between the lead SNP and nuclear APA usage, gene expression levels, protein expression levels, and ribosome occupancy (as measured using ribo-seq). mRNA, protein and translation data reported in Li et al. 2016\citep{li_rna_2016}.}
 \label{tab:ch02-s1}
 \end{table}
 
 \begin{table}[!htb]
-\caption[Differential expression results.]{\textbf{Differential
-    expression results.} (see supplementary file associated with this
-  dissertation) Contains the differential expression statistics from
-  limma. This includes the log\textsubscript{2} fold change (logFC),
-  average expression level (AveExpr), t-statistic (t), p-value
-  (P.Value), q-value (adj.P.Val), and log-odds (B). The column names
-  also contain the infection and timepoint for the given
-  comparison. It can also be downloaded from
-  \url{http://giladlab.uchicago.edu} or
-  \url{https://bitbucket.org/jdblischak/tb-data}.}
+\caption[Meta Data]{ \textbf{Meta data}  (see supplementary file
+  associated with this dissertation) Library information for each Yoruba lymphoblastoid cell line, including sample,
+collection, and read information. Column names as described: Sample\_ID: Sample ID, line: YRI Line,fraction: Molecular fraction, batch:3' Sequencing batch, fqlines: number of lines in fastQ file (used to calculate reads),reads: number of sequenced reads, mapped: number of mapped reads,  Mapped\_noMP:number of reads mapped after misprimmed reads are removed, prop\_MappedwithoutMP, proportion of usable reads, Sex: Sex of YRI sample, Wake\_Up: Date up cell line wakeup, Collection: Date of cell collection, count1:cell count measurements ($1x10^{^6}$) , count2:cell count measurements ($1x10^{^6}$), alive1: percent of cells alive calculated with trypan blue stain, alive2:percent of cells alive calculated with trypan blue stain, alive\_avg: average of two percent alive measurements,  undiluted\_avg: average of two cell count measurements ($1x10^{^6}$), Extraction: Date of mRNA extraction, Concentration: RNA concentration ng/ul, ratio260\_280: RNA quality collected from nanodrop, to\_use: amount of RNA input for 3' seq, h20: amount of water used for 3' seq, threeprime\_start: data of library collection, Cq: quantification measurement from qPCR during 3'  seq library preparation, cycles: cycles used for library prep, library\_conc: concentration of 3'  seq library (ng/ul).}
 \label{tab:ch02-s2}
+
 \end{table}
 
-\begin{table}[!htb]
-\caption[Joint Bayesian analysis results.]{\textbf{Joint Bayesian
-    analysis results.} (see supplementary file associated with this
-  dissertation) Contains the assigned expression patterns for the
-  12,728 Ensembl genes analyzed in this study for each of the three
-  analyses in Fig. \ref{fig:joint-all}, \ref{fig:joint-18h}, and
-  \ref{fig:joint-48h}. The columns ``full\_time\_course'',
-  ``time\_18h'', and ``time\_48h'' correspond to Fig.
-  \ref{fig:joint-all}, \ref{fig:joint-18h}, and \ref{fig:joint-48h},
-  respectively.}
-\label{tab:ch02-s3}
-\end{table}
 
-\begin{table}[!htb]
-\caption[Joint Bayesian analysis results with gene
-  descriptions.]{\textbf{Joint Bayesian analysis results with gene
-    descriptions.} (see supplementary file associated with this
-  dissertation) Contains the assigned expression patterns for the
-  12,728 Ensembl genes analyzed in this study for each of the three
-  analyses in Fig. \ref{fig:joint-all}, \ref{fig:joint-18h}, and
-  \ref{fig:joint-48h}. It is the same information as Supplementary
-  Table \ref{tab:ch02-s3}, but with the genes from each pattern from
-  each of the three figures in its own sheet of the
-  workbook. Furthermore, it contains the gene descriptions from
-  Ensembl.}
-\label{tab:ch02-s4}
-\end{table}
 
-\begin{table}[!htb]
-\caption[Gene ontology results.]{\textbf{Gene ontology results.} (see
-  supplementary file associated with this dissertation) Contains the
-  gene ontology results for each of the expression patterns for the
-  three analyses in Fig. \ref{fig:joint-all}, \ref{fig:joint-18h}, and
-  \ref{fig:joint-48h}.}
-\label{tab:ch02-s5}
-\end{table}
-
-\begin{table}[!htb]
-\caption[RNA quality.]{\textbf{RNA quality.} (see supplementary file
-  associated with this dissertation) Contains the RNA Integrity Number
-  (RIN) and molarity (nmol/L) measured with a Bioanalyzer (Agilent)
-  for each of the 156 samples.}
-\label{tab:ch02-s6}
-\end{table}
-
-\begin{table}[!htb]
-\caption[Number of differentially expressed genes from intersecting
-  gene lists.]{\textbf{Number of differentially expressed genes from
-    intersecting gene lists.} (see supplementary file associated with
-  this dissertation) Contains the results of intersecting lists of
-  differentially expressed genes for all pairwise comparisons (within
-  each of the three timepoints).}
-\label{tab:ch02-s7}
-\end{table}
-
-\begin{table}[!htb]
-\caption[Number of differentially expressed genes from pairwise
-  tests.]{\textbf{Number of differentially expressed genes from
-    pairwise tests.} (see supplementary file associated with this
-  dissertation) Contains the number of differentially expressed genes
-  when performing all pairwise tests between bacterial infections for
-  each of the three timepoints.}
-\label{tab:ch02-s8}
-\end{table}
-
-\begin{table}[!htb]
-\caption[Concordance in direction of effect for genes in each
-  expression pattern.]{\textbf{Concordance in direction of effect for
-    genes in each expression pattern.} (see supplementary file
-  associated with this dissertation) Cormotif does not distinguish
-  between the direction of the effect when assigning a gene to a given
-  expression pattern. For example, a gene that is upregulated in one
-  infection but downregulated in another is indistinguishable from a
-  gene that is upregulated in response to both infections. However, in
-  this data set, this is a rare effect. We calculated the percent
-  concordance for the genes in the expression patterns from the three
-  separate analyses. For example, for the expression pattern ``MTB'',
-  100\% would indicate the gene is regulated in the same direction in
-  the five mycobacterial infections, 80\% would indicate that the gene
-  is regulated in the same direction for four of the five
-  mycobacterial infections, etc. ``num\_concord'' is the number of
-  genes in that expression pattern that are 100\% concordant across
-  the infections. ``num\_discord'' is the number of genes in that
-  expression pattern that are not 100\%
-  concordant. ``mean\_perc\_concord'' is the mean percent concordance
-  of all the genes in that expression pattern.}
-\label{tab:ch02-s9}
-\end{table}

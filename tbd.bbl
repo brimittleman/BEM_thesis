@@ -1,0 +1,718 @@
+\begin{thebibliography}{10}
+
+\bibitem{adelman_promoter-proximal_2012}
+Karen Adelman and John~T. Lis.
+\newblock Promoter-proximal pausing of {{RNA}} polymerase {{II}}: Emerging
+  roles in metazoans.
+\newblock {\em Nature Reviews. Genetics}, 13(10):720--731, 2012.
+
+\bibitem{astle_allelic_2016}
+William~J. Astle, Heather Elding, Tao Jiang, Dave Allen, Dace Ruklisa, Alice~L.
+  Mann, Daniel Mead, Heleen Bouman, Fernando {Riveros-Mckay}, Myrto~A.
+  Kostadima, John~J. Lambourne, Suthesh Sivapalaratnam, Kate Downes, Kousik
+  Kundu, Lorenzo Bomba, Kim Berentsen, John~R. Bradley, Louise~C. Daugherty,
+  Olivier Delaneau, Kathleen Freson, Stephen~F. Garner, Luigi Grassi, Jose
+  Guerrero, Matthias Haimel, Eva~M. {Janssen-Megens}, Anita Kaan, Mihir Kamat,
+  Bowon Kim, Amit Mandoli, Jonathan Marchini, Joost H.~A. Martens, Stuart
+  Meacham, Karyn Megy, Jared O'Connell, Romina Petersen, Nilofar Sharifi,
+  Simon~M. Sheard, James~R. Staley, Salih Tuna, Martijn {van der Ent}, Klaudia
+  Walter, Shuang-Yin Wang, Eleanor Wheeler, Steven~P. Wilder, Valentina
+  Iotchkova, Carmel Moore, Jennifer Sambrook, Hendrik~G. Stunnenberg, Emanuele
+  Di~Angelantonio, Stephen Kaptoge, Taco~W. Kuijpers, Enrique
+  {Carrillo-de-Santa-Pau}, David Juan, Daniel Rico, Alfonso Valencia, Lu~Chen,
+  Bing Ge, Louella Vasquez, Tony Kwan, Diego {Garrido-Mart{\'i}n}, Stephen
+  Watt, Ying Yang, Roderic Guigo, Stephan Beck, Dirk~S. Paul, Tomi Pastinen,
+  David Bujold, Guillaume Bourque, Mattia Frontini, John Danesh, David~J.
+  Roberts, Willem~H. Ouwehand, Adam~S. Butterworth, and Nicole Soranzo.
+\newblock The {{Allelic Landscape}} of {{Human Blood Cell Trait Variation}} and
+  {{Links}} to {{Common Complex Disease}}.
+\newblock {\em Cell}, 167(5):1415--1429.e19, 2016.
+
+\bibitem{battle_genomic_2015}
+Alexis Battle, Zia Khan, Sidney~H. Wang, Amy Mitrano, Michael~J. Ford,
+  Jonathan~K. Pritchard, and Yoav Gilad.
+\newblock Genomic variation. {{Impact}} of regulatory variation from {{RNA}} to
+  protein.
+\newblock {\em Science (New York, N.Y.)}, 347(6222):664--667, 2015.
+
+\bibitem{beaudoing_patterns_2000}
+Emmanuel Beaudoing, Susan Freier, Jacqueline~R. Wyatt, Jean-Michel Claverie,
+  and Daniel Gautheret.
+\newblock Patterns of {{Variant Polyadenylation Signal Usage}} in {{Human
+  Genes}}.
+\newblock {\em Genome Research}, 10(7):1001--1010, 2000.
+
+\bibitem{berg_u1_2012}
+Michael~G. Berg, Larry~N. Singh, Ihab Younis, Qiang Liu, Anna~Maria Pinto,
+  Daisuke Kaida, Zhenxi Zhang, Sungchan Cho, Scott {Sherrill-Mix}, Lili Wan,
+  and Gideon Dreyfuss.
+\newblock U1 {{snRNP Determines mRNA Length}} and {{Regulates Isoform
+  Expression}}.
+\newblock {\em Cell}, 150(1):53--64, 2012.
+
+\bibitem{bonder_systematic_2019}
+Marc~Jan Bonder, Craig Smail, Michael~J. Gloudemans, Laure Fr{\'e}sard, David
+  Jakubosky, Matteo D'Antonio, Xin Li, Nicole~M. Ferraro, Ivan {Carcamo-Orive},
+  Bogdan Mirauta, Daniel~D. Seaton, Na~Cai, Danilo Horta, HipSci Consortium,
+  iPSCORE Consortium, GENESiPS Consortium, PhLiPS Consortium, Erin~N. Smith,
+  Kelly~A. Frazer, Stephen~B. Montgomery, and Oliver Stegle.
+\newblock Systematic assessment of regulatory effects of human disease variants
+  in pluripotent cells.
+\newblock {\em bioRxiv}, page 784967, 2019.
+
+\bibitem{buck_chip-chip_2004}
+Michael~J. Buck and Jason~D. Lieb.
+\newblock {{ChIP}}-chip: Considerations for the design, analysis, and
+  application of genome-wide chromatin immunoprecipitation experiments.
+\newblock {\em Genomics}, 83(3):349--360, 2004.
+
+\bibitem{bulik-sullivan_ld_2015}
+Brendan~K. {Bulik-Sullivan}, Po-Ru Loh, Hilary~K. Finucane, Stephan Ripke, Jian
+  Yang, Nick Patterson, Mark~J. Daly, Alkes~L. Price, and Benjamin~M. Neale.
+\newblock {{LD Score}} regression distinguishes confounding from polygenicity
+  in genome-wide association studies.
+\newblock {\em Nature Genetics}, 47(3):291--295, 2015.
+
+\bibitem{carrillo_oesterreich_global_2010}
+Fernando Carrillo~Oesterreich, Stephan Preibisch, and Karla~M. Neugebauer.
+\newblock Global analysis of nascent {{RNA}} reveals transcriptional pausing in
+  terminal exons.
+\newblock {\em Molecular Cell}, 40(4):571--581, 2010.
+
+\bibitem{chick_defining_2016}
+Joel~M. Chick, Steven~C. Munger, Petr Simecek, Edward~L. Huttlin, Kwangbom
+  Choi, Daniel~M. Gatti, Narayanan Raghupathy, Karen~L. Svenson, Gary~A.
+  Churchill, and Steven~P. Gygi.
+\newblock Defining the consequences of genetic variation on a proteome-wide
+  scale.
+\newblock {\em Nature}, 534(7608):500--505, 2016.
+
+\bibitem{chun_limited_2017}
+Sung Chun, Alexandra Casparino, Nikolaos~A. Patsopoulos, Damien~C.
+  {Croteau-Chonka}, Benjamin~A. Raby, Philip~L. De~Jager, Shamil~R. Sunyaev,
+  and Chris Cotsapas.
+\newblock Limited statistical evidence for shared genetic effects of {{eQTLs}}
+  and autoimmune-disease-associated loci in three major immune-cell types.
+\newblock {\em Nature Genetics}, 49(4):600--605, 2017.
+
+\bibitem{church_modernizing_2011}
+Deanna~M. Church, Valerie~A. Schneider, Tina Graves, Katherine Auger, Fiona
+  Cunningham, Nathan Bouk, Hsiu-Chuan Chen, Richa Agarwala, William~M. McLaren,
+  Graham R.~S. Ritchie, Derek Albracht, Milinn Kremitzki, Susan Rock, Holland
+  Kotkiewicz, Colin Kremitzki, Aye Wollam, Lee Trani, Lucinda Fulton, Robert
+  Fulton, Lucy Matthews, Siobhan Whitehead, Will Chow, James Torrance, Matthew
+  Dunn, Glenn Harden, Glen Threadgold, Jonathan Wood, Joanna Collins, Paul
+  Heath, Guy Griffiths, Sarah Pelan, Darren Grafham, Evan~E. Eichler, George
+  Weinstock, Elaine~R. Mardis, Richard~K. Wilson, Kerstin Howe, Paul Flicek,
+  and Tim Hubbard.
+\newblock Modernizing reference genome assemblies.
+\newblock {\em PLoS biology}, 9(7):e1001091, 2011.
+
+\bibitem{core_analysis_2014}
+Leighton~J. Core, Andr{\'e}~L. Martins, Charles~G. Danko, Colin~T. Waters, Adam
+  Siepel, and John~T. Lis.
+\newblock Analysis of nascent {{RNA}} identifies a unified architecture of
+  initiation regions at mammalian promoters and enhancers.
+\newblock {\em Nature Genetics}, 46(12):1311--1320, 2014.
+
+\bibitem{day_comprehensive_2016}
+Daniel~S. Day, Bing Zhang, Sean~M. Stevens, Francesco Ferrari, Erica~N.
+  Larschan, Peter~J. Park, and William~T. Pu.
+\newblock Comprehensive analysis of promoter-proximal {{RNA}} polymerase {{II}}
+  pausing across mammalian cell types.
+\newblock {\em Genome Biology}, 17(1):120, 2016.
+
+\bibitem{degner_dnase_2012}
+Jacob~F. Degner, Athma~A. Pai, Roger {Pique-Regi}, Jean-Baptiste Veyrieras,
+  Daniel~J. Gaffney, Joseph~K. Pickrell, Sherryl De~Leon, Katelyn Michelini,
+  Noah Lewellen, Gregory~E. Crawford, Matthew Stephens, Yoav Gilad, and
+  Jonathan~K. Pritchard.
+\newblock {{DNase I}} sensitivity {{QTLs}} are a major determinant of human
+  expression variation.
+\newblock {\em Nature}, 482(7385):390--394, 2012.
+
+\bibitem{derti_quantitative_2012}
+Adnan Derti, Philip {Garrett-Engele}, Kenzie~D. MacIsaac, Richard~C. Stevens,
+  Shreedharan Sriram, Ronghua Chen, Carol~A. Rohl, Jason~M. Johnson, and Tomas
+  Babak.
+\newblock A quantitative atlas of polyadenylation in five mammals.
+\newblock {\em Genome Research}, 22(6):1173--1183, 2012.
+
+\bibitem{dobin_star_2013}
+Alexander Dobin, Carrie~A. Davis, Felix Schlesinger, Jorg Drenkow, Chris
+  Zaleski, Sonali Jha, Philippe Batut, Mark Chaisson, and Thomas~R. Gingeras.
+\newblock {{STAR}}: {{Ultrafast}} universal {{RNA}}-{{Seq}} aligner.
+\newblock {\em Bioinformatics}, 29(1):15--21, 2013.
+
+\bibitem{floor_tunable_2016-1}
+Stephen~N Floor and Jennifer~A Doudna.
+\newblock Tunable protein synthesis by transcript isoforms in human cells.
+\newblock {\em eLife}, 5:e10921, 2016.
+
+\bibitem{frankish_gencode_2019}
+Adam Frankish, Mark Diekhans, Anne-Maud Ferreira, Rory Johnson, Irwin Jungreis,
+  Jane Loveland, Jonathan~M. Mudge, Cristina Sisu, James Wright, Joel
+  Armstrong, If~Barnes, Andrew Berry, Alexandra Bignell, Silvia Carbonell~Sala,
+  Jacqueline Chrast, Fiona Cunningham, Tom{\'a}s Di~Domenico, Sarah Donaldson,
+  Ian~T. Fiddes, Carlos Garc{\'i}a~Gir{\'o}n, Jose~Manuel Gonzalez, Tiago
+  Grego, Matthew Hardy, Thibaut Hourlier, Toby Hunt, Osagie~G. Izuogu, Julien
+  Lagarde, Fergal~J. Martin, Laura Mart{\'i}nez, Shamika Mohanan, Paul Muir,
+  Fabio C.~P. Navarro, Anne Parker, Baikang Pei, Fernando Pozo, Magali Ruffier,
+  Bianca~M. Schmitt, Eloise Stapleton, Marie-Marthe Suner, Irina Sycheva,
+  Barbara {Uszczynska-Ratajczak}, Jinuri Xu, Andrew Yates, Daniel Zerbino, Yan
+  Zhang, Bronwen Aken, Jyoti~S. Choudhary, Mark Gerstein, Roderic Guig{\'o},
+  Tim J.~P. Hubbard, Manolis Kellis, Benedict Paten, Alexandre Reymond,
+  Michael~L. Tress, and Paul Flicek.
+\newblock {{GENCODE}} reference annotation for the human and mouse genomes.
+\newblock {\em Nucleic Acids Research}, 47(D1):D766--D773, 2019.
+
+\bibitem{fusby_coordination_2016}
+Becky Fusby, Soojin Kim, Benjamin Erickson, Hyunmin Kim, Martha~L. Peterson,
+  and David~L. Bentley.
+\newblock Coordination of {{RNA Polymerase II Pausing}} and 3' {{End Processing
+  Factor Recruitment}} with {{Alternative Polyadenylation}}.
+\newblock {\em Molecular and Cellular Biology}, 36(2):295--303, 2016.
+
+\bibitem{gaffney_dissecting_2012}
+Daniel~J Gaffney, Jean-Baptiste Veyrieras, Jacob~F Degner, Roger {Pique-Regi},
+  Athma~A Pai, Gregory~E Crawford, Matthew Stephens, Yoav Gilad, and Jonathan~K
+  Pritchard.
+\newblock Dissecting the regulatory architecture of gene expression {{QTLs}}.
+\newblock {\em Genome Biology}, 13(1):R7, 2012.
+
+\bibitem{gardini_global_2017}
+Alessandro Gardini.
+\newblock Global {{Run}}-{{On Sequencing}} ({{GRO}}-{{Seq}}).
+\newblock {\em Methods in Molecular Biology (Clifton, N.J.)}, 1468:111--120,
+  2017.
+
+\bibitem{gariglio_clustering_1981}
+P.~Gariglio, M.~Bellard, and P.~Chambon.
+\newblock Clustering of {{RNA}} polymerase {{B}} molecules in the 5{${'}$}
+  moiety of the adult {$\beta$}-globin gene of hen erythrocytes.
+\newblock {\em Nucleic Acids Research}, 9(11):2589--2598, 1981.
+
+\bibitem{gromak_pause_2006}
+Natalia Gromak, Steven West, and Nick~J. Proudfoot.
+\newblock Pause sites promote transcriptional termination of mammalian {{RNA}}
+  polymerase {{II}}.
+\newblock {\em Molecular and Cellular Biology}, 26(10):3986--3996, 2006.
+
+\bibitem{ha_qapa_2018}
+Kevin C.~H. Ha, Benjamin~J. Blencowe, and Quaid Morris.
+\newblock {{QAPA}}: {{A}} new method for the systematic analysis of alternative
+  polyadenylation from {{RNA}}-{{Seq}} data.
+\newblock {\em Genome Biology}, 19(1):45, 2018.
+
+\bibitem{heinz_simple_2010}
+Sven Heinz, Christopher Benner, Nathanael Spann, Eric Bertolino, Yin~C. Lin,
+  Peter Laslo, Jason~X. Cheng, Cornelis Murre, Harinder Singh, and
+  Christopher~K. Glass.
+\newblock Simple combinations of lineage-determining transcription factors
+  prime cis-regulatory elements required for macrophage and {{B}} cell
+  identities.
+\newblock {\em Molecular Cell}, 38(4):576--589, 2010.
+
+\bibitem{international_hapmap_consortium_haplotype_2005}
+{{{{{{{{{{{{{{{{{{{{{{{{{{{International HapMap
+  Consortium}}}}}}}}}}}}}}}}}}}}}}}}}}}.
+\newblock A haplotype map of the human genome.
+\newblock {\em Nature}, 437(7063):1299--1320, 2005.
+
+\bibitem{HapMap2005}
+{{{{{{{{{{{{{{{{{{{{{{{{{{{International HapMap
+  Consortium}}}}}}}}}}}}}}}}}}}}}}}}}}}.
+\newblock A haplotype map of the human genome.
+\newblock {\em Nature}, 437(7063):1299--320, 2005.
+
+\bibitem{international_human_genome_sequencing_consortium_initial_2001}
+{{{{{{{{{{{{{{{{{{{{{{{{{{{International Human Genome Sequencing
+  Consortium}}}}}}}}}}}}}}}}}}}}}}}}}}}.
+\newblock Initial sequencing and analysis of the human genome.
+\newblock {\em Nature}, 409(6822):860--921, 2001.
+
+\bibitem{joehanes_integrated_2017}
+Roby Joehanes, Xiaoling Zhang, Tianxiao Huan, Chen Yao, Sai-xia Ying, Quang~Tri
+  Nguyen, Cumhur~Yusuf Demirkale, Michael~L. Feolo, Nataliya~R. Sharopova, Anne
+  Sturcke, Alejandro~A. Sch{\"a}ffer, Nancy {Heard-Costa}, Han Chen, Po-ching
+  Liu, Richard Wang, Kimberly~A. Woodhouse, Kahraman Tanriverdi, Jane~E.
+  Freedman, Nalini Raghavachari, Jos{\'e}e Dupuis, Andrew~D. Johnson,
+  Christopher~J. O'Donnell, Daniel Levy, and Peter~J. Munson.
+\newblock Integrated genome-wide analysis of expression quantitative trait loci
+  aids interpretation of genomic association studies.
+\newblock {\em Genome Biology}, 18(1):16, 2017.
+
+\bibitem{jonkers_genome-wide_2014}
+Iris Jonkers, Hojoong Kwak, and John~T. Lis.
+\newblock Genome-wide dynamics of {{Pol II}} elongation and its interplay with
+  promoter proximal pausing, chromatin, and exons.
+\newblock {\em eLife}, 3:e02407, 2014.
+
+\bibitem{jun_detecting_2012}
+Goo Jun, Matthew Flickinger, Kurt~N. Hetrick, Jane~M. Romm, Kimberly~F. Doheny,
+  Gon{\c c}alo~R. Abecasis, Michael Boehnke, and Hyun~Min Kang.
+\newblock Detecting and {{Estimating Contamination}} of {{Human DNA Samples}}
+  in {{Sequencing}} and {{Array}}-{{Based Genotype Data}}.
+\newblock {\em The American Journal of Human Genetics}, 91(5):839--848, 2012.
+
+\bibitem{kaida_u1_2010}
+Daisuke Kaida, Michael~G. Berg, Ihab Younis, Mumtaz Kasim, Larry~N. Singh, Lili
+  Wan, and Gideon Dreyfuss.
+\newblock U1 {{snRNP}} protects pre-{{mRNAs}} from premature cleavage and
+  polyadenylation.
+\newblock {\em Nature}, 468(7324):664--668, 2010.
+
+\bibitem{kent_human_2002}
+W.~James Kent, Charles~W. Sugnet, Terrence~S. Furey, Krishna~M. Roskin, Tom~H.
+  Pringle, Alan~M. Zahler, and {and}~David Haussler.
+\newblock The {{Human Genome Browser}} at {{UCSC}}.
+\newblock {\em Genome Research}, 12(6):996--1006, 2002.
+
+\bibitem{kim_high-resolution_2005}
+Tae~Hoon Kim, Leah~O. Barrera, Ming Zheng, Chunxu Qu, Michael~A. Singer,
+  Todd~A. Richmond, Yingnian Wu, Roland~D. Green, and Bing Ren.
+\newblock A high-resolution map of active promoters in the human genome.
+\newblock {\em Nature}, 436(7052):876--880, 2005.
+
+\bibitem{klarin_genetics_2018}
+Derek Klarin, Scott~M. Damrauer, Kelly Cho, Yan~V. Sun, Tanya~M. Teslovich,
+  Jacqueline Honerlaw, David~R. Gagnon, Scott~L. DuVall, Jin Li, Gina~M.
+  Peloso, Mark Chaffin, Aeron~M. Small, Jie Huang, Hua Tang, Julie~A. Lynch,
+  Yuk-Lam Ho, Dajiang~J. Liu, Connor~A. Emdin, Alexander~H. Li, Jennifer~E.
+  Huffman, Jennifer~S. Lee, Pradeep Natarajan, Rajiv Chowdhury, Danish
+  Saleheen, Marijana Vujkovic, Aris Baras, Saiju Pyarajan, Emanuele
+  Di~Angelantonio, Benjamin~M. Neale, Aliya Naheed, Amit~V. Khera, John Danesh,
+  Kyong-Mi Chang, Gon{\c c}alo Abecasis, Cristen Willer, Frederick~E. Dewey,
+  David~J. Carey, {Global Lipids Genetics Consortium}, {Myocardial Infarction
+  Genetics (MIGen) Consortium}, {Geisinger-Regeneron DiscovEHR Collaboration},
+  {VA Million Veteran Program}, John Concato, J.~Michael Gaziano,
+  Christopher~J. O'Donnell, Philip~S. Tsao, Sekar Kathiresan, Daniel~J. Rader,
+  Peter W.~F. Wilson, and Themistocles~L. Assimes.
+\newblock Genetics of blood lipids among \textasciitilde 300,000 multi-ethnic
+  participants of the {{Million Veteran Program}}.
+\newblock {\em Nature Genetics}, 50(11):1514--1523, 2018.
+
+\bibitem{kristjansdottir_population-scale_2018}
+Katla Kristj{\'a}nsd{\'o}ttir, Yeonui Kwak, Nathaniel~D. Tippens, John~T. Lis,
+  Hyun Min~Kang, and Hojoong Kwak.
+\newblock Population-scale study of {{eRNA}} transcription reveals bipartite
+  functional enhancer architecture.
+\newblock Technical report, 2018.
+
+\bibitem{kwak_precise_2013}
+Hojoong Kwak, Nicholas~J. Fuda, Leighton~J. Core, and John~T. Lis.
+\newblock Precise maps of {{RNA}} polymerase reveal how promoters direct
+  initiation and pausing.
+\newblock {\em Science (New York, N.Y.)}, 339(6122):950--953, 2013.
+
+\bibitem{lappalainen_transcriptome_2013}
+Tuuli Lappalainen, Michael Sammeth, Marc~R. Friedl{\"a}nder, Peter A.~C.
+  `t~Hoen, Jean Monlong, Manuel~A. Rivas, Mar {Gonz{\`a}lez-Porta}, Natalja
+  Kurbatova, Thasso Griebel, Pedro~G. Ferreira, Matthias Barann, Thomas
+  Wieland, Liliana Greger, Maarten {van Iterson}, Jonas Alml{\"o}f, Paolo
+  Ribeca, Irina Pulyakhina, Daniela Esser, Thomas Giger, Andrew Tikhonov, Marc
+  Sultan, Gabrielle Bertier, Daniel~G. MacArthur, Monkol Lek, Esther Lizano,
+  Henk P.~J. Buermans, Ismael Padioleau, Thomas Schwarzmayr, Olof Karlberg,
+  Halit Ongen, Helena Kilpinen, Sergi Beltran, Marta Gut, Katja Kahlem,
+  Vyacheslav Amstislavskiy, Oliver Stegle, Matti Pirinen, Stephen~B.
+  Montgomery, Peter Donnelly, Mark~I. McCarthy, Paul Flicek, Tim~M. Strom, {The
+  Geuvadis Consortium}, Hans Lehrach, Stefan Schreiber, Ralf Sudbrak, {\'A}ngel
+  Carracedo, Stylianos~E. Antonarakis, Robert H{\"a}sler, Ann-Christine
+  Syv{\"a}nen, Gert-Jan {van Ommen}, Alvis Brazma, Thomas Meitinger, Philip
+  Rosenstiel, Roderic Guig{\'o}, Ivo~G. Gut, Xavier Estivill, and Emmanouil~T.
+  Dermitzakis.
+\newblock Transcriptome and genome sequencing uncovers functional variation in
+  humans.
+\newblock {\em Nature}, 501(7468):506--511, 2013.
+
+\bibitem{lee_widespread_2018}
+Shih-Han Lee, Irtisha Singh, Sarah Tisdale, Omar {Abdel-Wahab}, Christina~S.
+  Leslie, and Christine Mayr.
+\newblock Widespread intronic polyadenylation inactivates tumor suppressor
+  genes in leukemia.
+\newblock {\em Nature}, 561(7721):127--131, 2018.
+
+\bibitem{Li2009}
+Heng Li, Bob Handsaker, Alec Wysoker, Tim Fennell, Jue Ruan, Nils Homer, Gabor
+  Marth, Goncalo Abecasis, Richard Durbin, and {1000 Genome Project Data
+  Processing Subgroup}.
+\newblock The sequence {{Alignment}}/{{Map}} format and {{SAMtools}}.
+\newblock {\em Bioinformatics (Oxford, England)}, 25(16):2078--9, 2009.
+
+\bibitem{li_genetic_2019}
+Lei Li, Yipeng Gao, Fanglue Peng, Eric~J. Wagner, and Wei Li.
+\newblock Genetic {{Basis}} of {{Alternative Polyadenylation}} is an {{Emerging
+  Molecular Phenotype}} for {{Human Traits}} and {{Diseases}}.
+\newblock {\em bioRxiv}, page 570176, 2019.
+
+\bibitem{li_annotation-free_2018}
+Yang~I. Li, David~A. Knowles, Jack Humphrey, Alvaro~N. Barbeira, Scott~P.
+  Dickinson, Hae~Kyung Im, and Jonathan~K. Pritchard.
+\newblock Annotation-free quantification of {{RNA}} splicing using
+  {{LeafCutter}}.
+\newblock {\em Nature Genetics}, 50(1):151--158, 2018.
+
+\bibitem{li_rna_2016}
+Yang~I. Li, Bryce {van de Geijn}, Anil Raj, David~A. Knowles, Allegra~A. Petti,
+  David Golan, Yoav Gilad, and Jonathan~K. Pritchard.
+\newblock {{RNA}} splicing is a primary link between genetic variation and
+  disease.
+\newblock {\em Science}, 352(6285):600--604, 2016.
+
+\bibitem{lianoglou_ubiquitously_2013}
+Steve Lianoglou, Vidur Garg, Julie~L. Yang, Christina~S. Leslie, and Christine
+  Mayr.
+\newblock Ubiquitously transcribed genes use alternative polyadenylation to
+  achieve tissue-specific expression.
+\newblock {\em Genes \& Development}, 27(21):2380--2396, 2013.
+
+\bibitem{Liao2013}
+Yang Liao, Gordon~K Smyth, and Wei Shi.
+\newblock The {{Subread}} aligner: Fast, accurate and scalable read mapping by
+  seed-and-vote.
+\newblock {\em Nucleic acids research}, 41(10):e108, 2013.
+
+\bibitem{liao_featurecounts_2014}
+Yang Liao, Gordon~K. Smyth, and Wei Shi.
+\newblock {{featureCounts}}: {{An}} efficient general purpose program for
+  assigning sequence reads to genomic features.
+\newblock {\em Bioinformatics (Oxford, England)}, 30(7):923--930, 2014.
+
+\bibitem{lin_-depth_2012}
+Yuefeng Lin, Zhihua Li, Fatih Ozsolak, Sang~Woo Kim, Gustavo {Arango-Argoty},
+  Teresa~T. Liu, Scott~A. Tenenbaum, Timothy Bailey, A.~Paula Monaghan,
+  Patrice~M. Milos, and Bino John.
+\newblock An in-depth map of polyadenylation sites in cancer.
+\newblock {\em Nucleic Acids Research}, 40(17):8460--8471, 2012.
+
+\bibitem{liu_transcription_2017}
+Xiaochuan Liu, Jaime Freitas, Dinghai Zheng, Marta~S. Oliveira, Mainul Hoque,
+  Torcato Martins, Telmo Henriques, Bin Tian, and Alexandra Moreira.
+\newblock Transcription elongation rate has a tissue-specific impact on
+  alternative cleavage and polyadenylation in {{Drosophila}} melanogaster.
+\newblock {\em RNA (New York, N.Y.)}, 23(12):1807--1816, 2017.
+
+\bibitem{machiela_ldlink_2015}
+Mitchell~J. Machiela and Stephen~J. Chanock.
+\newblock {{LDlink}}: {{A}} web-based application for exploring
+  population-specific haplotype structure and linking correlated alleles of
+  possible functional variants.
+\newblock {\em Bioinformatics (Oxford, England)}, 31(21):3555--3557, 2015.
+
+\bibitem{mahat_base-pair-resolution_2016}
+Dig~Bijay Mahat, Hojoong Kwak, Gregory~T. Booth, Iris~H. Jonkers, Charles~G.
+  Danko, Ravi~K. Patel, Colin~T. Waters, Katie Munson, Leighton~J. Core, and
+  John~T. Lis.
+\newblock Base-pair-resolution genome-wide mapping of active {{RNA}}
+  polymerases using precision nuclear run-on ({{PRO}}-seq).
+\newblock {\em Nature Protocols}, 11(8):1455--1476, 2016.
+
+\bibitem{mariella_length_2019-1}
+Elisa Mariella, Federico Marotta, Elena Grassi, Stefano Gilotto, and Paolo
+  Provero.
+\newblock The {{Length}} of the {{Expressed}} 3' {{UTR Is}} an {{Intermediate
+  Molecular Phenotype Linking Genetic Variants}} to {{Complex Diseases}}.
+\newblock {\em Frontiers in Genetics}, 10:714, 2019.
+
+\bibitem{mayer_genome-wide_2016}
+Andreas Mayer and L.~Stirling Churchman.
+\newblock Genome-wide profiling of {{RNA}} polymerase transcription at
+  nucleotide resolution in human cells with native elongating transcript
+  sequencing.
+\newblock {\em Nature Protocols}, 11(4):813--833, 2016.
+
+\bibitem{mayer_native_2015}
+Andreas Mayer, Julia {di Iulio}, Seth Maleri, Umut Eser, Jeff Vierstra, Alex
+  Reynolds, Richard Sandstrom, John~A. Stamatoyannopoulos, and L.~Stirling
+  Churchman.
+\newblock Native {{Elongating Transcript Sequencing Reveals Human
+  Transcriptional Activity}} at {{Nucleotide Resolution}}.
+\newblock {\em Cell}, 161(3):541--554, 2015.
+
+\bibitem{mayer_pause_2017}
+Andreas Mayer, Heather~M Landry, and L~Stirling Churchman.
+\newblock Pause \& go: From the discovery of {{RNA}} polymerase pausing to its
+  functional implications.
+\newblock {\em Current Opinion in Cell Biology}, 46:72--80, 2017.
+
+\bibitem{mayr_evolution_2016}
+Christine Mayr.
+\newblock Evolution and {{Biological Roles}} of {{Alternative}} 3'{{UTRs}}.
+\newblock {\em Trends in Cell Biology}, 26(3):227--237, 2016.
+
+\bibitem{mayr_regulation_2017}
+Christine Mayr.
+\newblock Regulation by 3'-{{Untranslated Regions}}.
+\newblock {\em Annual Review of Genetics}, 51(1):171--194, 2017.
+
+\bibitem{mcvicker_identification_2013}
+Graham McVicker, Bryce {van de Geijn}, Jacob~F. Degner, Carolyn~E. Cain,
+  Nicholas~E. Banovich, Anil Raj, Noah Lewellen, Marsha Myrthil, Yoav Gilad,
+  and Jonathan~K. Pritchard.
+\newblock Identification of {{Genetic Variants That Affect Histone
+  Modifications}} in {{Human Cells}}.
+\newblock {\em Science}, 342(6159):747--749, 2013.
+
+\bibitem{McVicker2013}
+Graham McVicker, Bryce {van de Geijn}, Jacob~F Degner, Carolyn~E Cain,
+  Nicholas~E Banovich, Anil Raj, Noah Lewellen, Marsha Myrthil, Yoav Gilad, and
+  Jonathan~K Pritchard.
+\newblock Identification of genetic variants that affect histone modifications
+  in human cells.
+\newblock {\em Science (New York, N.Y.)}, 342(6159):747--9, 2013.
+
+\bibitem{mittleman_alternative_2020}
+Briana~E Mittleman, Sebastian Pott, Shane Warland, Tony Zeng, Zepeng Mu, Mayher
+  Kaur, Yoav Gilad, and Yang Li.
+\newblock Alternative polyadenylation mediates genetic regulation of gene
+  expression.
+\newblock {\em eLife}, 9:e57492, 2020.
+
+\bibitem{moll_quantseq_2014}
+Pamela Moll, Michael Ante, Alexander Seitz, and Torsten Reda.
+\newblock {{QuantSeq}} 3' {{mRNA}} sequencing for {{RNA}} quantification.
+\newblock {\em Nature Methods}, 11:972, 2014.
+
+\bibitem{nojima_mammalian_2015}
+Takayuki Nojima, Tom{\'a}s Gomes, Ana Rita~Fialho Grosso, Hiroshi Kimura,
+  Michael~J. Dye, Somdutta Dhir, Maria {Carmo-Fonseca}, and Nicholas~J.
+  Proudfoot.
+\newblock Mammalian {{NET}}-{{Seq Reveals Genome}}-wide {{Nascent Transcription
+  Coupled}} to {{RNA Processing}}.
+\newblock {\em Cell}, 161(3):526--540, 2015.
+
+\bibitem{oh_u1_2017}
+Jung-Min Oh, Chao Di, Christopher~C. Venters, Jiannan Guo, Chie Arai, Byung~Ran
+  So, Anna~Maria Pinto, Zhenxi Zhang, Lili Wan, Ihab Younis, and Gideon
+  Dreyfuss.
+\newblock U1 {{snRNP}} telescripting regulates a size\textendash
+  function-stratified human genome.
+\newblock {\em Nature Structural \& Molecular Biology}, 24(11):993--999, 2017.
+
+\bibitem{okada_genetics_2014}
+Yukinori Okada, Di~Wu, Gosia Trynka, Towfique Raj, Chikashi Terao, Katsunori
+  Ikari, Yuta Kochi, Koichiro Ohmura, Akari Suzuki, Shinji Yoshida, Robert~R.
+  Graham, Arun Manoharan, Ward Ortmann, Tushar Bhangale, Joshua~C. Denny,
+  Robert~J. Carroll, Anne~E. Eyler, Jeffrey~D. Greenberg, Joel~M. Kremer,
+  Dimitrios~A. Pappas, Lei Jiang, Jian Yin, Lingying Ye, Ding-Feng Su, Jian
+  Yang, Gang Xie, Ed~Keystone, Harm-Jan Westra, T{\~o}nu Esko, Andres Metspalu,
+  Xuezhong Zhou, Namrata Gupta, Daniel Mirel, Eli~A. Stahl, Doroth{\'e}e Diogo,
+  Jing Cui, Katherine Liao, Michael~H. Guo, Keiko Myouzen, Takahisa Kawaguchi,
+  Marieke~J.H. Coenen, Piet~L.C.M. {van Riel}, Mart~A.F.J. {van de Laar},
+  Henk-Jan Guchelaar, Tom~W.J. Huizinga, Philippe Dieud{\'e}, Xavier Mariette,
+  S.~Louis Bridges, Alexandra Zhernakova, Rene~E.M. Toes, Paul~P. Tak, Corinne
+  {Miceli-Richard}, So-Young Bang, Hye-Soon Lee, Javier Martin, Miguel~A.
+  {Gonzalez-Gay}, Luis {Rodriguez-Rodriguez}, Solbritt
+  {Rantap{\"a}{\"a}-Dahlqvist}, Lisbeth {\"A}rlestig, Hyon~K. Choi, Yoichiro
+  Kamatani, Pilar Galan, Mark Lathrop, Steve Eyre, John Bowes, Anne Barton,
+  Niek {de Vries}, Larry~W. Moreland, Lindsey~A. Criswell, Elizabeth~W.
+  Karlson, Atsuo Taniguchi, Ryo Yamada, Michiaki Kubo, Jun~S. Liu, Sang-Cheol
+  Bae, Jane Worthington, Leonid Padyukov, Lars Klareskog, Peter~K. Gregersen,
+  Soumya Raychaudhuri, Barbara~E. Stranger, Philip~L. De~Jager, Lude Franke,
+  Peter~M. Visscher, Matthew~A. Brown, Hisashi Yamanaka, Tsuneyo Mimori,
+  Atsushi Takahashi, Huji Xu, Timothy~W. Behrens, Katherine~A. Siminovitch,
+  Shigeki Momohara, Fumihiko Matsuda, Kazuhiko Yamamoto, and Robert~M. Plenge.
+\newblock Genetics of rheumatoid arthritis contributes to biology and drug
+  discovery.
+\newblock {\em Nature}, 506(7488):376--381, 2014.
+
+\bibitem{oktaba_elav_2015}
+Katarzyna Oktaba, Wei Zhang, Thea~Sabrina Lotz, David~Jayhyun Jun,
+  Sandra~Beatrice Lemke, Samuel~Pak Ng, Emilia Esposito, Michael Levine, and
+  Val{\'e}rie Hilgers.
+\newblock {{ELAV Links Paused Pol II}} to {{Alternative Polyadenylation}} in
+  the {{Drosophila Nervous System}}.
+\newblock {\em Molecular Cell}, 57(2):341--348, 2015.
+
+\bibitem{ongen_estimating_2017}
+Halit Ongen, Andrew~A. Brown, Olivier Delaneau, Nikolaos~I. Panousis,
+  Alexandra~C. Nica, {GTEx Consortium}, and Emmanouil~T. Dermitzakis.
+\newblock Estimating the causal tissues for complex traits and diseases.
+\newblock {\em Nature Genetics}, 49(12):1676--1683, 2017.
+
+\bibitem{ongen_fast_2016}
+Halit Ongen, Alfonso Buil, Andrew~Anand Brown, Emmanouil~T. Dermitzakis, and
+  Olivier Delaneau.
+\newblock Fast and efficient {{QTL}} mapper for thousands of molecular
+  phenotypes.
+\newblock {\em Bioinformatics}, 32(10):1479--1485, 2016.
+
+\bibitem{pai_contribution_2012}
+Athma~A. Pai, Carolyn~E. Cain, Orna {Mizrahi-Man}, Sherryl De~Leon, Noah
+  Lewellen, Jean-Baptiste Veyrieras, Jacob~F. Degner, Daniel~J. Gaffney,
+  Joseph~K. Pickrell, Matthew Stephens, Jonathan~K. Pritchard, and Yoav Gilad.
+\newblock The {{Contribution}} of {{RNA Decay Quantitative Trait Loci}} to
+  {{Inter}}-{{Individual Variation}} in {{Steady}}-{{State Gene Expression
+  Levels}}.
+\newblock {\em PLoS Genetics}, 8(10):e1003000, 2012.
+
+\bibitem{pickrell_understanding_2010}
+Joseph~K. Pickrell, John~C. Marioni, Athma~A. Pai, Jacob~F. Degner, Barbara~E.
+  Engelhardt, Everlyne Nkadori, Jean-Baptiste Veyrieras, Matthew Stephens, Yoav
+  Gilad, and Jonathan~K. Pritchard.
+\newblock Understanding mechanisms underlying human gene expression variation
+  with {{RNA}} sequencing.
+\newblock {\em Nature}, 464(7289):768--772, 2010.
+
+\bibitem{price_transient_2018}
+David~H. Price.
+\newblock Transient pausing by {{RNA}} polymerase {{II}}.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  115(19):4810--4812, 2018.
+
+\bibitem{proudfoot_transcriptional_2016}
+Nick~J. Proudfoot.
+\newblock Transcriptional termination in mammals: {{Stopping}} the {{RNA}}
+  polymerase {{II}} juggernaut.
+\newblock {\em Science (New York, N.Y.)}, 352(6291):aad9926, 2016.
+
+\bibitem{rahl_c-myc_2010}
+Peter~B. Rahl, Charles~Y. Lin, Amy~C. Seila, Ryan~A. Flynn, Scott McCuine,
+  Christopher~B. Burge, Phillip~A. Sharp, and Richard~A. Young.
+\newblock C-{{Myc}} regulates transcriptional pause release.
+\newblock {\em Cell}, 141(3):432--445, 2010.
+
+\bibitem{reimer_rapid_2020}
+Kirsten~A. Reimer, Claudia Mimoso, Karen Adelman, and Karla~M. Neugebauer.
+\newblock Rapid and {{Efficient Co}}-{{Transcriptional Splicing Enhances
+  Mammalian Gene Expression}}.
+\newblock Technical report, 2020.
+
+\bibitem{rogers_ribosome_2017}
+David~W. Rogers, Marvin~A. B{\"o}ttcher, Arne Traulsen, and Duncan Greig.
+\newblock Ribosome reinitiation can explain length-dependent translation of
+  messenger {{RNA}}.
+\newblock {\em PLOS Computational Biology}, 13(6):e1005592, 2017.
+
+\bibitem{sheppard_accurate_2013}
+Sarah Sheppard, Nathan~D. Lawson, and Lihua~Julie Zhu.
+\newblock Accurate identification of polyadenylation sites from 3' end deep
+  sequencing using a na\"ive {{Bayes}} classifier.
+\newblock {\em Bioinformatics}, 29(20):2564--2571, 2013.
+
+\bibitem{shi_alternative_2012}
+Yongsheng Shi.
+\newblock Alternative polyadenylation: {{New}} insights from global analyses.
+\newblock {\em RNA (New York, N.Y.)}, 18(12):2105--2117, 2012.
+
+\bibitem{singh_widespread_2018}
+Irtisha Singh, Shih-Han Lee, Adam~S. Sperling, Mehmet~K. Samur, Yu-Tzu Tai,
+  Mariateresa Fulciniti, Nikhil~C. Munshi, Christine Mayr, and Christina~S.
+  Leslie.
+\newblock Widespread intronic polyadenylation diversifies immune cell
+  transcriptomes.
+\newblock {\em Nature Communications}, 9(1):1716, 2018.
+
+\bibitem{smith_umi-tools_2017}
+Tom Smith, Andreas Heger, and Ian Sudbery.
+\newblock {{UMI}}-tools: Modeling sequencing errors in {{Unique Molecular
+  Identifiers}} to improve quantification accuracy.
+\newblock {\em Genome Research}, 27(3):491--499, 2017.
+
+\bibitem{swaminathan_variants_2015}
+Bhairavi Swaminathan, Gu{\dh}mar Thorleifsson, Magnus J{\"o}ud, Mina Ali,
+  Ellinor Johnsson, Ram Ajore, Patrick Sulem, Britt-Marie Halvarsson,
+  Gu{\dh}mundur Eyjolfsson, Vilhelmina Haraldsdottir, Christina Hultman, Erik
+  Ingelsson, Sigur{\dh}ur~Y. Kristinsson, Anna~K. K{\"a}hler, Stig Lenhoff,
+  Gisli Masson, Ulf-Henrik Mellqvist, Robert M{\aa}nsson, Sven Nelander,
+  Isleifur Olafsson, Olof Sigur{\dh}ardottir, Hlif Steingrimsd{\'o}ttir,
+  Annette Vangsted, Ulla Vogel, Anders Waage, Hareth Nahi, Daniel~F.
+  Gudbjartsson, Thorunn Rafnar, Ingemar Turesson, Urban Gullberg, K{\'a}ri
+  Stef{\'a}nsson, Markus Hansson, Unnur Thorsteinsd{\'o}ttir, and Bj{\"o}rn
+  Nilsson.
+\newblock Variants in {{{\emph{ELL2}}}} influencing immunoglobulin levels
+  associate with multiple myeloma.
+\newblock {\em Nature Communications}, 6:7213, 2015.
+
+\bibitem{tian_large-scale_2005}
+Bin Tian, Jun Hu, Haibo Zhang, and Carol~S. Lutz.
+\newblock A large-scale analysis of {{mRNA}} polyadenylation of human and mouse
+  genes.
+\newblock {\em Nucleic Acids Research}, 33(1):201--212, 2005.
+
+\bibitem{tian_alternative_2017}
+Bin Tian and James~L. Manley.
+\newblock Alternative polyadenylation of {{mRNA}} precursors.
+\newblock {\em Nature Reviews. Molecular Cell Biology}, 18(1):18--30, 2017.
+
+\bibitem{tian_widespread_2007}
+Bin Tian, Zhenhua Pan, and Ju~Youn Lee.
+\newblock Widespread {{mRNA}} polyadenylation events in introns indicate
+  dynamic interplay between polyadenylation and splicing.
+\newblock {\em Genome Research}, 17(2):156--165, 2007.
+
+\bibitem{tome_single-molecule_2018}
+Jacob~M. Tome, Nathaniel~D. Tippens, and John~T. Lis.
+\newblock Single-molecule nascent {{RNA}} sequencing identifies regulatory
+  domain architecture at promoters and enhancers.
+\newblock {\em Nature Genetics}, 50(11):1533--1541, 2018.
+
+\bibitem{van_de_geijn_wasp_2015}
+Bryce {van de Geijn}, Graham McVicker, Yoav Gilad, and Jonathan~K. Pritchard.
+\newblock {{WASP}}: {{Allele}}-specific software for robust molecular
+  quantitative trait locus discovery.
+\newblock {\em Nature Methods}, 12(11):1061--1063, 2015.
+
+\bibitem{vasudevan_non-stop_2002}
+Shobha Vasudevan, Stuart~W. Peltz, and Carol~J. Wilusz.
+\newblock Non-stop decay\textemdash a new {{mRNA}} surveillance pathway.
+\newblock {\em BioEssays}, 24(9):785--788, 2002.
+
+\bibitem{wallace_statistical_2012}
+Chris Wallace, Maxime Rotival, Jason~D. Cooper, Catherine~M. Rice, Jennie H.~M.
+  Yang, Mhairi McNeill, Deborah~J. Smyth, David Niblett, Fran{\c c}ois Cambien,
+  Laurence Tiret, John~A. Todd, David~G. Clayton, and Stefan Blankenberg.
+\newblock Statistical colocalization of monocyte gene expression and genetic
+  risk variants for type 1 diabetes.
+\newblock {\em Human Molecular Genetics}, 21(12):2815--2824, 2012.
+
+\bibitem{wang_polya_db_2018}
+Ruijia Wang, Ram Nambiar, Dinghai Zheng, and Bin Tian.
+\newblock {{PolyA}}\_{{DB}} 3 catalogs cleavage and polyadenylation sites
+  identified by deep sequencing in multiple genomes.
+\newblock {\em Nucleic Acids Research}, 46(D1):D315--D319, 2018.
+
+\bibitem{wissink_nascent_2019}
+Erin~M. Wissink, Anniina Vihervaara, Nathaniel~D. Tippens, and John~T. Lis.
+\newblock Nascent {{RNA}} analyses: Tracking transcription and its regulation.
+\newblock {\em Nature Reviews Genetics}, 20(12):705--723, 2019.
+
+\bibitem{xing_flexible_2016}
+Zhengrong Xing, Peter Carbonetto, and matthew Stephens.
+\newblock Flexible signal denoising via flexible empirical {{Bayes}} shrinkage.
+\newblock {\em arXiv}, 1605.07787, 2016.
+
+\bibitem{yamashita_translational_2017}
+A.~Yamashita and O.~Takeuchi.
+\newblock Translational control of {{mRNAs}} by 3'-{{Untranslated}} region
+  binding proteins.
+\newblock {\em BMB reports}, 50(4):194--200, 2017.
+
+\bibitem{yang_snp2apa_2019}
+Yanbo Yang, Qiong Zhang, Ya-Ru Miao, Jiajun Yang, Wenqian Yang, Fangda Yu,
+  Dongyang Wang, An-Yuan Guo, and Jing Gong.
+\newblock {{SNP2APA}}: {{A}} database for evaluating effects of genetic
+  variants on alternative polyadenylation in human cancers.
+\newblock {\em Nucleic Acids Research}, 2019.
+
+\bibitem{yeo_maximum_2004}
+Gene Yeo and Christopher~B. Burge.
+\newblock Maximum entropy modeling of short sequence motifs with applications
+  to {{RNA}} splicing signals.
+\newblock {\em Journal of Computational Biology: A Journal of Computational
+  Molecular Cell Biology}, 11(2-3):377--394, 2004.
+
+\bibitem{yoon_genetics_2012}
+Oh~Kyu Yoon, Tiffany~Y. Hsu, Joo~Hyun Im, and Rachel~B. Brem.
+\newblock Genetics and {{Regulatory Impact}} of {{Alternative Polyadenylation}}
+  in {{Human B}}-{{Lymphoblastoid Cells}}.
+\newblock {\em PLOS Genetics}, 8(8):e1002882, 2012.
+
+\bibitem{zeitlinger_rna_2007}
+Julia Zeitlinger, Alexander Stark, Manolis Kellis, Joung-Woo Hong, Sergei
+  Nechaev, Karen Adelman, Michael Levine, and Richard~A. Young.
+\newblock {{RNA}} polymerase stalling at developmental control genes in the
+  {{Drosophila}} melanogaster embryo.
+\newblock {\em Nature Genetics}, 39(12):1512--1516, 2007.
+
+\end{thebibliography}

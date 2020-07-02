@@ -1,0 +1,68 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: tbd.aux
+A level-1 auxiliary file: tex/acknowledgments.aux
+A level-1 auxiliary file: tex/abstract.aux
+A level-1 auxiliary file: tex/ch01.aux
+A level-1 auxiliary file: tex/ch02.aux
+A level-1 auxiliary file: tex/ch03.aux
+A level-1 auxiliary file: tex/ch04.aux
+White space in argument---line 46 of file tex/ch04.aux
+ : \citation{nojima_mammalian_2015,gariglio_clustering_1981,buck_chip-chip_2004,kim_high-resolution_2005,wissink_nascent_2019,mayer_pause_2017
+ :                                                                                                                                             }
+I'm skipping whatever remains of this command
+White space in argument---line 65 of file tex/ch04.aux
+ : \citation{frankish_gencode_2019,quinlan_bedtools_2010
+ :                                                       }
+I'm skipping whatever remains of this command
+White space in argument---line 66 of file tex/ch04.aux
+ : \citation{frankish_gencode_2019,Liao2014
+ :                                          }
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: tex/ch05.aux
+The style file: plain.bst
+Database file #1: refs.bib
+Warning--empty institution in kristjansdottir_population-scale_2018
+Warning--empty institution in reimer_rapid_2020
+You've used 94 entries,
+            2118 wiz_defined-function locations,
+            1015 strings with 35386 characters,
+and the built_in function-call counts, 53808 in all, are:
+= -- 4663
+> -- 4923
+< -- 2
++ -- 1966
+- -- 1860
+* -- 5380
+:= -- 9580
+add.period$ -- 282
+call.type$ -- 94
+change.case$ -- 1214
+chr.to.int$ -- 0
+cite$ -- 96
+duplicate$ -- 1052
+empty$ -- 2493
+format.name$ -- 1860
+if$ -- 10022
+int.to.chr$ -- 0
+int.to.str$ -- 94
+missing$ -- 92
+newline$ -- 473
+num.names$ -- 188
+pop$ -- 1036
+preamble$ -- 1
+purify$ -- 1118
+quote$ -- 0
+skip$ -- 696
+stack$ -- 0
+substring$ -- 2650
+swap$ -- 118
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 376
+warning$ -- 2
+while$ -- 346
+width$ -- 96
+write$ -- 1033
+(There were 3 error messages)
