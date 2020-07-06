@@ -21,12 +21,14 @@ import os
 import sys
 import bibtexparser as bib
 import shutil
+#add common strings parser to deal with months in citations
+parser = bib.bparser.BibTexParser(common_strings=True)
 
 bibtex_input = sys.argv[1]
 assert os.path.isfile(bibtex_input), "bibtex file does not exist"
 
 with open(bibtex_input) as bibtex_file:
-    bib_database = bib.load(bibtex_file)
+    bib_database = bib.load(bibtex_file,parser=parser)
 
 bib_dict = bib_database.entries_dict
 keys = bib_dict.keys()

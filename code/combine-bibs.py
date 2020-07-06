@@ -15,7 +15,8 @@ Usage:
 import os
 import sys
 import bibtexparser as bib
-
+#add common strings parser to deal with months in citations
+parser = bib.bparser.BibTexParser(common_strings=True)
 args = sys.argv
 assert len(args) == 3, \
     "Usage: python combine-bibs.py one.bib two.bib > new.bib"
@@ -25,7 +26,7 @@ file1 = args[1]
 assert os.path.isfile(file1), \
     "bibtex file %s does not exist"%(file1)
 with open(file1) as bibtex_file:
-    bib1 = bib.load(bibtex_file)
+    bib1 = bib.load(bibtex_file, parser=parser)
 entries1 = bib1.entries_dict
 keys1 = set(entries1.keys())
 
@@ -34,7 +35,7 @@ file2 = args[2]
 assert os.path.isfile(file2), \
     "bibtex file %s does not exist"%(file2)
 with open(file2) as bibtex_file:
-    bib2 = bib.load(bibtex_file)
+    bib2 = bib.load(bibtex_file,parser=parser)
 entries2 = bib2.entries_dict
 keys2 = set(entries2.keys())
 
