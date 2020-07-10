@@ -1,48 +1,57 @@
 This is BibTeX, Version 0.99d (TeX Live 2017)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: tbd.aux
-I found no \citation commands---while reading file tbd.aux
-I found no \bibdata command---while reading file tbd.aux
-I found no \bibstyle command---while reading file tbd.aux
-You've used 0 entries,
-            0 wiz_defined-function locations,
-            83 strings with 480 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
+A level-1 auxiliary file: tex/acknowledgments.aux
+A level-1 auxiliary file: tex/abstract.aux
+A level-1 auxiliary file: tex/ch01.aux
+A level-1 auxiliary file: tex/ch02.aux
+A level-1 auxiliary file: tex/ch03.aux
+A level-1 auxiliary file: tex/ch04.aux
+A level-1 auxiliary file: tex/ch05.aux
+The style file: plain.bst
+Database file #1: refs.bib
+Warning--I didn't find a database entry for "wang_posttranslational_2018"
+Warning--empty institution in kristjansdottir_population-scale_2018
+Warning--empty institution in reimer_rapid_2020
+You've used 137 entries,
+            2118 wiz_defined-function locations,
+            1228 strings with 48155 characters,
+and the built_in function-call counts, 78380 in all, are:
+= -- 6799
+> -- 7128
+< -- 3
++ -- 2849
+- -- 2692
+* -- 7829
+:= -- 13930
+add.period$ -- 411
+call.type$ -- 137
+change.case$ -- 1759
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
+cite$ -- 139
+duplicate$ -- 1538
+empty$ -- 3666
+format.name$ -- 2692
+if$ -- 14622
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
-purify$ -- 0
+int.to.str$ -- 137
+missing$ -- 135
+newline$ -- 688
+num.names$ -- 274
+pop$ -- 1498
+preamble$ -- 1
+purify$ -- 1620
 quote$ -- 0
-skip$ -- 0
+skip$ -- 1022
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 3934
+swap$ -- 174
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 0
-(There were 3 error messages)
+type$ -- 548
+warning$ -- 2
+while$ -- 504
+width$ -- 140
+write$ -- 1506
+(There were 3 warnings)
