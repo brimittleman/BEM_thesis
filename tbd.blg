@@ -10,48 +10,49 @@ A level-1 auxiliary file: tex/ch04.aux
 A level-1 auxiliary file: tex/ch05.aux
 The style file: plain.bst
 Database file #1: refs.bib
-Warning--I didn't find a database entry for "wang_posttranslational_2018"
 Warning--empty institution in kristjansdottir_population-scale_2018
+Warning--empty institution in park_bayesian_2017
 Warning--empty institution in reimer_rapid_2020
-You've used 137 entries,
+Warning--empty institution in romero_widespread_2018
+You've used 166 entries,
             2118 wiz_defined-function locations,
-            1228 strings with 48155 characters,
-and the built_in function-call counts, 78380 in all, are:
-= -- 6799
-> -- 7128
-< -- 3
-+ -- 2849
-- -- 2692
-* -- 7829
-:= -- 13930
-add.period$ -- 411
-call.type$ -- 137
-change.case$ -- 1759
+            1351 strings with 55446 characters,
+and the built_in function-call counts, 91934 in all, are:
+= -- 8021
+> -- 8198
+< -- 4
++ -- 3278
+- -- 3086
+* -- 9095
+:= -- 16315
+add.period$ -- 498
+call.type$ -- 166
+change.case$ -- 2045
 chr.to.int$ -- 0
-cite$ -- 139
-duplicate$ -- 1538
-empty$ -- 3666
-format.name$ -- 2692
-if$ -- 14622
+cite$ -- 170
+duplicate$ -- 1861
+empty$ -- 4407
+format.name$ -- 3086
+if$ -- 17214
 int.to.chr$ -- 0
-int.to.str$ -- 137
-missing$ -- 135
-newline$ -- 688
-num.names$ -- 274
-pop$ -- 1498
+int.to.str$ -- 166
+missing$ -- 162
+newline$ -- 833
+num.names$ -- 332
+pop$ -- 1731
 preamble$ -- 1
-purify$ -- 1620
+purify$ -- 1875
 quote$ -- 0
-skip$ -- 1022
+skip$ -- 1238
 stack$ -- 0
-substring$ -- 3934
-swap$ -- 174
-text.length$ -- 3
+substring$ -- 4672
+swap$ -- 212
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 548
-warning$ -- 2
-while$ -- 504
-width$ -- 140
-write$ -- 1506
-(There were 3 warnings)
+type$ -- 664
+warning$ -- 4
+while$ -- 604
+width$ -- 169
+write$ -- 1823
+(There were 4 warnings)

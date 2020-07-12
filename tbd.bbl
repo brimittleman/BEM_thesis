@@ -24,6 +24,12 @@ Fran{\c c}ois Aguet, Alvaro~N. Barbeira, Rodrigo Bonazzola, Andrew Brown,
   human tissues.
 \newblock {\em bioRxiv}, page 787903, 2019.
 
+\bibitem{amarasinghe_opportunities_2020}
+Shanika~L. Amarasinghe, Shian Su, Xueyi Dong, Luke Zappia, Matthew~E. Ritchie,
+  and Quentin Gouil.
+\newblock Opportunities and challenges in long-read sequencing data analysis.
+\newblock {\em Genome Biology}, 21(1):30, 2020.
+
 \bibitem{astle_allelic_2016}
 William~J. Astle, Heather Elding, Tao Jiang, Dave Allen, Dace Ruklisa, Alice~L.
   Mann, Daniel Mead, Heleen Bouman, Fernando {Riveros-Mckay}, Myrto~A.
@@ -52,6 +58,12 @@ Jan Attig, Igor {Ruiz de los Mozos}, Nejc Haberman, Zhen Wang, Warren Emmett,
 \newblock Splicing repression allows the gradual emergence of new {{Alu}}-exons
   in primate evolution.
 \newblock {\em eLife}, 5:e19545, 2016.
+
+\bibitem{balazs_template-switching_2019}
+Zsolt Bal{\'a}zs, D{\'o}ra Tomb{\'a}cz, Zsolt Csabai, Norbert Moldov{\'a}n,
+  Michael Snyder, and Zsolt Boldogk{\H o}i.
+\newblock Template-switching artifacts resemble alternative polyadenylation.
+\newblock {\em BMC Genomics}, 20(1):824, 2019.
 
 \bibitem{barski_high-resolution_2007}
 Artem Barski, Suresh Cuddapah, Kairong Cui, Tae-Young Roh, Dustin~E. Schones,
@@ -95,6 +107,14 @@ Bradley~E Bernstein, John~A Stamatoyannopoulos, Joseph~F Costello, Bing Ren,
   Lander, Tarjei~S Mikkelsen, and James~A Thomson.
 \newblock The {{NIH Roadmap Epigenomics Mapping Consortium}}.
 \newblock {\em Nature Biotechnology}, 28(10):1045--1048, 2010.
+
+\bibitem{blake_comparison_2020}
+Lauren~E. Blake, Julien Roux, Irene {Hernando-Herraez}, Nicholas~E. Banovich,
+  Raquel~Garcia Perez, Chiaowen~Joyce Hsiao, Ittai Eres, Claudia Cuevas, Tomas
+  {Marques-Bonet}, and Yoav Gilad.
+\newblock A comparison of gene expression and {{DNA}} methylation patterns
+  across tissues and species.
+\newblock {\em Genome Research}, 30(2):250--262, 2020.
 
 \bibitem{blekhman_sex-specific_2010}
 Ran Blekhman, John~C. Marioni, Paul Zumbo, Matthew Stephens, and Yoav Gilad.
@@ -203,6 +223,13 @@ Daniel~S. Day, Bing Zhang, Sean~M. Stevens, Francesco Ferrari, Erica~N.
   pausing across mammalian cell types.
 \newblock {\em Genome Biology}, 17(1):120, 2016.
 
+\bibitem{de_la_mata_slow_2003}
+Manuel {de la Mata}, Claudio~R Alonso, Sebasti{\'a}n Kadener, Juan~P Fededa,
+  Mat{\'{\i}}as Blaustein, Federico Pelisch, Paula Cramer, David Bentley, and
+  Alberto~R Kornblihtt.
+\newblock A {{Slow RNA Polymerase II Affects Alternative Splicing In Vivo}}.
+\newblock {\em Molecular Cell}, 12(2):525--532, 2003.
+
 \bibitem{degner_dnase_2012}
 Jacob~F. Degner, Athma~A. Pai, Roger {Pique-Regi}, Jean-Baptiste Veyrieras,
   Daniel~J. Gaffney, Joseph~K. Pickrell, Sherryl De~Leon, Katelyn Michelini,
@@ -306,7 +333,7 @@ Natalia Gromak, Steven West, and Nick~J. Proudfoot.
 \newblock {\em Molecular and Cellular Biology}, 26(10):3986--3996, 2006.
 
 \bibitem{gtex_consortium_genetic_2017}
-{{{{{{{{{{{{{{{{{GTEx Consortium}}}}}}}}}}}}}}}}}.
+{{{{{{{{{{{{{{{{{{{{{{{GTEx Consortium}}}}}}}}}}}}}}}}}}}}}}}.
 \newblock Genetic effects on gene expression across human tissues.
 \newblock {\em Nature}, 550(7675):204--213, 2017.
 
@@ -325,26 +352,47 @@ Sven Heinz, Christopher Benner, Nathanael Spann, Eric Bertolino, Yin~C. Lin,
   identities.
 \newblock {\em Molecular Cell}, 38(4):576--589, 2010.
 
+\bibitem{hilgers_neural-specific_2011}
+Val{\'e}rie Hilgers, Michael~W. Perry, David Hendrix, Alexander Stark, Michael
+  Levine, and Benjamin Haley.
+\newblock Neural-specific elongation of 3' {{UTRs}} during {{Drosophila}}
+  development.
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America}, 108(38):15864--15869, 2011.
+
 \bibitem{housman_prime_2020}
 Genevieve Housman and Yoav Gilad.
 \newblock Prime time for primate functional genomics.
 \newblock {\em Current Opinion in Genetics \& Development}, 62:1--7, 2020.
 
+\bibitem{howe_perturbation_2003}
+K.~J. Howe.
+\newblock Perturbation of transcription elongation influences the fidelity of
+  internal exon inclusion in {{Saccharomyces}} cerevisiae.
+\newblock {\em RNA}, 9(8):993--1006, 2003.
+
 \bibitem{international_hapmap_consortium_haplotype_2005}
-{{{{{{{{{{{{{{{{{International HapMap Consortium}}}}}}}}}}}}}}}}}.
+{{{{{{{{{{{{{{{{{{{{{{{International HapMap Consortium}}}}}}}}}}}}}}}}}}}}}}}.
 \newblock A haplotype map of the human genome.
 \newblock {\em Nature}, 437(7063):1299--1320, 2005.
 
 \bibitem{HapMap2005}
-{{{{{{{{{{{{{{{{{International HapMap Consortium}}}}}}}}}}}}}}}}}.
+{{{{{{{{{{{{{{{{{{{{{{{International HapMap Consortium}}}}}}}}}}}}}}}}}}}}}}}.
 \newblock A haplotype map of the human genome.
 \newblock {\em Nature}, 437(7063):1299--320, 2005.
 
 \bibitem{international_human_genome_sequencing_consortium_initial_2001}
-{{{{{{{{{{{{{{{{{International Human Genome Sequencing
-  Consortium}}}}}}}}}}}}}}}}}.
+{{{{{{{{{{{{{{{{{{{{{{{International Human Genome Sequencing
+  Consortium}}}}}}}}}}}}}}}}}}}}}}}.
 \newblock Initial sequencing and analysis of the human genome.
 \newblock {\em Nature}, 409(6822):860--921, 2001.
+
+\bibitem{ji_progressive_2009}
+Zhe Ji, Ju~Youn Lee, Zhenhua Pan, Bingjun Jiang, and Bin Tian.
+\newblock Progressive lengthening of 3' untranslated regions of {{mRNAs}} by
+  alternative polyadenylation during mouse embryonic development.
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America}, 106(17):7028--7033, 2009.
 
 \bibitem{joehanes_integrated_2017}
 Roby Joehanes, Xiaoling Zhang, Tianxiao Huan, Chen Yao, Sai-xia Ying, Quang~Tri
@@ -391,6 +439,13 @@ W.~James Kent, Charles~W. Sugnet, Terrence~S. Furey, Krishna~M. Roskin, Tom~H.
 \newblock The {{Human Genome Browser}} at {{UCSC}}.
 \newblock {\em Genome Research}, 12(6):996--1006, 2002.
 
+\bibitem{khan_primate_2013}
+Z.~Khan, M.~J. Ford, D.~A. Cusanovich, A.~Mitrano, J.~K. Pritchard, and
+  Y.~Gilad.
+\newblock Primate {{Transcript}} and {{Protein Expression Levels Evolve Under
+  Compensatory Selection Pressures}}.
+\newblock {\em Science}, 342(6162):1100--1104, 2013.
+
 \bibitem{kim_high-resolution_2005}
 Tae~Hoon Kim, Leah~O. Barrera, Ming Zheng, Chunxu Qu, Michael~A. Singer,
   Todd~A. Richmond, Yingnian Wu, Roland~D. Green, and Bing Ren.
@@ -420,6 +475,11 @@ Derek Klarin, Scott~M. Damrauer, Kelly Cho, Yan~V. Sun, Tanya~M. Teslovich,
   participants of the {{Million Veteran Program}}.
 \newblock {\em Nature Genetics}, 50(11):1514--1523, 2018.
 
+\bibitem{kornblihtt_chromatin_2006}
+Alberto~R Kornblihtt.
+\newblock Chromatin, transcript elongation and alternative splicing.
+\newblock {\em Nature Structural \& Molecular Biology}, 13(1):5--7, 2006.
+
 \bibitem{kristjansdottir_population-scale_2018}
 Katla Kristj{\'a}nsd{\'o}ttir, Yeonui Kwak, Nathaniel~D. Tippens, John~T. Lis,
   Hyun Min~Kang, and Hojoong Kwak.
@@ -437,6 +497,13 @@ Hojoong Kwak, Nicholas~J. Fuda, Leighton~J. Core, and John~T. Lis.
 \newblock Precise maps of {{RNA}} polymerase reveal how promoters direct
   initiation and pausing.
 \newblock {\em Science (New York, N.Y.)}, 339(6122):950--953, 2013.
+
+\bibitem{lammey_interstitial_2008}
+Michael~L. Lammey, Gary~B. Baskin, Andrew~P. Gigliotti, D.~Rick Lee, John~J.
+  Ely, and Meg~M. Sleeper.
+\newblock Interstitial myocardial fibrosis in a captive chimpanzee ({{Pan}}
+  troglodytes) population.
+\newblock {\em Comparative Medicine}, 58(4):389--394, 2008.
 
 \bibitem{lappalainen_transcriptome_2013}
 Tuuli Lappalainen, Michael Sammeth, Marc~R. Friedl{\"a}nder, Peter A.~C.
@@ -477,6 +544,12 @@ Lei Li, Yipeng Gao, Fanglue Peng, Eric~J. Wagner, and Wei Li.
 \newblock Genetic {{Basis}} of {{Alternative Polyadenylation}} is an {{Emerging
   Molecular Phenotype}} for {{Human Traits}} and {{Diseases}}.
 \newblock {\em bioRxiv}, page 570176, 2019.
+
+\bibitem{li_dynamic_2012}
+Y.~Li, Y.~Sun, Y.~Fu, M.~Li, G.~Huang, C.~Zhang, J.~Liang, S.~Huang, G.~Shen,
+  S.~Yuan, L.~Chen, S.~Chen, and A.~Xu.
+\newblock Dynamic landscape of tandem 3' {{UTRs}} during zebrafish development.
+\newblock {\em Genome Research}, 22(10):1899--1906, 2012.
 
 \bibitem{li_annotation-free_2018}
 Yang~I. Li, David~A. Knowles, Jack Humphrey, Alvaro~N. Barbeira, Scott~P.
@@ -569,6 +642,13 @@ Elisa Mariella, Federico Marotta, Elena Grassi, Stefano Gilotto, and Paolo
 \newblock The {{Length}} of the {{Expressed}} 3' {{UTR Is}} an {{Intermediate
   Molecular Phenotype Linking Genetic Variants}} to {{Complex Diseases}}.
 \newblock {\em Frontiers in Genetics}, 10:714, 2019.
+
+\bibitem{mariella_length_2019}
+Elisa Mariella, Federico Marotta, Elena Grassi, Stefano Gilotto, and Paolo
+  Provero.
+\newblock The {{Length}} of the {{Expressed}} 3' {{UTR Is}} an {{Intermediate
+  Molecular Phenotype Linking Genetic Variants}} to {{Complex Diseases}}.
+\newblock {\em Frontiers in Genetics}, 10, 2019.
 
 \bibitem{marsman_long_2012}
 Judith Marsman and Julia~A. Horsfield.
@@ -679,6 +759,20 @@ Pamela Moll, Michael Ante, Alexander Seitz, and Torsten Reda.
 \newblock An encyclopedia of mouse {{DNA}} elements ({{Mouse ENCODE}}).
 \newblock {\em Genome Biology}, 13(8):418, 2012.
 
+\bibitem{mueller_alls_2013}
+Alisa~A Mueller, Tom~H Cheung, and Thomas~A Rando.
+\newblock All's well that ends well: Alternative polyadenylation and its
+  implications for stem cell biology.
+\newblock {\em Current Opinion in Cell Biology}, 25(2):222--232, 2013.
+
+\bibitem{nanavaty_dna_2020}
+Vishal Nanavaty, Elizabeth~W. Abrash, Changjin Hong, Sunho Park, Emily~E. Fink,
+  Zhuangyue Li, Thomas~J. Sweet, Jeffrey~M. Bhasin, Srinidhi Singuri, Byron~H.
+  Lee, Tae~Hyun Hwang, and Angela~H. Ting.
+\newblock {{DNA Methylation Regulates Alternative Polyadenylation}} via
+  {{CTCF}} and the {{Cohesin Complex}}.
+\newblock {\em Molecular Cell}, 78(4):752--764.e6, 2020.
+
 \bibitem{nojima_mammalian_2015}
 Takayuki Nojima, Tom{\'a}s Gomes, Ana Rita~Fialho Grosso, Hiroshi Kimura,
   Michael~J. Dye, Somdutta Dhir, Maria {Carmo-Fonseca}, and Nicholas~J.
@@ -749,6 +843,13 @@ Halit Ongen and Emmanouil~T. Dermitzakis.
   Populations}}.
 \newblock {\em American Journal of Human Genetics}, 97(4):567--575, 2015.
 
+\bibitem{pai_genome-wide_2011}
+Athma~A. Pai, Jordana~T. Bell, John~C. Marioni, Jonathan~K. Pritchard, and Yoav
+  Gilad.
+\newblock A {{Genome}}-{{Wide Study}} of {{DNA Methylation Patterns}} and
+  {{Gene Expression Levels}} in {{Multiple Human}} and {{Chimpanzee Tissues}}.
+\newblock {\em PLoS Genetics}, 7(2):e1001316, 2011.
+
 \bibitem{pai_contribution_2012}
 Athma~A. Pai, Carolyn~E. Cain, Orna {Mizrahi-Man}, Sherryl De~Leon, Noah
   Lewellen, Jean-Baptiste Veyrieras, Jacob~F. Degner, Daniel~J. Gaffney,
@@ -757,6 +858,11 @@ Athma~A. Pai, Carolyn~E. Cain, Orna {Mizrahi-Man}, Sherryl De~Leon, Noah
   {{Inter}}-{{Individual Variation}} in {{Steady}}-{{State Gene Expression
   Levels}}.
 \newblock {\em PLoS Genetics}, 8(10):e1003000, 2012.
+
+\bibitem{pai_comparative_2014}
+Athma~A Pai and Yoav Gilad.
+\newblock Comparative studies of gene regulatory mechanisms.
+\newblock {\em Current Opinion in Genetics \& Development}, 29:68--74, 2014.
 
 \bibitem{Pai2015}
 Athma~A Pai, Jonathan~K Pritchard, and Yoav Gilad.
@@ -770,6 +876,13 @@ Robert-Jan Palstra, Bas Tolhuis, Erik Splinter, Rian Nijmeijer, Frank Grosveld,
   differentiation.
 \newblock {\em Nature Genetics}, 35(2):190--194, 2003.
 
+\bibitem{park_bayesian_2017}
+Yongjin Park, Abhishek~K Sarkar, Liang He, Jose {Davila-Velderrain}, Philip~L
+  De~Jager, and Manolis Kellis.
+\newblock A {{Bayesian}} approach to mediation analysis predicts 206 causal
+  target genes in {{Alzheimer}}'s disease.
+\newblock Technical report, 2017.
+
 \bibitem{pickrell_understanding_2010}
 Joseph~K. Pickrell, John~C. Marioni, Athma~A. Pai, Jacob~F. Degner, Barbara~E.
   Engelhardt, Everlyne Nkadori, Jean-Baptiste Veyrieras, Matthew Stephens, Yoav
@@ -777,6 +890,24 @@ Joseph~K. Pickrell, John~C. Marioni, Athma~A. Pai, Jacob~F. Degner, Barbara~E.
 \newblock Understanding mechanisms underlying human gene expression variation
   with {{RNA}} sequencing.
 \newblock {\em Nature}, 464(7289):768--772, 2010.
+
+\bibitem{pierce_co-occurring_2018}
+Brandon~L. Pierce, Lin Tong, Maria Argos, Kathryn Demanelis, Farzana Jasmine,
+  Muhammad {Rakibuz-Zaman}, Golam Sarwar, Md.~Tariqul Islam, Hasan Shahriar,
+  Tariqul Islam, Mahfuzar Rahman, Md. Yunus, Muhammad~G. Kibriya, Lin~S. Chen,
+  and Habibul Ahsan.
+\newblock Co-occurring expression and methylation {{QTLs}} allow detection of
+  common causal variants and shared biological mechanisms.
+\newblock {\em Nature Communications}, 9(1):804, 2018.
+
+\bibitem{pinto_rna_2011}
+Pedro A~B Pinto, Telmo Henriques, Marta~O Freitas, Torcato Martins, Rita~G
+  Domingues, Paulina~S Wyrzykowska, Paula~A Coelho, Alexandre~M Carmo,
+  Claudio~E Sunkel, Nicholas~J Proudfoot, and Alexandra Moreira.
+\newblock {{RNA}} polymerase {{II}} kinetics in {\emph{polo}} polyadenylation
+  signal selection: {{RNA}} polymerase {{II}} kinetics and alternative
+  polyadenylation.
+\newblock {\em The EMBO Journal}, 30(12):2431--2444, 2011.
 
 \bibitem{price_transient_2018}
 David~H. Price.
@@ -789,6 +920,11 @@ Nick~J. Proudfoot.
 \newblock Transcriptional termination in mammals: {{Stopping}} the {{RNA}}
   polymerase {{II}} juggernaut.
 \newblock {\em Science (New York, N.Y.)}, 352(6291):aad9926, 2016.
+
+\bibitem{proudfoot_integrating_2002}
+Nick~J. Proudfoot, Andre Furger, and Michael~J. Dye.
+\newblock Integrating {{mRNA Processing}} with {{Transcription}}.
+\newblock {\em Cell}, 108(4):501--512, 2002.
 
 \bibitem{quinlan_bedtools_2010}
 Aaron~R. Quinlan and Ira~M. Hall.
@@ -814,6 +950,18 @@ David~W. Rogers, Marvin~A. B{\"o}ttcher, Arne Traulsen, and Duncan Greig.
   messenger {{RNA}}.
 \newblock {\em PLOS Computational Biology}, 13(6):e1005592, 2017.
 
+\bibitem{romero_widespread_2018}
+Irene~Gallego Romero, Shyam Gopalakrishnan, and Yoav Gilad.
+\newblock Widespread conservation of chromatin accessibility patterns and
+  transcription factor binding in human and chimpanzee induced pluripotent stem
+  cells.
+\newblock Technical report, 2018.
+
+\bibitem{sadek_alternative_2019}
+Jason Sadek, Amr Omer, Derek Hall, Kholoud Ashour, and Imed~Eddine Gallouzi.
+\newblock Alternative polyadenylation and the stress response.
+\newblock {\em Wiley Interdisciplinary Reviews: RNA}, page e1540, 2019.
+
 \bibitem{schmiedel_impact_2018}
 Benjamin~J. Schmiedel, Divya Singh, Ariel Madrigal, Alan~G.
   {Valdovino-Gonzalez}, Brandie~M. White, Jose {Zapardiel-Gonzalo}, Brendan Ha,
@@ -833,6 +981,16 @@ Sarah Sheppard, Nathan~D. Lawson, and Lihua~Julie Zhu.
 Yongsheng Shi.
 \newblock Alternative polyadenylation: {{New}} insights from global analyses.
 \newblock {\em RNA (New York, N.Y.)}, 18(12):2105--2117, 2012.
+
+\bibitem{shibata_extensive_2012-1}
+Yoichiro Shibata, Nathan~C. Sheffield, Olivier Fedrigo, Courtney~C. Babbitt,
+  Matthew Wortham, Alok~K. Tewari, Darin London, Lingyun Song, Bum-Kyu Lee,
+  Vishwanath~R. Iyer, Stephen C.~J. Parker, Elliott~H. Margulies, Gregory~A.
+  Wray, Terrence~S. Furey, and Gregory~E. Crawford.
+\newblock Extensive {{Evolutionary Changes}} in {{Regulatory Element Activity}}
+  during {{Human Origins Are Associated}} with {{Altered Gene Expression}} and
+  {{Positive Selection}}.
+\newblock {\em PLoS Genetics}, 8(6):e1002789, 2012.
 
 \bibitem{singh_widespread_2018}
 Irtisha Singh, Shih-Han Lee, Adam~S. Sperling, Mehmet~K. Samur, Yu-Tzu Tai,
@@ -862,6 +1020,13 @@ Barbara~E Stranger, Alexandra~C Nica, Matthew~S Forrest, Antigone Dimas,
 \newblock Population genomics of human gene expression.
 \newblock {\em Nature Genetics}, 39(10):1217--1224, 2007.
 
+\bibitem{strober_dynamic_2019}
+B.~J. Strober, R.~Elorbany, K.~Rhodes, N.~Krishnan, K.~Tayeb, A.~Battle, and
+  Y.~Gilad.
+\newblock Dynamic genetic regulation of gene expression during cellular
+  differentiation.
+\newblock {\em Science}, 364(6447):1287--1290, 2019.
+
 \bibitem{swaminathan_variants_2015}
 Bhairavi Swaminathan, Gu{\dh}mar Thorleifsson, Magnus J{\"o}ud, Mina Ali,
   Ellinor Johnsson, Ram Ajore, Patrick Sulem, Britt-Marie Halvarsson,
@@ -889,7 +1054,7 @@ Atsushi Takata, Naomichi Matsumoto, and Tadafumi Kato.
 \newblock {\em Nature Communications}, 8:14519, 2017.
 
 \bibitem{the_encode_project_consortium_integrated_2012}
-{{{{{{{{{{{{{{{{{The ENCODE Project Consortium}}}}}}}}}}}}}}}}}.
+{{{{{{{{{{{{{{{{{{{{{{{The ENCODE Project Consortium}}}}}}}}}}}}}}}}}}}}}}}.
 \newblock An integrated encyclopedia of {{DNA}} elements in the human genome.
 \newblock {\em Nature}, 489(7414):57--74, 2012.
 
@@ -944,6 +1109,15 @@ Bryce {van de Geijn}, Graham McVicker, Yoav Gilad, and Jonathan~K. Pritchard.
   quantitative trait locus discovery.
 \newblock {\em Nature Methods}, 12(11):1061--1063, 2015.
 
+\bibitem{varki_original_2009}
+Nissi Varki, Dan Anderson, James~G. Herndon, Tho Pham, Christopher~J. Gregg,
+  Monica Cheriyan, James Murphy, Elizabeth Strobert, Jo~Fritz, James~G. Else,
+  and Ajit Varki.
+\newblock {{ORIGINAL ARTICLE}}: {{Heart}} disease is common in humans and
+  chimpanzees, but is caused by different pathological processes: {{Heart}}
+  disease in hominids.
+\newblock {\em Evolutionary Applications}, 2(1):101--112, 2009.
+
 \bibitem{vasudevan_non-stop_2002}
 Shobha Vasudevan, Stuart~W. Peltz, and Carol~J. Wilusz.
 \newblock Non-stop decay\textemdash a new {{mRNA}} surveillance pathway.
@@ -963,10 +1137,22 @@ Ruijia Wang, Ram Nambiar, Dinghai Zheng, and Bin Tian.
   identified by deep sequencing in multiple genomes.
 \newblock {\em Nucleic Acids Research}, 46(D1):D315--D319, 2018.
 
+\bibitem{wang_post-translational_2018}
+Sidney~H. Wang, Chiaowen~Joyce Hsiao, Zia Khan, and Jonathan~K. Pritchard.
+\newblock Post-translational buffering leads to convergent protein expression
+  levels between primates.
+\newblock {\em Genome Biology}, 19(1):83, 2018.
+
 \bibitem{ward_cracking_2017}
 Michelle~C. Ward and Yoav Gilad.
 \newblock Cracking the regulatory code.
 \newblock {\em Nature}, 550(7675):190--191, 2017.
+
+\bibitem{ward_generally_2019}
+Michelle~C Ward and Yoav Gilad.
+\newblock A generally conserved response to hypoxia in {{iPSC}}-derived
+  cardiomyocytes from humans and chimpanzees.
+\newblock {\em eLife}, 8:e42374, 2019.
 
 \bibitem{wissink_nascent_2019}
 Erin~M. Wissink, Anniina Vihervaara, Nathaniel~D. Tippens, and John~T. Lis.
@@ -995,6 +1181,20 @@ Yanbo Yang, Qiong Zhang, Ya-Ru Miao, Jiajun Yang, Wenqian Yang, Fangda Yu,
 \newblock {{SNP2APA}}: {{A}} database for evaluating effects of genetic
   variants on alternative polyadenylation in human cancers.
 \newblock {\em Nucleic Acids Research}, 2019.
+
+\bibitem{yang_snp2apa_2020}
+Yanbo Yang, Qiong Zhang, Ya-Ru Miao, Jiajun Yang, Wenqian Yang, Fangda Yu,
+  Dongyang Wang, An-Yuan Guo, and Jing Gong.
+\newblock {{SNP2APA}}: A database for evaluating effects of genetic variants on
+  alternative polyadenylation in human cancers.
+\newblock {\em Nucleic Acids Research}, 48(D1):D226--D232, 2020.
+
+\bibitem{yao_coding_2012}
+Peng Yao, Alka~A. Potdar, Abul Arif, Partho~Sarothi Ray, Rupak Mukhopadhyay,
+  Belinda Willard, Yichi Xu, Jun Yan, Gerald~M. Saidel, and Paul~L. Fox.
+\newblock Coding region polyadenylation generates a truncated {{tRNA}}
+  synthetase that counters translation repression.
+\newblock {\em Cell}, 149(1):88--100, 2012.
 
 \bibitem{yeo_maximum_2004}
 Gene Yeo and Christopher~B. Burge.

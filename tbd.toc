@@ -60,9 +60,11 @@
 \contentsline {subsection}{\numberline {4.5.2}Collections and library preparation}{88}{subsection.4.5.2}
 \contentsline {subsection}{\numberline {4.5.3}Data processing}{89}{subsection.4.5.3}
 \contentsline {chapter}{\numberline {5}Conclusion}{91}{chapter.5}
-\contentsline {section}{\numberline {5.1}A joint Bayesian model provides a general framework for analyzing functional genomics studies with many conditions}{91}{section.5.1}
-\contentsline {section}{\numberline {5.2}Initial success classifying individuals susceptible to tuberculsosis and future directions}{91}{section.5.2}
-\contentsline {section}{\numberline {5.3}Incorporating lessons from single cell pilot study for future studies of the genetic basis of gene expression noise and the response to bacterial infection}{91}{section.5.3}
-\contentsline {section}{\numberline {5.4}The importance of mitigating batch effects in any genomics experiment}{91}{section.5.4}
-\contentsline {section}{\numberline {5.5}Concluding remarks}{91}{section.5.5}
-\contentsline {chapter}{References}{92}{section.5.5}
+\contentsline {section}{\numberline {5.1}Genetic underpinning of APA variation}{92}{section.5.1}
+\contentsline {section}{\numberline {5.2}Functional conservation of APA }{95}{section.5.2}
+\contentsline {section}{\numberline {5.3}Pol II dynamics to understand co-transcriptional gene regulation}{96}{section.5.3}
+\contentsline {section}{\numberline {5.4}Future directions}{97}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Expanding work to new biological processes}{97}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Technical and methodological future directions}{100}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}Concluding remarks}{101}{section.5.5}
+\contentsline {chapter}{References}{102}{section.5.5}
