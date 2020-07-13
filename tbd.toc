@@ -51,22 +51,22 @@
 \contentsline {section}{\numberline {3.4}Discussion}{77}{section.3.4}
 \contentsline {section}{\numberline {3.5}Methods}{77}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}Supplementary Figures}{78}{subsection.3.5.1}
-\contentsline {section}{\numberline {3.6}Supplementary Tables}{86}{section.3.6}
-\contentsline {chapter}{\numberline {4}Native Elongating Transcript sequencing to measure Polymerase II elongation rate in a human population}{87}{chapter.4}
-\contentsline {section}{\numberline {4.1}Abstract}{87}{section.4.1}
-\contentsline {section}{\numberline {4.2}Introduction}{88}{section.4.2}
-\contentsline {section}{\numberline {4.3}Results}{89}{section.4.3}
-\contentsline {section}{\numberline {4.4}Discussion}{95}{section.4.4}
-\contentsline {section}{\numberline {4.5}Methods}{97}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Cell culture of LCLs}{97}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Collections and library preparation}{97}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Data processing}{98}{subsection.4.5.3}
-\contentsline {chapter}{\numberline {5}Conclusion}{100}{chapter.5}
-\contentsline {section}{\numberline {5.1}Genetic underpinning of APA variation}{101}{section.5.1}
-\contentsline {section}{\numberline {5.2}Functional conservation of APA }{104}{section.5.2}
-\contentsline {section}{\numberline {5.3}Pol II dynamics to understand co-transcriptional gene regulation}{105}{section.5.3}
-\contentsline {section}{\numberline {5.4}Future directions}{106}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Expanding work to new biological processes}{106}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Technical and methodological future directions}{109}{subsection.5.4.2}
-\contentsline {section}{\numberline {5.5}Concluding remarks}{110}{section.5.5}
-\contentsline {chapter}{References}{111}{section.5.5}
+\contentsline {section}{\numberline {3.6}Supplementary Tables}{106}{section.3.6}
+\contentsline {chapter}{\numberline {4}Native Elongating Transcript sequencing to measure Polymerase II elongation rate in a human population}{107}{chapter.4}
+\contentsline {section}{\numberline {4.1}Abstract}{107}{section.4.1}
+\contentsline {section}{\numberline {4.2}Introduction}{108}{section.4.2}
+\contentsline {section}{\numberline {4.3}Results}{109}{section.4.3}
+\contentsline {section}{\numberline {4.4}Discussion}{115}{section.4.4}
+\contentsline {section}{\numberline {4.5}Methods}{117}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Cell culture of LCLs}{117}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Collections and library preparation}{117}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Data processing}{118}{subsection.4.5.3}
+\contentsline {chapter}{\numberline {5}Conclusion}{120}{chapter.5}
+\contentsline {section}{\numberline {5.1}Genetic underpinning of APA variation}{121}{section.5.1}
+\contentsline {section}{\numberline {5.2}Functional conservation of APA }{124}{section.5.2}
+\contentsline {section}{\numberline {5.3}Pol II dynamics to understand co-transcriptional gene regulation}{125}{section.5.3}
+\contentsline {section}{\numberline {5.4}Future directions}{126}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Expanding work to new biological processes}{126}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Technical and methodological future directions}{129}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}Concluding remarks}{130}{section.5.5}
+\contentsline {chapter}{References}{131}{section.5.5}

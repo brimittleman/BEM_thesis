@@ -49,11 +49,31 @@
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Figure 1B separated by genic location}}{83}{figure.3.6}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces PAS with AATAAA and ATTAAA are used more often}}{84}{figure.3.7}
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Chimp specific PAS likely due to loss of signal site in human lineage}}{85}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Genic Location of PAS differentially used between human and chimpanzee}}{86}{figure.3.9}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Location of PAS within Orthologous 3' UTRs}}{87}{figure.3.10}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Genes with differentially used PAS are enriched for genes with apaQTL }}{88}{figure.3.11}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Information content measurement densities}}{89}{figure.3.12}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Relationship between Shannon index and PAS number }}{90}{figure.3.13}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Relationship between Simpson diversity index and PAS number}}{91}{figure.3.14}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Intersection between genes with PAS and isoform diversity differences}}{92}{figure.3.15}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Figure 3 relationships expanded to total usage}}{93}{figure.3.16}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Relationship between APA differences and protein decay mark}}{94}{figure.3.17}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Gene with significant differences in isoform diversity only}}{95}{figure.3.18}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Relationship between $\Delta PAU$ and differential translation effect sizes}}{96}{figure.3.19}
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Enrichment for 3' UTR PAS in genes differentially expressed in protein and not in mRNA}}{97}{figure.3.20}
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Reciprocal liftover pipeline}}{98}{figure.3.21}
+\contentsline {figure}{\numberline {3.22}{\ignorespaces NA18499 removed from analysis due to low correlation between fractions}}{99}{figure.3.22}
+\contentsline {figure}{\numberline {3.23}{\ignorespaces PAS that do not lift from human to chimp}}{100}{figure.3.23}
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Figure 3 without genes affected by liftover}}{101}{figure.3.24}
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Figure 4 without genes affected by liftover}}{102}{figure.3.25}
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Figure 5 without genes affected by liftover}}{103}{figure.3.26}
+\contentsline {figure}{\numberline {3.27}{\ignorespaces Figure 6 without genes affected by liftover}}{104}{figure.3.27}
+\contentsline {figure}{\numberline {3.28}{\ignorespaces Differential expression quality control plots}}{105}{figure.3.28}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Graphical representation of NET-seq protocol}}{91}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Quality control metrics for NET-seq libraries.}}{92}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces NET-seq Gene coverage.}}{93}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Smoothing of NET-seq data using smashr }}{94}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces NA18486 NET-seq coverage along INSIG2 locus}}{94}{figure.4.5}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Graphical representation of NET-seq protocol}}{111}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Quality control metrics for NET-seq libraries.}}{112}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces NET-seq Gene coverage.}}{113}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Smoothing of NET-seq data using smashr }}{114}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces NA18486 NET-seq coverage along INSIG2 locus}}{114}{figure.4.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Graphical Abstract of dissertation}}{102}{figure.5.1}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Graphical Abstract of dissertation}}{122}{figure.5.1}

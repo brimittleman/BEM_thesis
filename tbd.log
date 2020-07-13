@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  12 JUL 2020 19:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  13 JUL 2020 13:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -363,7 +363,14 @@ Package: ccaption 2011/08/07 v3.2c Extended captioning and new floats
 \c@newflo@tctr=\count126
 ))
 (./tbd.aux (./tex/acknowledgments.aux) (./tex/abstract.aux) (./tex/ch01.aux)
-(./tex/ch02.aux) (./tex/ch03.aux) (./tex/ch04.aux) (./tex/ch05.aux))
+(./tex/ch02.aux) (./tex/ch03.aux
+
+LaTeX Warning: Label `fig:ch03-simpNum' multiply defined.
+
+
+LaTeX Warning: Label `fig:ch03-unliftfig4' multiply defined.
+
+) (./tex/ch04.aux) (./tex/ch05.aux))
 \openout1 = `tbd.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -511,7 +518,7 @@ l.11
 
 
 
-] <img/ch01/eQTLMech.png, id=568, 449.5194pt x 267.27855pt>
+] <img/ch01/eQTLMech.png, id=610, 449.5194pt x 267.27855pt>
 File: img/ch01/eQTLMech.png Graphic file (type png)
 
 <use img/ch01/eQTLMech.png>
@@ -530,7 +537,7 @@ Chapter 2.
 ] [9
 
 ] [10] [11] [12] [13]
-<img/ch02/figure1.pdf, id=793, 614.295pt x 794.97pt>
+<img/ch02/figure1.pdf, id=835, 614.295pt x 794.97pt>
 File: img/ch02/figure1.pdf Graphic file (type pdf)
 
 <use img/ch02/figure1.pdf>
@@ -543,7 +550,7 @@ the same identifier (name{figure.2.1}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.61 
-     ] <img/ch02/figure2.pdf, id=875, 614.295pt x 794.97pt>
+     ] <img/ch02/figure2.pdf, id=916, 614.295pt x 794.97pt>
 File: img/ch02/figure2.pdf Graphic file (type pdf)
 
 <use img/ch02/figure2.pdf>
@@ -556,14 +563,14 @@ the same identifier (name{figure.2.2}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.84 
-     ] <img/ch02/figure3.pdf, id=963, 614.295pt x 794.97pt>
+     ] <img/ch02/figure3.pdf, id=1005, 614.295pt x 794.97pt>
 File: img/ch02/figure3.pdf Graphic file (type pdf)
 
 <use img/ch02/figure3.pdf>
 Package pdftex.def Info: img/ch02/figure3.pdf used on input line 87.
 (pdftex.def)             Requested size: 361.34999pt x 467.63326pt.
  [20] [21 <./img/ch02/figure3.pdf>]
-<img/ch02/figure4.pdf, id=1167, 614.295pt x 794.97pt>
+<img/ch02/figure4.pdf, id=1209, 614.295pt x 794.97pt>
 File: img/ch02/figure4.pdf Graphic file (type pdf)
 
 <use img/ch02/figure4.pdf>
@@ -573,7 +580,7 @@ Package pdftex.def Info: img/ch02/figure4.pdf used on input line 104.
 [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36
 
 ]
-<img/ch02/Fig1_figuresupplement1.pdf, id=1393, 578.16pt x 433.62pt>
+<img/ch02/Fig1_figuresupplement1.pdf, id=1435, 578.16pt x 433.62pt>
 File: img/ch02/Fig1_figuresupplement1.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig1_figuresupplement1.pdf>
@@ -583,7 +590,7 @@ Package pdftex.def Info: img/ch02/Fig1_figuresupplement1.pdf used on input line
  [37
 
  <./img/ch02/Fig1_figuresupplement1.pdf>] <img/ch02/Fig1_figuresupplement2.pdf,
- id=1407, 867.24pt x 433.62pt>
+ id=1449, 867.24pt x 433.62pt>
 File: img/ch02/Fig1_figuresupplement2.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig1_figuresupplement2.pdf>
@@ -593,7 +600,7 @@ Package pdftex.def Info: img/ch02/Fig1_figuresupplement2.pdf used on input line
  [38
 
  <./img/ch02/Fig1_figuresupplement2.pdf>] <img/ch02/Fig1_figuresupplement3.pdf,
- id=1419, 578.16pt x 433.62pt>
+ id=1460, 578.16pt x 433.62pt>
 File: img/ch02/Fig1_figuresupplement3.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig1_figuresupplement3.pdf>
@@ -603,7 +610,7 @@ Package pdftex.def Info: img/ch02/Fig1_figuresupplement3.pdf used on input line
  [39
 
  <./img/ch02/Fig1_figuresupplement3.pdf>] <img/ch02/Fig1_figuresupplement4.pdf,
- id=1430, 578.16pt x 433.62pt>
+ id=1471, 578.16pt x 433.62pt>
 File: img/ch02/Fig1_figuresupplement4.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig1_figuresupplement4.pdf>
@@ -613,7 +620,7 @@ Package pdftex.def Info: img/ch02/Fig1_figuresupplement4.pdf used on input line
  [40
 
  <./img/ch02/Fig1_figuresupplement4.pdf>] <img/ch02/Fig1_figuresupplement5.pdf,
- id=1443, 867.24pt x 433.62pt>
+ id=1484, 867.24pt x 433.62pt>
 File: img/ch02/Fig1_figuresupplement5.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig1_figuresupplement5.pdf>
@@ -623,7 +630,7 @@ Package pdftex.def Info: img/ch02/Fig1_figuresupplement5.pdf used on input line
  [41
 
  <./img/ch02/Fig1_figuresupplement5.pdf>] <img/ch02/Fig1_figuresupplement6.pdf,
- id=1454, 867.24pt x 578.16pt>
+ id=1495, 867.24pt x 578.16pt>
 File: img/ch02/Fig1_figuresupplement6.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig1_figuresupplement6.pdf>
@@ -633,7 +640,7 @@ Package pdftex.def Info: img/ch02/Fig1_figuresupplement6.pdf used on input line
  [42
 
  <./img/ch02/Fig1_figuresupplement6.pdf>]
-<img/ch02/Fig2_figuresupplement1.pdf, id=1468, 481.31819pt x 241.53336pt>
+<img/ch02/Fig2_figuresupplement1.pdf, id=1509, 481.31819pt x 241.53336pt>
 File: img/ch02/Fig2_figuresupplement1.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig2_figuresupplement1.pdf>
@@ -643,7 +650,7 @@ Package pdftex.def Info: img/ch02/Fig2_figuresupplement1.pdf used on input line
  [43
 
  <./img/ch02/Fig2_figuresupplement1.pdf>] <img/ch02/Fig2_figuresuplement2.pdf, 
-id=1497, 722.7pt x 433.62pt>
+id=1538, 722.7pt x 433.62pt>
 File: img/ch02/Fig2_figuresuplement2.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig2_figuresuplement2.pdf>
@@ -653,7 +660,7 @@ Package pdftex.def Info: img/ch02/Fig2_figuresuplement2.pdf used on input line
  [44
 
  <./img/ch02/Fig2_figuresuplement2.pdf>]
-<img/ch02/Fig2_figuresupplement3.pdf, id=1508, 546.35214pt x 485.86821pt>
+<img/ch02/Fig2_figuresupplement3.pdf, id=1549, 546.35214pt x 485.86821pt>
 File: img/ch02/Fig2_figuresupplement3.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig2_figuresupplement3.pdf>
@@ -663,7 +670,7 @@ Package pdftex.def Info: img/ch02/Fig2_figuresupplement3.pdf used on input line
  [45
 
  <./img/ch02/Fig2_figuresupplement3.pdf>]
-<img/ch02/Fig2_figuresupplement4.pdf, id=1537, 472.6187pt x 376.38417pt>
+<img/ch02/Fig2_figuresupplement4.pdf, id=1579, 472.6187pt x 376.38417pt>
 File: img/ch02/Fig2_figuresupplement4.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig2_figuresupplement4.pdf>
@@ -673,7 +680,7 @@ Package pdftex.def Info: img/ch02/Fig2_figuresupplement4.pdf used on input line
  [46
 
  <./img/ch02/Fig2_figuresupplement4.pdf>]
-<img/ch02/Fig2_figuresupplement5.pdf, id=1564, 503.27623pt x 185.79614pt>
+<img/ch02/Fig2_figuresupplement5.pdf, id=1606, 503.27623pt x 185.79614pt>
 File: img/ch02/Fig2_figuresupplement5.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig2_figuresupplement5.pdf>
@@ -683,7 +690,7 @@ Package pdftex.def Info: img/ch02/Fig2_figuresupplement5.pdf used on input line
  [47
 
  <./img/ch02/Fig2_figuresupplement5.pdf>] <img/ch02/Fig2_figuresupplement6.pdf,
- id=1592, 722.7pt x 433.62pt>
+ id=1633, 722.7pt x 433.62pt>
 File: img/ch02/Fig2_figuresupplement6.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig2_figuresupplement6.pdf>
@@ -693,7 +700,7 @@ Package pdftex.def Info: img/ch02/Fig2_figuresupplement6.pdf used on input line
  [48
 
  <./img/ch02/Fig2_figuresupplement6.pdf>] <img/ch02/Fig2_figuresupplement7.pdf,
- id=1608, 722.7pt x 433.62pt>
+ id=1649, 722.7pt x 433.62pt>
 File: img/ch02/Fig2_figuresupplement7.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig2_figuresupplement7.pdf>
@@ -703,7 +710,7 @@ Package pdftex.def Info: img/ch02/Fig2_figuresupplement7.pdf used on input line
  [49
 
  <./img/ch02/Fig2_figuresupplement7.pdf>] <img/ch02/Fig2_figuresupplement8.pdf,
- id=1631, 722.7pt x 433.62pt>
+ id=1672, 722.7pt x 433.62pt>
 File: img/ch02/Fig2_figuresupplement8.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig2_figuresupplement8.pdf>
@@ -713,7 +720,7 @@ Package pdftex.def Info: img/ch02/Fig2_figuresupplement8.pdf used on input line
  [50
 
  <./img/ch02/Fig2_figuresupplement8.pdf>] <img/ch02/Fig3_figuresupplement1.pdf,
- id=1647, 433.62pt x 433.62pt>
+ id=1688, 433.62pt x 433.62pt>
 File: img/ch02/Fig3_figuresupplement1.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig3_figuresupplement1.pdf>
@@ -723,7 +730,7 @@ Package pdftex.def Info: img/ch02/Fig3_figuresupplement1.pdf used on input line
  [51
 
  <./img/ch02/Fig3_figuresupplement1.pdf>] <img/ch02/Fig3_figuresupplement2.pdf,
- id=1662, 433.62pt x 433.62pt>
+ id=1703, 433.62pt x 433.62pt>
 File: img/ch02/Fig3_figuresupplement2.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig3_figuresupplement2.pdf>
@@ -733,7 +740,7 @@ Package pdftex.def Info: img/ch02/Fig3_figuresupplement2.pdf used on input line
  [52
 
  <./img/ch02/Fig3_figuresupplement2.pdf>] <img/ch02/Fig3_figuresupplement3.pdf,
- id=1674, 433.62pt x 433.62pt>
+ id=1715, 433.62pt x 433.62pt>
 File: img/ch02/Fig3_figuresupplement3.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig3_figuresupplement3.pdf>
@@ -743,7 +750,7 @@ Package pdftex.def Info: img/ch02/Fig3_figuresupplement3.pdf used on input line
  [53
 
  <./img/ch02/Fig3_figuresupplement3.pdf>]
-<img/ch02/Fig4_figuresupplement1.pdf, id=1685, 520.47752pt x 193.41559pt>
+<img/ch02/Fig4_figuresupplement1.pdf, id=1727, 520.47752pt x 193.41559pt>
 File: img/ch02/Fig4_figuresupplement1.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig4_figuresupplement1.pdf>
@@ -753,7 +760,7 @@ Package pdftex.def Info: img/ch02/Fig4_figuresupplement1.pdf used on input line
  [54
 
  <./img/ch02/Fig4_figuresupplement1.pdf>]
-<img/ch02/Fig4_figuresupplement2.pdf, id=1712, 525.02852pt x 361.9673pt>
+<img/ch02/Fig4_figuresupplement2.pdf, id=1754, 525.02852pt x 361.9673pt>
 File: img/ch02/Fig4_figuresupplement2.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig4_figuresupplement2.pdf>
@@ -763,7 +770,7 @@ Package pdftex.def Info: img/ch02/Fig4_figuresupplement2.pdf used on input line
  [55
 
  <./img/ch02/Fig4_figuresupplement2.pdf>] <img/ch02/Fig4_figuresupplement3.pdf,
- id=2004, 433.62pt x 722.7pt>
+ id=2045, 433.62pt x 722.7pt>
 File: img/ch02/Fig4_figuresupplement3.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig4_figuresupplement3.pdf>
@@ -782,7 +789,7 @@ te ignored
                                                   \fi \fi 
 l.379 \clearpage
                 ]
-<img/ch02/Fig1_figuresupplement7.pdf, id=2024, 525.09976pt x 193.68361pt>
+<img/ch02/Fig1_figuresupplement7.pdf, id=2065, 525.09976pt x 193.68361pt>
 File: img/ch02/Fig1_figuresupplement7.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig1_figuresupplement7.pdf>
@@ -793,7 +800,7 @@ Package pdftex.def Info: img/ch02/Fig1_figuresupplement7.pdf used on input line
 
 
  <./img/ch02/Fig1_figuresupplement7.pdf>] <img/ch02/Fig1_figuresupplement8.pdf,
- id=2061, 433.62pt x 433.62pt>
+ id=2102, 433.62pt x 433.62pt>
 File: img/ch02/Fig1_figuresupplement8.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig1_figuresupplement8.pdf>
@@ -803,7 +810,7 @@ Package pdftex.def Info: img/ch02/Fig1_figuresupplement8.pdf used on input line
  [59
 
  <./img/ch02/Fig1_figuresupplement8.pdf>] <img/ch02/Fig1_figuresupplement9.pdf,
- id=2071, 433.62pt x 433.62pt>
+ id=2113, 433.62pt x 433.62pt>
 File: img/ch02/Fig1_figuresupplement9.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig1_figuresupplement9.pdf>
@@ -813,7 +820,7 @@ Package pdftex.def Info: img/ch02/Fig1_figuresupplement9.pdf used on input line
  [60
 
  <./img/ch02/Fig1_figuresupplement9.pdf>] <img/ch02/Fig1_figuresupplement10.pdf
-, id=2081, 433.62pt x 433.62pt>
+, id=2123, 433.62pt x 433.62pt>
 File: img/ch02/Fig1_figuresupplement10.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig1_figuresupplement10.pdf>
@@ -823,7 +830,7 @@ e 407.
  [61
 
  <./img/ch02/Fig1_figuresupplement10.pdf>] <img/ch02/Fig1_figuresupplement11.pd
-f, id=2091, 433.62pt x 433.62pt>
+f, id=2133, 433.62pt x 433.62pt>
 File: img/ch02/Fig1_figuresupplement11.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig1_figuresupplement11.pdf>
@@ -833,7 +840,7 @@ e 415.
  [62
 
  <./img/ch02/Fig1_figuresupplement11.pdf>] <img/ch02/Fig3_figuresupplement4.pdf
-, id=2103, 722.7pt x 433.62pt>
+, id=2144, 722.7pt x 433.62pt>
 File: img/ch02/Fig3_figuresupplement4.pdf Graphic file (type pdf)
 
 <use img/ch02/Fig3_figuresupplement4.pdf>
@@ -844,14 +851,14 @@ Package pdftex.def Info: img/ch02/Fig3_figuresupplement4.pdf used on input line
 
  <./img/ch02/Fig3_figuresupplement4.pdf>] [64
 
-] <img/ch02/figureAppendix1.pdf, id=2123, 478.57895pt x 190.2578pt>
+] <img/ch02/figureAppendix1.pdf, id=2164, 478.57895pt x 190.2578pt>
 File: img/ch02/figureAppendix1.pdf Graphic file (type pdf)
 
 <use img/ch02/figureAppendix1.pdf>
 Package pdftex.def Info: img/ch02/figureAppendix1.pdf used on input line 442.
 (pdftex.def)             Requested size: 361.34999pt x 143.6568pt.
  [65]
-<img/ch02/figureAppendix2.png, id=2130, 462.528pt x 313.17pt>
+<img/ch02/figureAppendix2.png, id=2171, 462.528pt x 313.17pt>
 File: img/ch02/figureAppendix2.png Graphic file (type png)
 
 <use img/ch02/figureAppendix2.png>
@@ -859,21 +866,21 @@ Package pdftex.def Info: img/ch02/figureAppendix2.png used on input line 455.
 (pdftex.def)             Requested size: 361.34999pt x 244.67778pt.
  [66 <./img/ch02/figureAppendix1.pdf>]
 [67 <./img/ch02/figureAppendix2.png>]
-<img/ch02/figureAppendix3.pdf, id=2169, 552.00026pt x 185.1989pt>
+<img/ch02/figureAppendix3.pdf, id=2210, 552.00026pt x 185.1989pt>
 File: img/ch02/figureAppendix3.pdf Graphic file (type pdf)
 
 <use img/ch02/figureAppendix3.pdf>
 Package pdftex.def Info: img/ch02/figureAppendix3.pdf used on input line 468.
 (pdftex.def)             Requested size: 361.34999pt x 121.23975pt.
  [68]
-<img/ch02/figureAppendix4.png, id=2175, 353.1594pt x 238.491pt>
+<img/ch02/figureAppendix4.png, id=2216, 353.1594pt x 238.491pt>
 File: img/ch02/figureAppendix4.png Graphic file (type png)
 
 <use img/ch02/figureAppendix4.png>
 Package pdftex.def Info: img/ch02/figureAppendix4.png used on input line 480.
 (pdftex.def)             Requested size: 361.34999pt x 244.02179pt.
  [69 <./img/ch02/figureAppendix3.pdf>]
-<img/ch02/figureAppendix5.png, id=2201, 254.8722pt x 182.6022pt>
+<img/ch02/figureAppendix5.png, id=2242, 254.8722pt x 182.6022pt>
 File: img/ch02/figureAppendix5.png Graphic file (type png)
 
 <use img/ch02/figureAppendix5.png>
@@ -881,28 +888,28 @@ Package pdftex.def Info: img/ch02/figureAppendix5.png used on input line 493.
 (pdftex.def)             Requested size: 361.34999pt x 258.9152pt.
  [70 <./img/ch02/figureAppendix4.png>]
 [71 <./img/ch02/figureAppendix5.png>]
-<img/ch02/figureAppendix6.png, id=2212, 365.2044pt x 248.6088pt>
+<img/ch02/figureAppendix6.png, id=2253, 365.2044pt x 248.6088pt>
 File: img/ch02/figureAppendix6.png Graphic file (type png)
 
 <use img/ch02/figureAppendix6.png>
 Package pdftex.def Info: img/ch02/figureAppendix6.png used on input line 504.
 (pdftex.def)             Requested size: 361.34999pt x 245.99446pt.
 
-<img/ch02/figureAppendix7.png, id=2213, 282.8166pt x 187.4202pt>
+<img/ch02/figureAppendix7.png, id=2254, 282.8166pt x 187.4202pt>
 File: img/ch02/figureAppendix7.png Graphic file (type png)
 
 <use img/ch02/figureAppendix7.png>
 Package pdftex.def Info: img/ch02/figureAppendix7.png used on input line 514.
 (pdftex.def)             Requested size: 361.34999pt x 239.4652pt.
  [72 <./img/ch02/figureAppendix6.png>]
-<img/ch02/figureAppendix8.png, id=2219, 278.9622pt x 190.311pt>
+<img/ch02/figureAppendix8.png, id=2260, 278.9622pt x 190.311pt>
 File: img/ch02/figureAppendix8.png Graphic file (type png)
 
 <use img/ch02/figureAppendix8.png>
 Package pdftex.def Info: img/ch02/figureAppendix8.png used on input line 523.
 (pdftex.def)             Requested size: 361.34999pt x 246.53598pt.
 
-<img/ch02/figureAppendix9.png, id=2220, 469.2732pt x 334.851pt>
+<img/ch02/figureAppendix9.png, id=2261, 469.2732pt x 334.851pt>
 File: img/ch02/figureAppendix9.png Graphic file (type png)
 
 <use img/ch02/figureAppendix9.png>
@@ -921,7 +928,7 @@ Chapter 3.
 
 
 
-] <img/ch03/Fig1-figSup1.pdf, id=2253, 469.54723pt x 554.19044pt>
+] <img/ch03/Fig1-figSup1.pdf, id=2294, 469.54723pt x 554.19044pt>
 File: img/ch03/Fig1-figSup1.pdf Graphic file (type pdf)
 
 <use img/ch03/Fig1-figSup1.pdf>
@@ -930,7 +937,7 @@ Package pdftex.def Info: img/ch03/Fig1-figSup1.pdf used on input line 27.
  [78
 
  <./img/ch03/Fig1-figSup1.pdf>]
-<img/ch03/Fig1-figSup2.pdf, id=2287, 143.29535pt x 109.27927pt>
+<img/ch03/Fig1-figSup2.pdf, id=2328, 143.29535pt x 109.27927pt>
 File: img/ch03/Fig1-figSup2.pdf Graphic file (type pdf)
 
 <use img/ch03/Fig1-figSup2.pdf>
@@ -939,7 +946,7 @@ Package pdftex.def Info: img/ch03/Fig1-figSup2.pdf used on input line 35.
  [79
 
  <./img/ch03/Fig1-figSup2.pdf>]
-<img/ch03/Fig1-figSup3.pdf, id=2310, 867.24pt x 578.16pt>
+<img/ch03/Fig1-figSup3.pdf, id=2351, 867.24pt x 578.16pt>
 File: img/ch03/Fig1-figSup3.pdf Graphic file (type pdf)
 
 <use img/ch03/Fig1-figSup3.pdf>
@@ -948,7 +955,7 @@ Package pdftex.def Info: img/ch03/Fig1-figSup3.pdf used on input line 43.
  [80
 
  <./img/ch03/Fig1-figSup3.pdf>]
-<img/ch03/Fig1-figSup4.pdf, id=2330, 576.99966pt x 288.8411pt>
+<img/ch03/Fig1-figSup4.pdf, id=2371, 576.99966pt x 288.8411pt>
 File: img/ch03/Fig1-figSup4.pdf Graphic file (type pdf)
 
 <use img/ch03/Fig1-figSup4.pdf>
@@ -957,7 +964,7 @@ Package pdftex.def Info: img/ch03/Fig1-figSup4.pdf used on input line 51.
  [81
 
  <./img/ch03/Fig1-figSup4.pdf>]
-<img/ch03/Fig1-figSup6.pdf, id=2356, 289.08pt x 289.08pt>
+<img/ch03/Fig1-figSup6.pdf, id=2396, 289.08pt x 289.08pt>
 File: img/ch03/Fig1-figSup6.pdf Graphic file (type pdf)
 
 <use img/ch03/Fig1-figSup6.pdf>
@@ -966,7 +973,7 @@ Package pdftex.def Info: img/ch03/Fig1-figSup6.pdf used on input line 59.
  [82
 
  <./img/ch03/Fig1-figSup6.pdf>]
-<img/ch03/Fig1-figSup7.pdf, id=2367, 578.16pt x 289.08pt>
+<img/ch03/Fig1-figSup7.pdf, id=2407, 578.16pt x 289.08pt>
 File: img/ch03/Fig1-figSup7.pdf Graphic file (type pdf)
 
 <use img/ch03/Fig1-figSup7.pdf>
@@ -975,7 +982,7 @@ Package pdftex.def Info: img/ch03/Fig1-figSup7.pdf used on input line 68.
  [83
 
  <./img/ch03/Fig1-figSup7.pdf>]
-<img/ch03/Fig1-figSup8.pdf, id=2379, 433.62pt x 289.08pt>
+<img/ch03/Fig1-figSup8.pdf, id=2420, 433.62pt x 289.08pt>
 File: img/ch03/Fig1-figSup8.pdf Graphic file (type pdf)
 
 <use img/ch03/Fig1-figSup8.pdf>
@@ -984,7 +991,7 @@ Package pdftex.def Info: img/ch03/Fig1-figSup8.pdf used on input line 76.
  [84
 
  <./img/ch03/Fig1-figSup8.pdf>]
-<img/ch03/Fig1_figSup9.pdf, id=2391, 594.22pt x 258.9675pt>
+<img/ch03/Fig1_figSup9.pdf, id=2432, 594.22pt x 258.9675pt>
 File: img/ch03/Fig1_figSup9.pdf Graphic file (type pdf)
 
 <use img/ch03/Fig1_figSup9.pdf>
@@ -1001,67 +1008,248 @@ nput line 85.
 
 [85
 
- <./img/ch03/Fig1_figSup9.pdf>]) [86
+ <./img/ch03/Fig1_figSup9.pdf>]
+<img/ch03/Fig2-figSup1.pdf, id=2460, 289.08pt x 289.08pt>
+File: img/ch03/Fig2-figSup1.pdf Graphic file (type pdf)
+
+<use img/ch03/Fig2-figSup1.pdf>
+Package pdftex.def Info: img/ch03/Fig2-figSup1.pdf used on input line 92.
+(pdftex.def)             Requested size: 361.34999pt x 361.36674pt.
+ [86
+
+ <./img/ch03/Fig2-figSup1.pdf>]
+<img/ch03/Fig2-figSup2.pdf, id=2472, 433.62pt x 433.62pt>
+File: img/ch03/Fig2-figSup2.pdf Graphic file (type pdf)
+
+<use img/ch03/Fig2-figSup2.pdf>
+Package pdftex.def Info: img/ch03/Fig2-figSup2.pdf used on input line 100.
+(pdftex.def)             Requested size: 361.34999pt x 361.36676pt.
+ [87
+
+ <./img/ch03/Fig2-figSup2.pdf>]
+<img/ch03/Fig2_figSup3.pdf, id=2495, 433.62pt x 433.62pt>
+File: img/ch03/Fig2_figSup3.pdf Graphic file (type pdf)
+
+<use img/ch03/Fig2_figSup3.pdf>
+Package pdftex.def Info: img/ch03/Fig2_figSup3.pdf used on input line 108.
+(pdftex.def)             Requested size: 361.34999pt x 361.36676pt.
+ [88
+
+ <./img/ch03/Fig2_figSup3.pdf>]
+<img/ch03/Fig2-figSup4.pdf, id=2508, 433.62pt x 289.08pt>
+File: img/ch03/Fig2-figSup4.pdf Graphic file (type pdf)
+
+<use img/ch03/Fig2-figSup4.pdf>
+Package pdftex.def Info: img/ch03/Fig2-figSup4.pdf used on input line 116.
+(pdftex.def)             Requested size: 361.34999pt x 240.91116pt.
+ [89
+
+ <./img/ch03/Fig2-figSup4.pdf>]
+<img/ch03/Fig2-figSup5.pdf, id=2524, 722.7pt x 433.62pt>
+File: img/ch03/Fig2-figSup5.pdf Graphic file (type pdf)
+
+<use img/ch03/Fig2-figSup5.pdf>
+Package pdftex.def Info: img/ch03/Fig2-figSup5.pdf used on input line 125.
+(pdftex.def)             Requested size: 361.34999pt x 216.80946pt.
+ [90
+
+ <./img/ch03/Fig2-figSup5.pdf>]
+<img/ch03/Fig2-figSup6.pdf, id=2540, 722.7pt x 433.62pt>
+File: img/ch03/Fig2-figSup6.pdf Graphic file (type pdf)
+
+<use img/ch03/Fig2-figSup6.pdf>
+Package pdftex.def Info: img/ch03/Fig2-figSup6.pdf used on input line 133.
+(pdftex.def)             Requested size: 361.34999pt x 216.80946pt.
+ [91
+
+ <./img/ch03/Fig2-figSup6.pdf>]
+<img/ch03/Fig2_figSup7.pdf, id=2557, 509.905pt x 361.35pt>
+File: img/ch03/Fig2_figSup7.pdf Graphic file (type pdf)
+
+<use img/ch03/Fig2_figSup7.pdf>
+Package pdftex.def Info: img/ch03/Fig2_figSup7.pdf used on input line 141.
+(pdftex.def)             Requested size: 361.34999pt x 256.0861pt.
+ [92
+
+ <./img/ch03/Fig2_figSup7.pdf>]
+<img/ch03/Fig3-figSup1.pdf, id=2578, 722.7pt x 578.16pt>
+File: img/ch03/Fig3-figSup1.pdf Graphic file (type pdf)
+
+<use img/ch03/Fig3-figSup1.pdf>
+Package pdftex.def Info: img/ch03/Fig3-figSup1.pdf used on input line 149.
+(pdftex.def)             Requested size: 361.34999pt x 289.07928pt.
+ [93
+
+ <./img/ch03/Fig3-figSup1.pdf>]
+<img/ch03/Fig3-figSup2.pdf, id=95757, 722.7pt x 433.62pt>
+File: img/ch03/Fig3-figSup2.pdf Graphic file (type pdf)
+
+<use img/ch03/Fig3-figSup2.pdf>
+Package pdftex.def Info: img/ch03/Fig3-figSup2.pdf used on input line 157.
+(pdftex.def)             Requested size: 361.34999pt x 216.80946pt.
+ [94
+
+ <./img/ch03/Fig3-figSup2.pdf>]
+<img/ch03/Fig4_figSup1.pdf, id=95816, 539.01375pt x 340.27126pt>
+File: img/ch03/Fig4_figSup1.pdf Graphic file (type pdf)
+
+<use img/ch03/Fig4_figSup1.pdf>
+Package pdftex.def Info: img/ch03/Fig4_figSup1.pdf used on input line 165.
+(pdftex.def)             Requested size: 361.34999pt x 228.11554pt.
+ [95
+
+ <./img/ch03/Fig4_figSup1.pdf>]
+<img/ch03/Fig4-figSup2.pdf, id=95834, 722.7pt x 578.16pt>
+File: img/ch03/Fig4-figSup2.pdf Graphic file (type pdf)
+
+<use img/ch03/Fig4-figSup2.pdf>
+Package pdftex.def Info: img/ch03/Fig4-figSup2.pdf used on input line 173.
+(pdftex.def)             Requested size: 361.34999pt x 289.07928pt.
+ [96
+
+ <./img/ch03/Fig4-figSup2.pdf>]
+<img/ch03/Fig6-figSup1.pdf, id=175796, 433.62pt x 433.62pt>
+File: img/ch03/Fig6-figSup1.pdf Graphic file (type pdf)
+
+<use img/ch03/Fig6-figSup1.pdf>
+Package pdftex.def Info: img/ch03/Fig6-figSup1.pdf used on input line 181.
+(pdftex.def)             Requested size: 361.34999pt x 361.36676pt.
+ [97
+
+ <./img/ch03/Fig6-figSup1.pdf>]
+<img/ch03/Fig1_figSup10.pdf, id=175824, 285.39926pt x 349.2297pt>
+File: img/ch03/Fig1_figSup10.pdf Graphic file (type pdf)
+
+<use img/ch03/Fig1_figSup10.pdf>
+Package pdftex.def Info: img/ch03/Fig1_figSup10.pdf used on input line 190.
+(pdftex.def)             Requested size: 361.34999pt x 442.20056pt.
+ [98
+
+ <./img/ch03/Fig1_figSup10.pdf>]
+<img/ch03/Fig1_figSup11.pdf, id=175848, 501.875pt x 367.3725pt>
+File: img/ch03/Fig1_figSup11.pdf Graphic file (type pdf)
+
+<use img/ch03/Fig1_figSup11.pdf>
+Package pdftex.def Info: img/ch03/Fig1_figSup11.pdf used on input line 198.
+(pdftex.def)             Requested size: 361.34999pt x 264.5192pt.
+ [99
+
+ <./img/ch03/Fig1_figSup11.pdf>]
+<img/ch03/Fig2-figSup8.pdf, id=175870, 433.62pt x 433.62pt>
+File: img/ch03/Fig2-figSup8.pdf Graphic file (type pdf)
+
+<use img/ch03/Fig2-figSup8.pdf>
+Package pdftex.def Info: img/ch03/Fig2-figSup8.pdf used on input line 206.
+(pdftex.def)             Requested size: 361.34999pt x 361.36676pt.
+ [100
+
+ <./img/ch03/Fig2-figSup8.pdf>]
+<img/ch03/Fig3-figSup3.pdf, id=175880, 867.24pt x 578.16pt>
+File: img/ch03/Fig3-figSup3.pdf Graphic file (type pdf)
+
+<use img/ch03/Fig3-figSup3.pdf>
+Package pdftex.def Info: img/ch03/Fig3-figSup3.pdf used on input line 214.
+(pdftex.def)             Requested size: 361.34999pt x 240.90234pt.
+ [101
+
+ <./img/ch03/Fig3-figSup3.pdf>]
+<img/ch03/Fig4-figSup3.pdf, id=266412, 578.16pt x 433.62pt>
+File: img/ch03/Fig4-figSup3.pdf Graphic file (type pdf)
+
+<use img/ch03/Fig4-figSup3.pdf>
+Package pdftex.def Info: img/ch03/Fig4-figSup3.pdf used on input line 224.
+(pdftex.def)             Requested size: 361.34999pt x 271.01183pt.
+ [102
+
+ <./img/ch03/Fig4-figSup3.pdf>]
+<img/ch03/Fig5-figSup1.pdf, id=266446, 722.7pt x 433.62pt>
+File: img/ch03/Fig5-figSup1.pdf Graphic file (type pdf)
+
+<use img/ch03/Fig5-figSup1.pdf>
+Package pdftex.def Info: img/ch03/Fig5-figSup1.pdf used on input line 233.
+(pdftex.def)             Requested size: 361.34999pt x 216.80946pt.
+ [103
+
+ <./img/ch03/Fig5-figSup1.pdf>]
+<img/ch03/Fig6-figSup2.pdf, id=266477, 867.24pt x 650.43pt>
+File: img/ch03/Fig6-figSup2.pdf Graphic file (type pdf)
+
+<use img/ch03/Fig6-figSup2.pdf>
+Package pdftex.def Info: img/ch03/Fig6-figSup2.pdf used on input line 241.
+(pdftex.def)             Requested size: 361.34999pt x 271.01514pt.
+ [104
+
+ <./img/ch03/Fig6-figSup2.pdf>]
+<img/ch03/Fig3_figSup4.pdf, id=266541, 614.295pt x 794.97pt>
+File: img/ch03/Fig3_figSup4.pdf Graphic file (type pdf)
+
+<use img/ch03/Fig3_figSup4.pdf>
+Package pdftex.def Info: img/ch03/Fig3_figSup4.pdf used on input line 250.
+(pdftex.def)             Requested size: 361.34999pt x 467.63326pt.
+ [105
+
+ <./img/ch03/Fig3_figSup4.pdf>]) [106
 
 
 ]
 \openout2 = `tex/ch04.aux'.
 
- (./tex/ch04.tex
+
+(./tex/ch04.tex
 Chapter 4.
-[87
+[107
 
 
 
-] [88
+] [108
 
-] [89] <img/ch04/Figure1.pdf, id=2479, 207.88565pt x 290.9821pt>
+] [109] <img/ch04/Figure1.pdf, id=266639, 207.88565pt x 290.9821pt>
 File: img/ch04/Figure1.pdf Graphic file (type pdf)
 
 <use img/ch04/Figure1.pdf>
 Package pdftex.def Info: img/ch04/Figure1.pdf used on input line 36.
 (pdftex.def)             Requested size: 361.34999pt x 442.99876pt.
 
-<img/ch04/Figure2.pdf, id=2483, 600.93411pt x 375.81203pt>
+<img/ch04/Figure2.pdf, id=266643, 600.93411pt x 375.81203pt>
 File: img/ch04/Figure2.pdf Graphic file (type pdf)
 
 <use img/ch04/Figure2.pdf>
 Package pdftex.def Info: img/ch04/Figure2.pdf used on input line 44.
 (pdftex.def)             Requested size: 361.34999pt x 212.95024pt.
 
-<img/ch04/Figure3.pdf, id=2493, 601.72203pt x 382.62749pt>
+<img/ch04/Figure3.pdf, id=266653, 601.72203pt x 382.62749pt>
 File: img/ch04/Figure3.pdf Graphic file (type pdf)
 
 <use img/ch04/Figure3.pdf>
 Package pdftex.def Info: img/ch04/Figure3.pdf used on input line 57.
 (pdftex.def)             Requested size: 361.34999pt x 216.75668pt.
- [90] [91 <./img/ch04/Figure1.pdf>] [92 <./img/ch04/Figure2.pdf>] <img/ch04/Fig
-ure4.pdf, id=2569, 393.47pt x 286.06876pt>
+ [110] [111 <./img/ch04/Figure1.pdf>] [112 <./img/ch04/Figure2.pdf>] <img/ch04/
+Figure4.pdf, id=266729, 393.47pt x 286.06876pt>
 File: img/ch04/Figure4.pdf Graphic file (type pdf)
 
 <use img/ch04/Figure4.pdf>
 Package pdftex.def Info: img/ch04/Figure4.pdf used on input line 69.
 (pdftex.def)             Requested size: 361.34999pt x 242.8038pt.
 
-<img/ch04/Figure5.pdf, id=2574, 315.07813pt x 212.85222pt>
+<img/ch04/Figure5.pdf, id=266734, 315.07813pt x 212.85222pt>
 File: img/ch04/Figure5.pdf Graphic file (type pdf)
 
 <use img/ch04/Figure5.pdf>
 Package pdftex.def Info: img/ch04/Figure5.pdf used on input line 78.
 (pdftex.def)             Requested size: 361.34999pt x 219.25572pt.
- [93 <./img/ch04/Figure3.pdf>] [94 <./img/ch04/Figure4.pdf> <./img/ch04/Figure5
-.pdf>] [95] [96]
+ [113 <./img/ch04/Figure3.pdf>] [114 <./img/ch04/Figure4.pdf> <./img/ch04/Figur
+e5.pdf>] [115] [116]
 Overfull \hbox (5.51787pt too wide) in paragraph at lines 108--110
 \OT1/cmr/m/n/12 NA19193, NA19128, NA19141, NA19128, NA18853, NA18508, NA18505, 
 NA18501, NA18497,
  []
 
-[97] [98]) [99]
+[117] [118]) [119]
 \openout2 = `tex/ch05.aux'.
 
  (./tex/ch05.tex
 Chapter 5.
-[100
+[120
 
 
 
@@ -1069,7 +1257,7 @@ Chapter 5.
 
 pdfTeX warning: pdflatex (file ./img/ch05/thesisgraphicalabstract.pdf): PDF inc
 lusion: found PDF version <1.6>, but at most version <1.5> allowed
-<img/ch05/thesisgraphicalabstract.pdf, id=2771, 320.75433pt x 500.50587pt>
+<img/ch05/thesisgraphicalabstract.pdf, id=266930, 320.75433pt x 500.50587pt>
 File: img/ch05/thesisgraphicalabstract.pdf Graphic file (type pdf)
 
 <use img/ch05/thesisgraphicalabstract.pdf>
@@ -1080,18 +1268,18 @@ e 19.
 
 LaTeX Warning: Float too large for page by 1.82518pt on input line 22.
 
-[101] [102 <./img/ch05/thesisgraphicalabstract.pdf>] [103] [104] [105] [106]
-[107] [108] [109]) [110] (./tbd.bbl [111
+[121] [122 <./img/ch05/thesisgraphicalabstract.pdf>] [123] [124] [125] [126]
+[127] [128] [129]) [130] (./tbd.bbl [131
 
 
-] [112] [113] [114] [115] [116]
-[117] [118] [119]
+] [132] [133] [134] [135] [136]
+[137] [138] [139]
 Underfull \hbox (badness 1824) in paragraph at lines 654--659
 []\OT1/cmr/m/n/12 Judith Mars-man and Ju-lia A. Hors-field.  Long dis-tance re-
 la-tion-ships: En-
  []
 
-[120] [121] [122] [123] [124]
+[140] [141] [142] [143] [144]
 
 ! LaTeX Error: Command \dh unavailable in encoding OT1.
 
@@ -1136,18 +1324,18 @@ l.1036   Isleifur Olafsson, Olof Sigur{\dh
                                           }ardottir, Hlif Steingrimsd{\'o}ttir,
 
 ? 
-[125] [126]
+[145] [146]
 Underfull \hbox (badness 1107) in paragraph at lines 1147--1150
 []\OT1/cmr/m/n/12 Michelle C. Ward and Yoav Gi-lad.  Crack-ing the reg-u-la-tor
 y code.  \OT1/cmr/m/it/12 Na-ture\OT1/cmr/m/n/12 ,
  []
 
-[127])
+[147])
 
 Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 81.
-[128]
+[148]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 81.
  (./tbd.aux (./tex/acknowledgments.aux) (./tex/abstract.aux)
 (./tex/ch01.aux) (./tex/ch02.aux) (./tex/ch03.aux) (./tex/ch04.aux)
@@ -1158,33 +1346,34 @@ Package rerunfilecheck Info: File `tbd.out' has not changed.
 (rerunfilecheck)             Checksum: B73AA5AB4CE63393F6D222C96018A4D4;5767.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 81.
  ) 
 Here is how much of TeX's memory you used:
- 8511 strings out of 492995
- 134666 string characters out of 6132704
- 213903 words of memory out of 5000000
- 11404 multiletter control sequences out of 15000+600000
- 12117 words of font info for 46 fonts, out of 8000000 for 9000
+ 8667 strings out of 492995
+ 138064 string characters out of 6132704
+ 215457 words of memory out of 5000000
+ 11501 multiletter control sequences out of 15000+600000
+ 11758 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,6n,33p,2320b,1110s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
-></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
-ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loc
-al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/loca
-l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on tbd.pdf (139 pages, 24988732 bytes).
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on tbd.pdf (159 pages, 87643519 bytes).
 PDF statistics:
- 3136 PDF objects out of 3580 (max. 8388607)
- 2298 compressed objects within 23 object streams
- 442 named destinations out of 1000 (max. 500000)
- 877 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 267308 PDF objects out of 284508 (max. 8388607)
+ 133808 compressed objects within 1339 object streams
+ 482 named destinations out of 1000 (max. 500000)
+ 977 words of extra memory for PDF output out of 10000 (max. 10000000)
 
