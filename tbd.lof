@@ -41,11 +41,19 @@
 \contentsline {figure}{\numberline {2.38}{\ignorespaces Figure 2.3A without unannotated intronic PAS}}{74}{figure.2.38}
 \contentsline {figure}{\numberline {2.39}{\ignorespaces Proportion eQTL explained without unannotated intronic PAS}}{75}{figure.2.39}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Density of merged human and chimpanzee 3' Seq}}{78}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Model representation of usage calculation}}{79}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces PAS usage is highly correlated across species}}{80}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Variation in PAS usage}}{81}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Number of PAS per gene largely conserved between species}}{82}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Figure 1B separated by genic location}}{83}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces PAS with AATAAA and ATTAAA are used more often}}{84}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Chimp specific PAS likely due to loss of signal site in human lineage}}{85}{figure.3.8}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Graphical representation of NET-seq protocol}}{82}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Quality control metrics for NET-seq libraries.}}{83}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces NET-seq Gene coverage.}}{84}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Smoothing of NET-seq data using smashr }}{85}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces NA18486 NET-seq coverage along INSIG2 locus}}{85}{figure.4.5}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Graphical representation of NET-seq protocol}}{91}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Quality control metrics for NET-seq libraries.}}{92}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces NET-seq Gene coverage.}}{93}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Smoothing of NET-seq data using smashr }}{94}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces NA18486 NET-seq coverage along INSIG2 locus}}{94}{figure.4.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Graphical Abstract of dissertation}}{93}{figure.5.1}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Graphical Abstract of dissertation}}{102}{figure.5.1}
