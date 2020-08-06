@@ -1,26 +1,261 @@
-\chapter{Predicting susceptibility to tuberculosis based on gene expression profiling}\label{ch:comp}
+\chapter{Divergence in alternative polyadenylation contributes to gene regulatory differences between humans and chimpanzees}\label{ch:comp}
 
 \section[Abstract]{Abstract\footnotemark}
 
 
-\footnotetext{Citation for chapter: Manuscript in Prep}
+Comparative functional genomic studies have shown that differences in gene expression between species can often be explained by corresponding inter-species differences in genetic and epigenetic regulatory mechanisms. In the quest to understand gene regulatory evolution in primates, the role of co-transcriptional regulatory mechanisms, such as alternative polyadenylation \emph{(APA)}, have so far received little attention. To begin addressing this gap, we studied APA in lymphoblastoid cell lines \emph{(LCLs)} from six humans and six chimpanzees, and comparatively estimated polyadenylation site \emph{(PAS)} usage for 44,432 PAS in 9,518 genes. While APA is largely conserved in humans and chimpanzees, we identified 1,705 genes with significantly different PAS usage (FDR of 0.05) between the two species. We found that genes with divergent APA patterns are enriched among differentially expressed genes, as well as among genes that show differences in protein translation between species. In particular, differences in APA between humans and chimpanzees can explain a subset of observed inter-species protein expression differences that do not display corresponding expression differences at the transcript level. Finally, we focused on genes that have a dominant PAS, meaning the gene has a PAS that is used more often than all others for the same gene. Dominant PAS are highly conserved, and inter-species differences in dominant PAS are particularly enriched for genes that also show expression differences between the species. This study establishes APA as another key mechanism underlying the genetic regulation of transcript and protein expression levels in primates.
+
+
+\footnotetext{Citation for chapter: Mittleman BE, Pott S, Warland S, Barr K, Cuevas C, and Gilad Y. Divergence in alternative polyadenylation contributes to gene regulatory differences between humans and chimpanzees. Manuscript in Prep}
 
 \section{Introduction}\label{ch03-introduction}
 
+
+Humans and our close primate relatives exhibit a striking array of phenotypic diversity despite sharing homologous proteins with nearly identical amino acid sequences. Understanding how this diversity is propagated from genomic sequence to mRNA and protein necessitates an understanding of the regulatory mechanisms that occur before, during, and after transcription.  Studying gene regulatory features in humans and other primates has long provided opportunities to understand genome evolution and function. For example, studies comparing patterns of epigenetic marks in primates have \citep{banovich_methylation_2014, cain_gene_2011,McVicker2013, pai_genome-wide_2011}. Although many studies have focused on interspecies differences in the regulation of gene expression, fewer studies have addressed isoform-level variation, which contributes to differences in mRNA, translation, and protein levels between species.  
+
+The main mechanisms that contribute to mRNA isoform diversity are alternative splicing and alternative polyadenylation \emph{(APA)}. Alternative splicing produces different combinations of coding sequences in mature mRNA and protein. APA occurs at genes that have more than one polyadenylation site \emph{(PAS)} and can result in mRNAs with different coding sequences or variable 3' UTR lengths. Like alternative splicing, APA that occurs within the gene body can affect protein sequence and function \citep{lee_widespread_2018, pan_intronic_2006, sandberg_proliferating_2008, tian_alternative_2017, vasudevan_non-stop_2002, yao_genomewide_2018}. APA that occurs outside of the coding sequence, in the 3' UTRs, can lead to differential inclusion of protein-binding motifs that can affect translational efficiency, mRNA stability, and mRNA localization  \citep{mayr_regulation_2017, tian_alternative_2017}. Yet, despite its potential to produce tremendous variation in mRNA and protein regulation, few studies have explored the contribution of APA to regulatory divergence between species. Indeed, our current understanding of APA conservation in mammals comes from few comparative studies of humans and rodents \citep{ara_conservation_2006, wang_compendium_2018}. However, these studies used sequence conservation rather than direct measurements of PAS usage to characterize APA \citep{wang_compendium_2018}. Thus, it remains possible that many mammalian PAS are functionally divergent despite having similar sequences. 
+
+To gain insight into APA conservation between human and chimpanzees and understand how differences in APA contribute to gene regulation, we performed 3' sequencing (3' Seq) of mRNA isolated from nuclei collected from human and chimpanzee LCLs. We integrated PAS usage measurements with RNA-sequencing data collected from the same cell lines to understand the relationship between APA and gene expression. Finally, we used ribosome profiling and protein measurements previously collected in the same panel of human and chimpanzee LCLs to explore the effects of APA on protein levels \citep{khan_primate_2013, wang_post-translational_2018}, reasoning that an understanding of how APA isoform usage varies among primates could help to explain why some human and chimpanzee genes are differentially expressed at the mRNA or protein levels, but not both.
+
 \section{Results}
+
+\subsection{Describing alternative polyadenylation in human and chimpanzee LCLs }\label{descSpec}
+
+We performed 3' sequencing (3' Seq) of mRNA from 6 human and 6 chimpanzee lymphoblastoid cell lines \emph{(LCLs)}, which we have previously used to study a variety of other functional genomic phenotypes \citep{cain_gene_2011, khan_primate_2013, wang_post-translational_2018, zhou_epigenetic_2014}. We collected mRNA separately from whole cells and isolated nuclei. The two cellular fractions serve as biological replicates, which we used to examine the quality of our data (Methods). In addition, by collecting data from isolated nuclei, we were able to capture polyadenylated transcripts before they became undetectable due to other regulatory processes, such as isoform-specific decay \cite{mittleman_alternative_2020}.  
+
+We mapped human 3' Seq reads to the GRCh38 reference genome and chimpanzee 3' Seq reads to the panTro6 reference genome \citep{chimpanzee_sequencing_and_analysis_consortium_initial_2005, schneider_evaluation_2017}  (Methods). 3' Seq relies on a poly(dT) primer to target the poly(A) tail of mRNA molecules; however, it can also mis-prime by binding a sequence of genomic adenines. To account for mis-priming of off-target genomic sequences we removed reads that mapped to genomic regions containing $\geq70\%$ adenine or 6 consecutive adenine bases in the 10 bp directly upstream of the mapped location  \citep{mittleman_alternative_2020, sheppard_accurate_2013, tian_large-scale_2005} (Methods). In addition, we treated all ambiguous nucleotide positions as adenines to ensure that differences in reference genome quality did not bias the detection of polyadenylation sites \emph{(PAS)} or mis-priming events (Methods). As expected, the filtered aligned sequences, merged by species, were enriched at transcription end sites \emph{(TES)} and showed a similar distribution along orthologous 3' UTRs (Methods, Supplementary Figure \ref{fig:ch03-deeptools}). Next, we used a custom peak calling method to ascertain PAS in humans and chimpanzees separately (Methods) To compare PAS usage across species, we needed to identify the orthologous genomic regions of all PAS in our dataset, regardless of the species in which they were originally annotated. As we were unable to confidently identify orthologous PAS at base pair resolution (inferring synteny at base pair resolution in non-coding regions is challenging\citep{broad_institute_sequencing_platform_and_whole_genome_assembly_team_high-resolution_2011}),  we extended each PAS by 100 bp upstream and downstream. We then used a reciprocal liftover pipeline to obtain an inclusive set of PAS regions with which we could confidently compare PAS usage between species (Methods). 
+
+
+To quantify PAS usage, we first assigned each PAS to a gene using the hg38 RefSeq annotation \citep{pruitt_ncbi_2005}. We then computed usage for each PAS in each individual as the fraction of reads mapping to one PAS over the total number of reads mapping to any PAS for the same gene (Supplementary Figure \ref{fig:ch03-UsageCalc}). We excluded PAS in lowly expressed genes or with less than 5\% usage, as measurements from sparse data are highly susceptible to random error (Methods). We observed a strong correlation between PAS usage in mRNA from the nuclear and total cell fractions in all but one cell line (human NA18499; Supplementary Figure \ref{fig:ch03-removeInd}). We re-identified PAS after removing all data from NA18499 and re-quantified PAS usage using nuclear 3' Seq data from 5 human and 6 chimpanzee LCLs. Using this analysis pipeline we identified a total of 44,432 PAS in 9,518 genes, which we used for all downstream analyses. On a genome-wide scale, we found that mean PAS usage is highly correlated between species (Pearson's Correlation, 0.9, $p<2.2x10^{-16}$, Supplementary Figure \ref{fig:ch03-UsageCorr}). However, as expected, 41.8\% of the variation in PAS usage (as explained by the top principal component of the data) is highly correlated with species (Pearson's correlation 0.99, $p =2.95x10^{-8}$, Supplementary Figure \ref{fig:ch03-PCAthreeprime}). 
+
+
+We used a number of analyses to ensure our ability to detect PAS was not biased by gene expression level or species. If our ability to detect PAS was biased by gene expression, we would expect a positive correlation between gene expression level and the number of PAS we detected. In our data, the number of PAS per gene is negatively correlated with gene expression in both species (Supplementary Figure \ref{fig:ch03-PASexp}, Human: Pearson's correlation -0.17, $p <2.2x10^{-16}$, Chimpanzee: Pearson's correlation -0.19, $p<2.2x10^{-16}$). If our ability to detect PAS was biased by species, we would expect to identify more PAS per gene in one species over the other. This is neither the case genome-wide nor when we test each gene independently. We identified, on average, 3.87 PAS per gene in humans and 3.46 PAS per gene in chimpanzees. On average, per gene, the number of PAS in human minus the number of PAS in chimpanzee is 0.39 with a median value of 0 (Supplementary Figure \ref{fig:ch03-SpecPASnum}. Moreover, as expected, the physical distribution of PAS across genes is conserved, with the majority of PAS located in 3' UTRs (17,688 (40.1\%) in chimpanzee and 17,620 (40.0\%) in human) and a considerable proportion located in introns (14,095 (31.9\%) in chimpanzee and 14,119 (32.0\%) in human) (Figure \ref{fig:Ch3fig1}A).
+
+To assess sequence conservation in PAS regions, we downloaded phyloP scores computed over 100 vertebrate genomes from the UCSC Genome Browser and calculated mean phyloP scores in PAS regions. Higher mean phyloP scores corresponds to regions of higher sequence conservation, and thus, slower evolution \citep{pollard_detection_2010}. Overall, sequence elements at PAS are more conserved than surrounding regions (Figure \ref{fig:Ch3fig1}B, Wilcoxon rank sum test, $p<2.2x10^{-16}$). This pattern holds independently for PAS in all genic locations other than introns (Supplementary Figure \ref{fig:ch03-phylopLoc}). 
+
+
+
+We identified 302 and 357 human- and chimpanzee-specific PAS, respectively (Methods). It has been previously shown that most PAS are directly preceded by one of 12 annotated sequence motifs that recruit cleavage and polyadenylation machinery to mRNA molecules as they are transcribed \citep{beaudoing_patterns_2000}. We asked if creation or disruption of a signal site motif could be responsible for species-specific PAS by  mapping  signal site motifs in both human and chimpanzee for each PAS region. Although human and chimpanzee PAS regions are equally likely to contain each of the 12 annotated signal sites (Figure \ref{fig:Ch3fig1}C), only the top two most commonly used motifs, AATAAA and ATTAAA, are associated with increased PAS usage (Supplementary Figure \ref{fig:ch03-SignalUsage}). Thus, we considered only the presence or absence of these two motifs in subsequent analyses. Of the 302 human-specific PAS, 14 have human-specific signal sites and 6 have chimpanzee-specific signal sites. Of the 357 chimpanzee-specific PAS, 24 have a chimpanzee-specific signal site and 6 have a human-specific signal site. These numbers are small; still, species-specific signal sites are more abundant than expected by chance among species-specific PAS in human (5.7X, hypergeometric test, $p=2.30x10^{-7}$) and in chimpanzee (8.3X, hypergeometric test, $p=3.2x10^{-15}$), suggesting that signal site changes can explain a subset of differences in PAS usage. For example, we identified a chimpanzee-specific PAS about 1 kb upstream of a PAS used in both species in the 3' UTR of \emph{MAN2B2}. The ancestral signal site conserved in chimpanzee is AATAAA; however, there has been a T to C transition in the human lineage \citep{blanchette_aligning_2004} (\ref{fig:ch03-exChimpspec}). This transition is likely responsible for the loss of PAS in humans.
+
+
+ 
+\begin{figure}
+\centering
+\includegraphics[width=5in]{img/ch03/fig1.pdf}
+\caption[Sequence conservation of PAS between humans and chimpanzees]{\textbf{Sequence conservation of PAS between humans and chimpanzees} \small {\bf (A)} Genic locations for 44,074 PAS identified in chimpanzee (left) and 44,130 PAS identified in human (right). {\bf (B)} Mean PhyloP scores for PAS regions (yellow) as well as three 200bp regions upstream and downstream (orange) {\bf (C)} Proportion of human and chimpanzee PAS regions with each of the 12 annotated signal site motifs from Beudoing \emph{et al.}\citep{beaudoing_patterns_2000}} 
+\label{fig:Ch3fig1}
+\end{figure}
+ 
+ 
+\subsection{Characterizing inter-species differences in PAS usage}\label{diffHC}
+
+While a few hundred PAS are species-specific, the majority of PAS (98.5\%) were identified in both species. We thus sought to characterize quantitative differences in alternative polyadenylation (APA) patterns between human and chimpanzee by estimating the difference in usage of individual PAS in each species. To do so, we used the leafcutter differential splicing tool \citep{li_annotation-free_2018}, which allowed us to tests for differences in normalized PAS usage fractions while accounting for gene structure (Methods). Using this approach, at an FDR of 5\% we identified 2,342 PAS (in 1,705 genes) whose usage differs by 20\% or more between the species (Figure \ref{fig:Ch3fig2}A). We applied an arbitrary effect size cutoff to focus on larger inter-species differences, which are more likely to have functional consequences. The list of all PAS whose usage differs between the species, regardless of the effect size, is available in Supplemental Table \ref{tab:ch03-s1}. 
+
+
+
+ \begin{figure}
+\centering
+\includegraphics[width=5in]{img/ch03/fig2.pdf}
+\caption[APA is functionally conserved between humans and chimpanzees]{\textbf{APA is functionally conserved between humans and chimpanzees.} \small {\bf (A)} Proportion of PAS and genes differentially used at PAS and isoform diversity level. (left) Divergent PAS are the 2,342 PAS differentially used at 5\% FDR. Conserved are the PAS not differentially used at 5\% FDR. Not tested PAS were removed from analysis by leafcutter tool. (middle) PAS level differentially used PAS reported at the gene level. Divergent genes are the 1,705 genes with PAS differentially used at 5\% FDR. Conserved genes are the genes with no PAS differentially used at 5\% FDR.  (right) Divergent genes are the 881 genes with differences in isoform diversity between species at a 5\% FDR. Conserved gene are genes without differences in isoform diversity. Genes with one PAS were not tested. {\bf (B)}  Proportion of tested genes with a dominant PAS in either species according to a range of cutoffs. Number of genes are reported in bars. {\bf (C)} Proportion of the number of the number of genes with a dominant in either species that share the top used PAS according to each dominance cutoff. Number of genes with a dominant PAS is either species are reported in bars.} 
+\label{fig:Ch3fig2}
+\end{figure}
+
+
+
+To better understand the mechanisms that underlie inter-species differences in PAS usage, and the potential functional impact of such differences, we considered the APA data in different contexts. First, we noticed that the spatial distribution of differentially used PAS reflects the distribution of all PAS, namely differentially used PAS are most often located in 3' UTRs, followed by introns (Supplementary Figure \ref{fig:ch03-dPAS}). Within the 3' UTR, however, differentially used PAS are more frequently the first ones compared with PAS that are used similarly in the two species (Supplementary Figure \ref{fig:ch03-whichUTR}, difference in proportion test, $p=0.0015$). This pattern is intriguing, because changes in the usage of the first PAS in the 3' UTR may have the largest overall impact on the transcript length, and hence potentially the largest functional impact as well. However, it is also possible that we are more likely to detect differences in usage in the first PAS in the 3' UTR because this site is transcribed earlier, and our estimate of usage is relative to all other sites in each gene. 
+
+We therefore sought evidence that differences in PAS usage may have functional consequences. In a previous study, we identified genetic variants associated with variation in PAS usage \emph{(apaQTLs)} in a panel of 52 human LCLs \citep{mittleman_alternative_2020}. We found that genes with inter-species differences in PAS usage are highly enriched for apaQTLs (160, empirical p-value based on 10,000 permutations $p=0.001$, Supplementary Figure \ref{fig:ch03-dPASQTL}). This observation indicates that inter-species differences in APA usage can often be found in genes whose regulation varies also at the population level, generally suggesting relaxation of evolutionary constraint on the regulation of such genes. We next considered sequence divergence at PAS by obtaining phyloP scores for all PAS flanking regions (200 bp, as explained above). If many changes in PAS usage are genetically controlled, we expect genomic regions of differentially used PAS to be less conserved than regions flanking PAS sites that have similar usage. Indeed, differentially used sites are enriched for regions with negative mean phyloP scores (hypergeometric test, $p=0.02$). This observation indicates that sequence divergence is often associated with differences in PAS usage, and that the majority of PAS usage in humans and chimpanzees may be generally conserved due to evolutionary constraint. 
+
+
+We next asked, more specifically, if signal site changes are likely to lead to differences in PAS usage. We addressed this question by performing two analyses. First, we focused on the 82 differentially used PAS with a signal site that is annotated in only one of the species. We found that the presence of a species-specific signal site is associated with increased PAS usage, as might be expected (human enrichment 3.82X, hypergeometric $p=1.37x10^{-10}$, chimpanzee enrichment 3.02X, hypergeometric $p=3.91x10^{-8}$). Second, we considered the presence of G/U-rich elements, which are known signals to the molecular machinery for polyadenylation \citep{colgan_mechanism_1997}. Specifically, we considered the proportion of uracil bases in the PAS regions. Despite a high correlation in overall uracil content in both species (Pearson's correlation 0.99, $p<2.2x10^{-16}$), the usage of PAS with greater uracil density in one species are more likely than expected by chance to be upregulated in that species (Chimpanzee 1.04X enrichment, hypergeometric test $p=0.03$, Human 1.06X enrichment, hypergeometric test $p=0.03$). Though species-specific signal sites explain a modest proportion of inter-species differences in PAS usage, these cases demonstrate the link between sequence evolution and conservation of PAS usage between species. 
+
+
+\subsection{The relationship between differences in alternative polyadenylation and gene expression}\label{dAPADE}
+
+Our analysis to this point indicates that inter-species differences in PAS usage are often genetically controlled, but generally we have not found strong evidence that they are functionally important. We explored this further by considering the APA data in the context of gene expression data that we collected from the same 6 human and 6 chimpanzee LCLs (see Methods for data collection procedures and low-level analysis of the RNA-seq data). We found no meaningful correlation between inter-species differences in gene expression levels and changes in polyadenylation site usage \emph{($\Delta PAU$)} in 7,462 genes for which we had both types of data (Pearson's correlation = -0.06, $p=3.1x10^{-7}$, Figure \ref{fig:Ch3fig3}A). We then separately considered the data for the 3' UTR and intronic PAS, because we previously found a different relationship between PAS usage in these genic regions and gene expression levels \citep{mittleman_alternative_2020}. Indeed, we found that inter-species differences in the usage of intronic and 3' UTR PAS correlate with differences in expression effect between the species at an equal magnitude, but in opposite directions (Figure \ref{fig:Ch3fig3}B). Increased usage of intronic sites is correlated with increased expression levels, while increased usage of 3' UTR sites is correlated with decreased expression. 
+
+We focused on 3,796 genes that were classified as differentially expressed between humans and chimpanzees at 5\% FDR (Methods). We found that genes with at least one differentially used PAS between the species are more likely to be classified as differentially expressed than expected by chance (610 genes, 1.12X enrichment, hypergeometric test, $p=3.18x10^{-5}$). Examining the subset of 610 genes, we observed a modest but significant negative correlation between differential expression effect size and $\Delta PAU$ when we considered all PAS (Pearson's correlation= -0.15, $p=0.0023$,Figure \ref{fig:Ch3fig3}C). Separating the analysis by PAS genic location revealed, again, an opposite direction of the correlation between gene expression and the usage of either 3' UTR or intronic PAS (Figure \ref{fig:Ch3fig3}D). These observations are consistent when we use PAS data based on 3' Seq data from whole cells instead of from the nuclear fractions, suggesting that the observed relationship is not due to nuclear export failure (Supplementary Figure \ref{fig:ch03-totalDPASDE}, Methods). 
+
+To provide possible mechanistic insight into the relationship between PAS usage and gene expression, we identified AU-rich elements in 3' UTRs in both human and chimpanzee. AU-rich elements in 3' UTRs have been linked to destabilization of mRNA transcripts and translation repression \citep{floor_tunable_2016-1,moore_physiological_2014,siegel_massively_2020}. We found that the 3' UTRs of genes that show an inter-species difference in 3' UTR PAS usage have a higher number (Wilcoxon test, $p < 10^{-16}$) and density (Wilcoxon test, $p < 10^{-16}$) of AU-rich elements compared with genes in which the 3' UTR PAS is similarly used in the two species. 
+
+
+
+\begin{figure}
+\centering
+\includegraphics[width=5in]{img/ch03/fig3.pdf}
+\caption[PAS usage differences for intronic and 3' UTR PAS correlate with DE effect sizes at similar magnitudes but in opposite directions]{\textbf{PAS usage differences for intronic and 3' UTR PAS correlate with DE effect sizes at similar magnitudes but in opposite directions} \small {\bf (A)} $\Delta PAU$ for top intronic or 3' UTR PAS per gene (Methods) plotted against differential effect size from differential expression analysis. {\bf (B)}  $\Delta PAU$ for top intronic or 3' UTR PAS per gene (Methods) plotted against differential effect size from differential expression analysis for genes with significant differences in each phenotype at 5\% FDR. {\bf (C)} $\Delta PAU$ for top intronic or 3' UTR PAS per gene (Methods) plotted against differential effect size from differential expression analysis. {\bf(D)} $\Delta PAU$ for top intronic or 3' UTR PAS per gene (Methods) plotted against differential effect size from differential expression analysis for genes with significant differences in each phenotype at 5\% FDR. In all panels, we calculated the linear regression and Pearson's correlation. In all panels, negative $\Delta PAU$ and DE effect sizes represent upregulation in chimpanzees. In panels B and D, we colored the points and regressions by genic location.} 
+\label{fig:Ch3fig3}
+\end{figure}
+
+\subsection{Considering overall APA diversity}\label{isodiv}
+
+
+We explored the relationship between inter-species differences in APA and gene expression by using a different perspective. We hypothesized that we could gain more insight into regulatory variation by summarizing the PAS diversity for a given gene using a single statistic, rather than by analyzing the usage of each site separately. To do so, we measured isoform diversity using Simpson's D \emph{(D)}, a metric traditionally employed by ecologists to measure taxon diversity between environments \citep{morris_choosing_2014}. In our system, higher D values indicate that usage is spread more evenly across all PAS for a gene, while low D values suggest the one PAS is more dominant than others (Methods). As expected, in both humans and chimpanzees, D values are correlated with the number of PAS per gene (Supplementary Figure \ref{fig:ch03-bothDensities}, \ref{fig:ch03-shanonNum}, \ref{fig:ch03-simpNum}, human Pearson's correlation 0.62, $p<2.2x10^{-16}$, chimpanzee Pearson's correlation 0.63, $p<2.2x10^{-16}$).
+
+Using Simpson's D values calculated for each gene in each individual, we identified (at 5\% FDR) 881 genes with significant differences in isoform diversity between species (Figure \ref{fig:Ch3fig2}A; Methods). Of these, 426 are genes for which we did not previously detect an inter-species difference in PAS usage, indicating that Simpson's D is capturing an additional dimension of, or is more sensitive to, APA variation between species (Supplementary Figure \ref{fig:ch03-upsetr}, for example see Supplementary Figure \ref{fig:ch03-ivn}).  
+
+
+We proceeded by focusing on genes with low isoform diversity, suggesting a single dominant PAS. We calculated a dominance metric for each gene as the difference in mean usage between the first and second most used PAS (we used different cutoffs to classify dominance; see Methods). We found that the classification dominant PAS is highly consistent across species; a result that is quite robust with respect to the approach used to classify PAS as dominant (Figure \ref{fig:Ch3fig2}B,C). While the dominant PAS is the same for most genes in humans and chimpanzees, differences in usage of a dominant PAS are likely to contribute to differential APA with functional consequences between species more than differences in other PAS. Indeed, regardless of the specific cutoff we used to define dominant PAS, when the dominant PAS is not the same in humans and chimpanzees, the corresponding genes are more likely to be differentially expressed between the species compared with genes where the dominant PAS is the same in both species, (For cutoffs between .2 and .7, $p< 0.005$), and even compared with genes in which only a non-dominant PAS is differentially used ($p >0.8$ for all cutoffs; Figure \ref{fig:Ch3fig4}A,B).  
+
+\begin{figure}
+\centering
+\includegraphics[width=5in]{img/ch03/fig4.pdf}
+\caption[Differences dominant PAS site between species likely drives differences in expression]{\textbf{Differences dominant PAS site between species likely drives differences in expression} \small {\bf (A)} Enrichment of genes with the different (left) of same (right) dominant PAS by dominant cutoff in differentially expressed genes. {\bf (B)} $-log_{10}(P-values)$ for enrichments in A calculated with hypergeometric tests. Horizontal line represents p-value of 0.05.} 
+\label{fig:Ch3fig4}
+\end{figure}
+
+
+In a previous study that collected mRNA from a larger panel of human, chimpanzee, and rhesus macaque LCLs, Khan \emph{et al.} identified genes whose regulation likely evolves under directional selection in humans and chimpanzees \citep{khan_primate_2013}. We were able to consider RNA and protein expression data as well as APA data from 2,532 genes. We found that twenty-two of the genes with significant inter-species differences in APA at both the site level and in isoform diversity are among those whose regulation likely evolves under directional selection in the chimpanzee lineage, a 1.6X enrichment over what is expected by chance (hypergeometric test, $p=0.015$). We did not find a similar enrichment when we considered genes whose regulation evolved under selection in humans, but the sample size is rather small. 
+
+
+
+\subsection{Variation in APA and differences in protein expression}\label{dAPAdp}
+
+Given the well-characterized molecular connection between APA and the regulation of protein translation, we hypothesized that genes with inter-species differences in APA are also more likely to be differentially translated between the species \citep{digiammartino_mechanisms_2011,floor_tunable_2016-1,tian_alternative_2017}. To examine this, we obtained estimates of protein translation based on ribosome profiling data that were collected from human and chimpanzee LCLs by Wang \emph{et al.} \citep{wang_post-translational_2018}. At a 5\% FWER, Wang \emph{et al.} identified 73 differentially translated genes between humans and chimpanzees. Genes with significant inter-species differences in isoform diversity are enriched among the differentially translated gene set ($p = 0.011$; Figure \ref{fig:Ch3fig5}A,B). 
+
+\begin{figure}
+\centering
+\includegraphics[width=5in]{img/ch03/fig5.pdf}
+\caption[PAS level differences in APA may drive differences in expression while isoform diversity differences likely drive translation differences]{\textbf{PAS level differences in APA may drive differences in expression while isoform diversity differences likely drive translation differences} \small {\bf (A)} Enrichment of genes with isoform diversity differences (ID), differences in APA at PAS level (PAS), or at both levels (Both) within differential expressed genes and differentially translated genes. Differentially translated genes reported by Wang \emph{et al.}\citep{wang_post-translational_2018} {\bf (B)} $-log_{10}(P-values)$ for enrichments in A calculated with hypergeometric tests. Horizontal line represents p-value of 0.05.} 
+\label{fig:Ch3fig5}
+\end{figure}
+
+
+We next investigated the relationship between $\Delta PAU$ in humans and chimpanzees and the effect sizes for differences in protein translation between the species \citep{wang_post-translational_2018}. Considering the most differentially used 3' UTR or intronic PAS per gene (Methods), we identified a significant correlation between inter-species differences in translation and $\Delta PAU$ for 3' UTR PAS, with a stronger correlation among genes with significant differences in both APA and translation (Supplementary Figure \ref{fig:ch03-TEdAPA}). As expected, and to some extent we view this as a control analysis, we did not identify a significant correlation between intronic PAS $\Delta PAU$ values and differences in translation (Supplementary Figure \ref{fig:ch03-TEdAPA}). 
+
+Given the apparent impact of PAS usage on protein translation, we next considered direct measurements of protein expression data from 3,391 genes in LCLs from humans and chimpanzees \citep{khan_primate_2013}. Using summary statistics from this study, we found 1,263 genes to be differentially expressed at the protein level between the species (FDR of 5\%). As the protein measurements are restricted to these 3,391 genes, we do not have enough power to ask if genes with inter-species differences in APA are also more likely to be differentially expressed at the protein level. However we did find a positive correlation between the absolute value of 3' UTR $\Delta PAU$ and the standardized number of ubiquitination sites for the same gene (Pearson's correlation, $R=0.15$, $p=5.0x10^{-7}$, Supplementary Figure \ref{fig:ch03-ubiq}, Methods), consistent with the observation that 3' UTR PAS are targets for the regulation of protein decay \citep{dubnikov_protein_2017, ravid_diversity_2008}.
+
+Thus, we next focused on the 506  genes with significant inter-species differences in protein expression and an absence of corresponding difference of transcript expression levels that we also tested for differences in APA. Khan \emph{et al.} reasonably hypothesized that inter-species differences in translation could account for the emergence of differences in protein expression levels when there are no regulatory differences at the RNA level, but they were unable to point to specific mechanisms. These genes are particularly interesting in the context of our current study, because APA which results in changes to 3' UTR length may be more likely to result in differences in protein expression without affecting the expression level of the mRNA. 
+
+Indeed, we found 76 genes with inter-species differences in APA that are also differentially expressed at the protein but not at the RNA level between humans and chimpanzees (Figure \ref{fig:Ch3fig6}A,B). In these 76 genes, inter-species differences in PAS usage are enriched at the 3' UTR (Supplementary Figure \ref{fig:ch03-dpnotE}). Finally, to assess whether APA contributes to differences in gene regulation by affecting translation efficiency or protein degradation, we asked whether genes with differential protein expression were also differentially translated. Of the 149 genes with significant differences in APA and protein expression, Wang \emph{et al.} reported translation measurements for 142 \citep{wang_post-translational_2018}. Only 34 genes displayed significant differences in translation efficiency, suggesting that isoform-specific post-translational buffering is largely responsible for protein-level differences (Figure \ref{fig:Ch3fig6}C,D). 
+
+
+\begin{figure}
+\centering
+\includegraphics[width=5in]{img/ch03/fig6.pdf}
+\caption[APA differences explain genes differentially expressed at protein level but not in mRNA. APA likely mediates functional differences post translationally.]{\textbf{APA differences explain genes differentially expressed at protein level but not in mRNA. APA likely mediates functional differences post translationally.} \small {\bf (A)} Number of genes with isoform level differences (ID), differences in APA at PAS level (PAS), or at both levels (Both) differentially expressed in protein (5\% FDR), but not mRNA (5\% FDR). Genes with differentially expressed protein reported in Khan \emph{et al.} \citep{khan_primate_2013} {\bf (B)} Proportion of genes with differential usage at PAS level (1,251 genes), isoform diversity level (426 genes) or both (454 genes), differentially expressed in protein (5\% FDR), but not mRNA (5\% FDR). {\bf (C)} Genes reported in A separated by genes differentially translated at 5\% FDR. Differentially translated genes reported in Wang \emph{et al.}\citep{wang_post-translational_2018} {\bf (D) } Genes differentially expressed in protein but not in mRNA, colored by differences in APA. Proportion of genes in the set differentially translated at 5\% FDR.} 
+\label{fig:Ch3fig6}
+\end{figure}
+
 
 
 \section{Discussion}
 
 
+Comparative primate functional genomics studies have contributed to our understanding of the gene regulatory processes that control genotype-phenotype relationships. The general framework starts with non-hypothesis driven research to characterize gene regulatory phenotypes in both human and non-human primates \citep{blekhman_sex-specific_2010,fair_gene_2020}. In comparison to studying a regulatory phenotype in a human population, this approach is useful because, even at modest sample sizes, larger differences between primates make it easier to detect genes with biologically relevant differences \citep{housman_prime_2020}.Once we understand the general properties and level of conservation of individual regulatory phenotypes, we can integrate data collected in the same cell lines or tissues to generate testable hypotheses for how variation in regulatory processes contribute to differences in physical traits. First, identification of genomic regions under adaptation in humans may point to causal mechanisms for human specific traits \citep{gokhman_differential_2020, ward_generally_2019}. Second, identification of heavily conserved genomic regions is critical because mutations in conserved loci likely have negative functional consequences and could be responsible for human disease risk \citep{housman_assessment_2019}. With regard to this general framework, the results above represent the first step in understanding the evolutionary importance of gene regulation though APA. Greater characterization of APA variation in additional cell types will aid in the understanding of how variation percolates through the central dogma as well as how this variation contributes to differences in human traits.  
+
+We characterized alternative polyadenylation in humans and chimpanzees to begin to understand the role that co-transcriptional mechanisms play in the evolution of gene regulation in primates. We focused on the contribution of APA to interspecies differences in transcript and protein expression. Our group has studied a variety of gene regulatory phenotypes in primate LCLs \citep{cain_gene_2011, khan_primate_2013, wang_post-translational_2018, zhou_epigenetic_2014}, and we, and others, have previously demonstrated that gene regulatory phenotypes in these cell lines recapitulate many regulatory patterns seen in primary tissues \citep{caliskan_effect_2014,caliskan_effects_2011,khaitovich_evolution_2006}. Not only did our use of primate LCLs allow us to circumvent many of the practical and ethical issues associated with primate research, but it also allowed us to integrate 3' Seq and gene expression data from this study with previously collected ribosome occupancy and protein expression data from primate LCLs \citep{khan_primate_2013, wang_post-translational_2018}.
+
+
+APA is an important molecular mechanism with regard to both the evolution of gene regulation and physiological traits. On a long-term evolutionary scale, both 3' UTR length and the proportion of genes exhibiting APA have scaled with genome size and complexity. The expansion of APA has introduced biological complexity independent of an increase in the number of distinct genes \citep{mayr_evolution_2016,mayr_regulation_2017}. As usage of multiple isoforms have been maintained, it is likely that distinct isoforms have divergent functions acted on by balancing selection. For example, APA facilitates post-transcription regulation of a Drosophila Hox gene through maintenance of 2 isoforms differentially targeted by multiple miRNAs \citep{patraquim_evolution_2011}. In terms of physiological traits, genome wide changes in APA during differentiation of stem cells to terminal cell types directs isoform specific gene regulation that is important for development in a range of species, including humans \citep{hilgers_neural-specific_2011, ji_progressive_2009, li_dynamic_2012}. In addition, dysregulation of tumor suppressor genes through intronic polyadenylation is also known to contribute to cancer pathogenesis \citep{dubbury_cdk12_2018,lee_widespread_2018}. We hypothesize that a further understanding of APA in primates will aid in the understanding of APA evolution and its contribution to human specific phenotypes. 
+
+
+We measured APA from 3' Seq data by calculating a ratio of isoforms terminating at one PAS compared to isoforms terminating at other PAS for the same gene. We then compared PAS usage ratios between species. To expand our understanding of APA conservation, we also calculated an isoform diversity statistic (Simpson's D) for each gene in each species. Because Simpson's D captures both the number of PAS isoforms and their usage, we were able to evaluate small regulatory changes spread across many PAS, rather than simply measure large changes at one PAS. While previous studies have used Shannon's Index to quantify isoform diversity \citep{pai_widespread_2016, wang_post-translational_2018}, we found Simpson's D to be less correlated with PAS number than Shannon's Index, making it less sensitive to the number of PAS per gene (Supplementary Figure \ref{fig:ch03-shanonNum}, \ref{fig:ch03-simpNum}). In addition, by placing more weight on dominant PAS, Simpson's D more closely mirrors our current biological understanding of APA, wherein dominant PAS play a larger role in downstream gene regulation \citep{morris_choosing_2014}.
+
+
+In general, we found that both individual PAS usage and isoform diversity are highly conserved between human and chimpanzee. Consistent with comparative studies of APA in humans and rodents, which used genomic synteny to identify conserved PAS, we found higher conservation among genes with a single PAS \citep{ara_conservation_2006, wang_compendium_2018} and showed that sequence variation in PAS signal sites and the surrounding U-rich regions contributes to interspecies differences in APA \citep{wang_compendium_2018}. Because we characterized APA in closely related primates, our study provides additional insight into APA divergence at both the gene level and the species level, revealing functional changes that contribute to differences in downstream gene regulation. For example, we observed that when genes use one PAS more often than others, the dominant PAS tends to be the same in both human and chimpanzee. It is likely that strong selection pressures have acted on these genes resulting in continual usage of the same dominant isoform. As a result, we can assume the dominant isoform is functionally important and alternative isoforms would be deleterious. The question remains, why are the non-dominant isoforms also conserved and at what level of expression do the alternative isoforms begin to impede gene function. 
+
+Out study also revealed that the majority of differentially used PAS between species are located in 3' UTRs. We showed that whereas increased intronic PAS usage is associated with increased mRNA expression levels, increased 3' UTR PAS usage is correlated with a decrease in mRNA expression. In a previous study, we found that human apaQTL alleles associated with increased intronic PAS usage were correlated with decreased mRNA expression levels \citep{mittleman_alternative_2020}. We reasoned that transcripts terminating in introns were likely subject to nonstop decay, and by studying APA variation within humans, we were able to capture the effects of intronic termination. Because the current study characterized APA between humans and chimpanzees, such effects were likely overshadowed by interspecies differences, which typically have much larger effect sizes \citep{housman_prime_2020}. Thus, usage of intronic PAS may contribute to down regulation of gene expression in some genes but in others, increased usage of intronic PAS result in truncated isoforms that do not contain 3' UTR cis regulatory elements that would signal mRNA decay. In these cases, the truncated isoforms are no longer targets of mRNA decay, causing certain genes to appear upregulated in RNA-Seq experiments.
+
+As an alternative explanation for the results in this study, large effect sizes for differential usage of 3' UTR PAS could be driving the relationship between differential APA and differential expression. In line with this hypothesis, we pointed to increases in AU destabilizing elements and ubiquitination marks for genes with divergent 3' UTR PAS. Due the ratio nature of PAS usage, we may detect changes in the usage of intronic PAS solely as a mathematical consequence of changes in 3' UTR PAS. Functional follow-up on the genes with PAS detected as differentially used between and within species would be necessary to explore the relative importance of each of these regulatory pathways and to disentangle the results from both studies.
+
+Indeed, APA is not the first molecular phenotype wherein a within-species study revealed alternative regulatory models compared to an interspecies analysis. For example, Pai \emph{et al.} reported tissue-specific differential methylation to be almost exclusively inversely correlated with gene expression patterns between human and chimpanzee \citep{enard_differences_2004, pai_genome-wide_2011, weber_distribution_2007}, whereas Banovich \emph{et al.} discovered genetic variation associated with methylation variation \emph{(meQTLs)} that was both directly and inversely correlated with eQTLs. 
+
+
+In several previous studies from our group and others, the authors estimated the proportion of variation in expression explained by the regulatory mechanism of interest. Specifically, they tested for differences in expression before and after accounting for another regulatory mechanism with formal mediation analyses \citep{blake_comparison_2020, blekhman_segmental_2009, cain_gene_2011,eres_reorganization_2019}. Similar mediation analyses may have helped us to better understand how usage of intronic and 3' UTR PAS contribute to differences in mRNA expression. However, in our study, APA was measured using ratios of alternative mRNA isoforms. Thus, effect sizes for APA and differential expression are on different scales and we cannot use a mediation approach to formally calculate the proportion of expression variation explained by APA. However, we are generally convinced that APA contributes to differences in mRNA expression overall because 764 of 3,796 (20.1\%) differentially expressed genes also have significant differences in APA. 
+
+
+Even though genes are ultimately expressed as proteins, many studies measure mRNA expression as a proxy for gene expression. As a justification for this approach, authors point to the fact that after accounting for technical considerations, the correlation between mRNA levels and abundance in quite high genome wide \citep{buccitelli_mrnas_2020,csardi_accounting_2015}. However, we also know that on the level of one gene across individuals or tissues, the correlation between mRNA and protein measurements are much lower \citep{battle_impact_2015,buccitelli_mrnas_2020}. This suggests that a number of molecular mechanisms decouple mRNA and protein levels post transcriptionally. As evident by the fact that we are still unable to predict protein levels from mRNA, we do not fully understand the post transcriptional mechanisms that shape the proteome \citep{buccitelli_mrnas_2020}.
+
+Within human populations and between primates there are large number of genes differentially expressed in mRNA, but not in protein. Directly measuring translation levels for these genes has demonstrated that post-translation protein buffering can explain the decreased variation at the protein level \citep{battle_impact_2015,wang_post-translational_2018}. Conversely there are also genes that are more variable in protein than in mRNA \citep{battle_impact_2015,chick_defining_2016, khan_primate_2013}. Our previous work demonstrated that some protein specific QTLs are also highly correlated with differences in APA \citep{mittleman_alternative_2020}. Here, we expanded this analysis and demonstrated that genes differentially expressed in protein, but not in mRNA between human and chimpanzee, have divergent APA patterns. We also concluded that the divergent protein levels are likely due to post-translational molecular mechanisms. While we cannot directly test the mechanism here, by differentially including RNA and protein binding motifs, APA could leads to variation in protein levels as a consequence of  protein auto-regulation \citep{buccitelli_mrnas_2020,de_bie_ubiquitination_2011, muller-mcnicoll_auto-regulatory_2019}. Alternatively, APA could contribute to temporal and spacial differences for proteins, that would modify our ability to quantify protein with traditional techniques \citep{buccitelli_mrnas_2020,tian_alternative_2017}. In conclusion, a better understanding of co-transcriptional gene regulatory mechanisms, such as APA, may point to additional mechanisms contributing to the decoupling of mRNA and protein abundance.  
+
+
 \section{Methods}
 
+
+\subsection{Cell culture and collections}\label{CellCultureColl}
+
+We grew 6 human and 6 chimpanzee Epstein-Bar virus transformed lymphoblastoid cell lines \emph{(LCLs)} in glutamine depleted RPMI [RPMI 1640 1X from Corning (15-040-CM)], completed with 20\% FBS, 2mM GlutaMax [Gibco (35050-061)], 100 IU/ml Penicillin, and 100 ug/mL Streptomycin. We cultured all cells at 37C at 5\% CO2. We passaged each cell line a minimum of 3 times then maintained cells at $1x10^{6}$ cell per mL in preparation for collection. Cell line numbers and details can be found in Table \ref{tab:ch03-s2}. The human lines were derived from Yoruba individuals collected as part of the HapMap project and can be ordered through the Coriell Institute \citep{HapMap2005}. Chimpanzee LCLs were originally transformed from individuals from the New Iberia Research Center (University of Louisiana at Lafayette), Coriell IPBR repository and Arizona State University \citep{khan_primate_2013}. The cell lines have previously been used for similar studies of primate gene regulation \citep{cain_gene_2011, khan_primate_2013, wang_post-translational_2018, zhou_epigenetic_2014}.
+
+Once all cells lines reached $1x10^{6}$ cell per mL, we used the collection and RNA extraction method detailed in Mittleman \emph{et al.} to extract whole cell and nuclear mRNA. Briefly, we collected 30 million cells in two 15 million cell aliquots. We extracted nuclei from one aliquot per line using the nuclear isolation protocol outlined by Mayer and Churchman \citep{mayer_genome-wide_2016}. We extracted mRNA in two fraction- and species-matched batches, using the miRNeasy kit (Qiagen) according to manufacture instructions, including the DNase step to remove genomic DNA. We quantified mRNA and tested quality using a nanodrop. Details of mRNA processing for each line, including concentrations and quality can be found in Table \ref{tab:ch03-s2}. 
+
+\subsection{3' Sequencing to identify PAS and quantify site usage }\label{PASident}
+
+We generated 3' sequencing \emph{(3' Seq)} libraries from whole cell and nuclear-isolated mRNA from 6 chimpanzee and 6 human individuals using the QuantSeq Rev 3' mRNA-Seq Library Prep Kit \citep{moll_quantseq_2014} according to the manufacturer's instructions. We sequenced all libraries on the Illumina NextSeq500 at the University of Chicago Genomics Core facility using single-end 50 bp sequencing.
+
+We mapped human 3' Seq libraries to GRCh38 \citep{schneider_evaluation_2017} and chimpanzee libraries to panTro6 \cite{chimpanzee_sequencing_and_analysis_consortium_initial_2005} using the STAR RNA-seq aligner with default settings \citep{dobin_star_2013}. Similar to our previous work, we removed reads with evidence of internal priming resulting from the poly(dT) primer. We filtered reads proceeded by 6 As or 7 of 10 As in the base pairs directly upstream of the mapped location 
+\citep{mittleman_alternative_2020, sheppard_accurate_2013, tian_large-scale_2005}. To ensure that differences in low quality bases would not bias our results, we treated any N in the genome annotation as an A. All raw read counts, mapped read counts, and filtered read counts can be found in Table \ref{tab:ch03-s2}. 
+
+We first identified an inclusive set of PAS in each species separately. We used the same in-house peak caller described in Mittleman \emph{et al} \citep{mittleman_alternative_2020}, annotating each PAS as the most 3' base in each peak. The initial PAS set included 340,023 in human and 303,249 in chimps. We extended PAS 100 bp upstream and 100 bp downstream and used a reciprocal liftover pipeline to identify an inclusive set of orthologous PAS. We downloaded chain files from UCSC genome browser \citep{kent_human_2002}. Details of the pipeline and number of PAS passing each step can be found in Supplementary Figure \ref{fig:ch03-liftover}.
+
+Due to gene annotation differences between species, we annotated all orthologous PAS to the human NCBI RefSeq annotation downloaded from UCSC genome browser \citep{pruitt_ncbi_2005}, We used a hierarchical model to assign PAS to genic locations\citep{lin_-depth_2012, mittleman_alternative_2020}. We prioritized annotations in the following order: 3' UTRs (UTR3), 5kb downstream of genes (end), exons (cds), 5' UTRs (UTR5), and introns (intron). We quantified reads mapping to each annotated PAS for each individual in both the total RNA libraries and nuclear RNA libraries using featureCounts with the -s strand specificity flag \citep{liao_featurecounts_2014}. We calculated usage for each PAS in each library as a ratio of reads mapping to the PAS divided by the number of reads mapping to any PAS in the same gene (Supplementary Figure \ref{fig:ch03-UsageCalc}). We implemented two filtering steps to remove PAS with ratios likely biased by low site count or low gene count separately in each fraction.
+
+Next, we filtered out sites with less than 5\% usage in both species in the nuclear fraction. We then merged nuclear counts across all PAS in each gene. We removed PAS in genes not passing a cutoff of $log_{2}(CPM)>2$ in at least 8 of the 12 individuals. After applying these filters, we were left with 44,432 PAS. As a quality control metric, we compared PAS usage calculated from the nuclear fraction to PAS usage calculated from whole cell fraction for each individual (we used the same methods to identify and quantify PAS usage in the whole cell 3' Seq data). We expected a high correlation between PAS usage in each fraction. Further, we expected a similar correlation in human and chimpanzee individuals \citep{mittleman_alternative_2020}. Human individual NA18499 had significantly lower across-species correlation than the other individuals and was therefore removed from the analysis (Supplementary Figure \ref{fig:ch03-removeInd}. 
+
+
+ To ensure gene expression level did not introduce ascertainment bias, we tested the relationship between PAS number and normalized gene expression. In both species, number of PAS is negatively correlated with normalized gene expression (Human: Pearson's correlation =-0.19, $p< 2.2x10^{-16}$, Chimp: Pearson's correlation=-0.17, $p< 2.2x10^{-16}$, Supplementary Figure \ref{fig:ch03-PASexp}). We expected species to contribute the most amount of variation to PAS usage. We ran PCA on the filtered nuclear PAS usage. PC1 accounts for 41.8\% of the variation and is highly correlated with species ($R^{2} =0.68$). PC2 accounts for 13.1\% of the variation and is moderately correlated with RNA extraction technician ($R^{2}=0.38$) and extraction day ($R^{2}=0.28$). As both of these variables are balanced with respect to species, we do not believe they bias the results (Supplementary Figure \ref{fig:ch03-PCAthreeprime}). We identified 302 sites used at a rate of 5\% in humans and 0\% in chimpanzees, which we designated as human-specific. We identified 357 sites used at a rate of 5\% in chimpanzee and 0\% in humans, which we designated as chimp-specific. 
+ 
+ We acknowledge the possibility that unlifted PAS may affect downstream analyses; therefore, we removed genes for which PAS ratios may be affected. Specifically, we annotated and calculated usage for the human PAS, including the 10,077 PAS that do not reciprocally lift to the chimpanzee genome. After removing PAS in genes previously identified as lowly expressed and PAS with usage below 5\%, 386 PAS in 353 genes remain (Supplementary Figure \ref{fig:ch03-unlift}). We removed these 353 genes and recreated Figures \ref{fig:Ch3fig3},  \ref{fig:Ch3fig4},  \ref{fig:Ch3fig5},  \ref{fig:Ch3fig6} (Supplementary Figures \ref{fig:ch03-unliftfig3},  \ref{fig:ch03-unliftfig5}, \ref{fig:ch03-unliftfig4}, \ref{fig:ch03-unliftfig6}).
+ 
+\subsection{Orthologous 3' UTRs}\label{OrthoUTR}
+ 
+ We identified a set of orthologous UTRs using the ortho exon file described the Differential Expression section of the methods. We merged all regions annotated as 3' UTR by gene. If a gene had multiple non-continuous annotations, we selected the most 3' region as the orthologous UTR. We used deepTools compute matrix and plotHeatmap functions to plot merged human and chimpanzee reads along the orthologous 3' UTR set (Supplementary Figure \ref{fig:ch03-deeptools}, \citep{ramirez_deeptools2_2016}) For all genes with PAS only in 3' UTRs, we assigned PAS to single, first, middle, and last, as previously described \citep{wang_compendium_2018}.
+ 
+\subsection{Analysis of sequence conservation around PAS}\label{seqCons} 
+
+We used phyloP scores to measure sequence level conservation. We downloaded the hg38 100-way vertebrate PhyloP bigwig file from the UCSC table browser \citep{pollard_detection_2010}. We computed scores for PAS regions as well as 200 bp intervals by taking the mean of the base pair scores. We removed any region with missing data from the analysis.  We tested for differences in mean phloP scores using Wilcoxon rank sum tests. 
+
+
+We tested for presence of the polyadenylation signal site motif in the 200 bp PAS regions. We used the bedtools nuc tool with the strand-specific flag to test for presence of each of the 12 previously annotated motifs for each PAS in both species \citep{beaudoing_patterns_2000, quinlan_bedtools_2010}. If a PAS had multiple motifs, we used a hierarchical model to choose the site based on the number of PAS with each identified motif (order: AATAAA, ATTAAA, AAAAAG, AAAAAA, TATAAA, AATATA, AGTAAA, AATACA, GATAAA, AATAGA, CATAAA, ACTAAA). The proportion of PAS with each signal site motif matched across species (Figure \ref{fig:Ch3fig1}). To ask if presence or absence of a signal site explained species specificity or site-level differences, we restricted our analysis to the top two signal sites. These two motifs are the only sites where presence of a signal is associated with increased usage of the site in both species (Supplementary Figure \ref{fig:ch03-SignalUsage}). For the 359 PAS with one of these two signal sites present only in chimpanzees, average usage was higher in chimpanzees than in humans ($p=0.025$). For the 361 PAS with one of these two signal sites present only in humans, average usage was higher in humans ($p=2.0x10^{-4}$). We used hypergeometric tests to evaluate enrichment of differentially used PAS and species-specific PAS in the set of PAS with signal sites in only one species.
+
+We also examined the proportion of U nucleotides in each PAS region. We used the bedtools nuc with the -s flag for strand specificity \citep{quinlan_bedtools_2010}. We tested if PAS with differences in U content are enriched for differentially used PAS using a hypergeometric test. 
+
+
+\subsection{Differential APA}\label{dAPA} 
+
+\emph{PAS level differences:} We quantified reads mapping to each PAS using the featureCounts tool with the -s strand specificity tool \citep{liao_featurecounts_2014}. We tested for site-level differences between human and chimpanzee using the leafcutter leafcutter\_ds.R tool with standard settings \citep{li_annotation-free_2018}. We tested for differences in both the total and nuclear fractions. We tested 43,038 PAS in 8,422 genes in the nuclear fraction and 41,914 PAS in 8,333 genes in the total fraction. We classified PAS as differentially used if the gene reached significance at 5\% FDR and the PAS had a $\Delta PAU$ greater than 20\% (absolute value ($\Delta PAU > 0.2$). A negative $\Delta PAU$ indicates increased usage in chimpanzees and $\Delta PAU$ indicates increased usage in humans. Top PAS per gene is the PAS with the most significant difference between species; ties were broken using mean usage for all individuals in both species. 
+
+\emph{Isoform diversity differences:} We calculated Shannon Information content ( $- \sum_{i=1}^{S} p_{i}log_{2}p_{i}$ ) and Simpson's Index ($1 - \sum_{i=1}^{S} p^{2}_{i}$) using mean usage of each PAS in humans and chimpanzees, where $p_{i}^{2}$ is the usage of the $i^{th}$ of $s$ sites in the gene. We used Simpson's Index to assess isoform diversity because the correlation between Simpson's Index and number of PAS is lower than the correlation between Shannon Information content and the number of PAS per gene (Supplementary Figure \ref{fig:ch03-shanonNum}, \ref{fig:ch03-simpNum}). To identify genes with differences in isoform diversity, we recalculated Simpson's index per gene per individual and tested for differences between species with Wilcoxon tests. We reported genes with differences at 5\% FDR.  
+
+\emph{Conservation of dominant PAS:}  We consider a gene to have a dominant PAS if the within species average usage of the top used PAS is greater than the second most used site by an arbitrary cutoff. We reported results for cutoffs between 0.1 and 0.9. If a gene had a dominant PAS in either species, we included the top used site for both species when testing if genes use the same or different dominant PAS between species. We tested for enrichment of genes using the same or different dominant PAS with differentially expressed genes using hypergeometric tests.
+
+\subsection{Differential expression analysis}\label{dE} 
+ 
+We generated unstranded RNA-seq libraries using the Illumina TruSeq Total RNA kit according to the manufacturer's instructions using the total mRNA collected from all 12 individuals (Illumina, San Diego, CA, USA). We sequenced RNA-seq libraries at the University of Chicago Genomics Core facility using the single-end 50 bp protocol on one lane of the Illumina HiSeq 4000 machine. RNA quality and concentration at the time of library prep and number of sequenced reads per library are available in  Table \ref{tab:ch03-s3}. We mapped the human libraries to GRhg38 \citep{schneider_evaluation_2017} and chimpanzee libraries to panTro6 \citep{chimpanzee_sequencing_and_analysis_consortium_initial_2005} and quantified reads mapping to orthologous exons. 
+
+To generate an updated orthologous exon file for the most recent chimpanzee genome assembly \emph{(panTro6)} we followed the procedure reported in Pavlovic \emph{et al.} with slight modifications \citep{pavlovic_comparative_2018}. We started with human \emph{(GRCh38)} exon definitions from Ensembl version 98. We filtered this set of definitions for biotypes 'protein\_coding,' using the command mkgtf from cellranger (10XGenomics). We then removed exon segments that were in exon definitions for multiple genes. This broke some exons into smaller unique exons. We then removed exons smaller than 10 bp. We took the final set of exons (1,371,917 exons from 20,338 genes) and extracted their sequences from the genome Ensembl GRCh38.p12. We used BLAT V. 35 to identify orthologous sequences within the chimpanzee genome \emph{(panTro6)} \citep{kent_human_2002} We removed hits with indels larger than 25 bp (using a function blatOutIndelIdent from \url{https://bitbucket.org/ee_reh_neh/orthoexon}). We then extracted the panTro6 sequences that had the highest sequence identity. We ran BLAT on this orthologous exon set to find matches in both the human and chimpanzee genomes. We removed exons that did not return the original location in humans or chimpanzees, as well as exons that mapped to multiple places with higher than 90\% sequence identity. We removed exons that different human genes that mapped to overlapping regions in the chimpanzee genome. Finally, we removed exons that mapped to a different contig than the majority of exons from each gene. This resulted in a set of 1,250,820 orthologous exons from 19,515 genes. 
+
+We mapped on average 18.6 million reads to orthologous exons. We collapsed orthologous exons to quantify raw gene expression for each gene in each individual. We standardized counts and filtered out genes without $log_{2}(CPM)$ values greater than 1 in 8 of the 12 individuals. To prepare counts for differential expression modeling we used the Voom function with the quantile normalization method in the limma R package \citep{ritchie_limma_2015}. We used PCA to test for batch effects. PC1 explains 35.1\% of the variation and is highly correlated with species ($R^{2}= 0.98$) (Supplementary Figure \ref{fig:ch03-DEQC}). Collected metadata such as the percent of live cells at collection, cell concentration at collection, RIN score, and RNA concentration do not segregate by species (Supplementary Figure \ref{fig:ch03-DEQC}). We modeled species as a fixed effect and called genes as differentially expressed at a 5\% FDR. The results from our differential expression analysis, including effect sizes and significance values are available in Table \ref{tab:ch03-s4}. 
+
+
+
+\subsection{Integration of translation and protein data}\label{dTdP} 
+
+We downloaded differential translation genes and effect sizes from Additional file 5 of Wang \emph{et al}\citep{wang_post-translational_2018}. Wang \emph{et al.} modeled differential translation using ribosome profiling of 4 human, 4 chimpanzee, and 4 rhesus macaque LCLs. For all integrations, we conditioned on the 6,407 genes tested in the Wang \emph{et al.} study and in our APA analysis. We tested for enrichments using a one-sided hypergeometric test implemented in R. We tested for correlations in effect sizes between site level $\Delta PAU$ and translation HvC effect sizes by first filtering for the top PAS (see top PAS method above, Supplementary Figure \ref{fig:ch03-TEdAPA}). We report Pearson's correlations calculated in R. 
+
+We downloaded differential protein level genes, effect sizes, and directional selection classifications from table S4 of Khan \emph{et al.}\citep{khan_primate_2013}. Khan \emph{et al.} modeled differential protein expression of 3,390 genes using high resolution mass spectrometry of stable isotope labeling by amino acids in cell culture \emph{(SILAC)} collected from 5 human, 5 chimpanzee, and 5 rhesus macaque LCLs. 
+
+\subsection{Supplemental functional data}\label{supFunc}
+
+We downloaded human protein length (in number of amino acids) for proteins annotated as reviewed for high confidence from UniProtKB \citep{the_uniprot_consortium_uniprot_2019}. We downloaded ubiquitination protein modification data from PhosphoSitePlus version 050320 \citep{hornbeck_phosphositeplus_2015}. For all analyses in which we used interaction or ubiquitination data, we normalized the values by number of amino acids. To identify 3' UTR AU-rich elements in human RefSeq annotated 3' UTRs, we used the transcriptome\_properties.py script published in Floor and Doudna 2016, available at \url{https://github.com/stephenfloor/tripseq-analysis}, with the -au-elements flag \citep{floor_tunable_2016-1}. According to Floor and Doudna 2016, the fraction of AU-elements is the percentage of the 3' UTR with repeating AU elements of 5nt or more\citep{floor_tunable_2016-1}.
+
+\subsection{Data and code
+availability}\label{ch03-data-and-code-availability} All scripts and analysis pipelines can be found at \url{https://brimittleman.github.io/Comparative_APA/index.html.} FastQ files and PAS annotations are available on GEO under GSE155245. 
+
+\section{Acknowledgments}\label{ch03-acknowledgments}
+We thank N. Gonzales for comments on the manuscript. We thank Y. Li, M. Ward, and G. Housman for useful discussion.  Funding: This work was supported by the US National Institutes of Health (RO1 to Y.G). B.E.M. supported by T32 GM09197 to the University of Chicago and F31HL149259 to B.E.M. from National Heart, Lung, And Blood Institute of the National Institutes of Health. SP was in part supported by the National Center for Advancing Translational Sciences of the NIH (K12 HL119995). This work was completed in part with resources provided by the University of Chicago Research Computing Center.
+ 
+\section{Author Contributions}\label{ch03-author-contributions}
+B.E.M. conceived the project with help from Y.G and S.P. B.E.M., S.W., C.C. and S.P. performed the experiments. B.E.M performed the analysis. K.B. curated orthologous exon file. B.E.M. drafted the manuscript with input from Y.G. and S.P. S.P. and Y.G supervised the project.
 
 
 \clearpage
 
+\section{Supplementary Information}\label{ch03-supplementary-information}
 
 \subsection{Supplementary Figures}\label{ch03-supplementary-figures}
+
+\clearpage
 
 \begin{figure}[!htb]
 \centering
@@ -40,6 +275,14 @@
 
 \begin{figure}[!htb]
 \centering
+\includegraphics[width=5in]{img/ch03/Fig1_figSup11.pdf}
+\caption[NA18499 removed from analysis due to low correlation between fractions]{\textbf{NA18499 removed from analysis due to low correlation between fractions} Pearson's correlation between PAS usage calculated using nuclear 3' seq libraries and total mRNA 3' seq libraries, calculated using sites reaching 5\% in one species in both fractions. (Plot from previous commit 30ff122 on Aril 9, 2020). }
+\label{fig:ch03-removeInd}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htb]
+\centering
 \includegraphics[width=5in]{img/ch03/Fig1-figSup3.pdf}
 \caption[PAS usage is highly correlated across species]{\textbf{PAS usage is highly correlated across species} {\bf (A)}  Correlation between human and chimpanzee PAS usage for 44,432 PAS. Red line is a 1:1 line. Linear regression line and Pearson's correlation plotted in blue. {\bf (B)}  Pairwise correlation for human and chimpanzee PAS usage.}
 \label{fig:ch03-UsageCorr}
@@ -49,15 +292,25 @@
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=5in]{img/ch03/Fig1-figSup4.pdf}
-\caption[Variation in PAS usage]{\textbf{Variation in PAS usage} {\bf (A)}  Plot of first two principal components \emph{(PCs)} calculated by a principal component analysis on PAS usage (44,432 PAS). Chimpanzee samples are shown in red and human samples are shown in blue {\bf (B)}  Heatmap representing correlation between technical factors and PCs. Y axis factors include: Species, Extraction date, Collection person, AverageAlive (average of two live dead calculations at time of collection), RIN score, RNA concentration. Explanation of factors and values in supplemental table \ref{tab:ch03-s1}}
+\caption[Variation in PAS usage]{\textbf{Variation in PAS usage} {\bf (A)}  Plot of first two principal components \emph{(PCs)} calculated by a principal component analysis on PAS usage (44,432 PAS). Chimpanzee samples are shown in red and human samples are shown in blue {\bf (B)}  Heatmap representing correlation between technical factors and PCs. Y axis factors include: Species, Extraction date, Collection person, AverageAlive (average of two live dead calculations at time of collection), RIN score, RNA concentration. Explanation of factors and values in Table \ref{tab:ch03-s1}}
 \label{fig:ch03-PCAthreeprime}
 \end{figure}
 \clearpage
 
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=5in]{img/ch03/Fig1-figSup5.pdf}
+\caption[PAS detection likely not biased by expression level]{\textbf{PAS detection likely not biased by expression level} {\bf (A)}  Normalized gene expression plotted against the number of PAS detected at 5\% usage in chimpanzee. {\bf (B)}  Normalized gene expression plotted against the number of PAS detected at 5\% usage in human.  The R package ggpubr was used to plot linear regression lines and calculate Pearson's correlations.}
+\label{fig:ch03-PASexp}
+\end{figure}
+\clearpage
+
+
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=5in]{img/ch03/Fig1-figSup6.pdf}
-\caption[Number of PAS per gene largely conserved between species]{\textbf{Number of PAS per gene largely conserved between species} Histogram of the number of PAS detected at 5\% usage in human minus the number of 5\% usage in chimpanzees. Red vertical line represents mean difference (0.39).}
+\caption[PAS detection likely not biased by species]{\textbf{PAS detection likely not biased by species} Histogram of the number of PAS detected at 5\% usage in human minus the number of 5\% usage in chimpanzees. Red vertical line represents mean difference (0.39).}
 \label{fig:ch03-SpecPASnum}
 \end{figure}
 \clearpage
@@ -98,7 +351,7 @@
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=5in]{img/ch03/Fig2-figSup2.pdf}
-\caption[Location of PAS within Orthologous 3' UTRs]{\textbf{Location of PAS within Orthologous 3' UTRs}Proportion of sites differentially used or conserved by whether they are the first (yellow), middle (blue), or last PAS (red) in orthologous exons. }
+\caption[Location of PAS within Orthologous 3' UTRs]{\textbf{Location of PAS within Orthologous 3' UTRs} Proportion of sites differentially used or conserved by whether they are the first (yellow), middle (blue), or last PAS (red) in orthologous exons. }
 \label{fig:ch03-whichUTR}
 \end{figure}
 \clearpage
@@ -110,6 +363,16 @@
 \label{fig:ch03-dPASQTL}
 \end{figure}
 \clearpage
+
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=5in]{img/ch03/Fig3-figSup1.pdf}
+\caption[Figure 3.3 relationships expanded to total usage]{\textbf{Figure 3.3 relationships expanded to total usage} {\bf (A)}  Total mRNA  $\Delta PAU$ for top intronic or 3' UTR PAS per gene plotted against differential effect size from differential expression analysis. {\bf (B)} Total mRNA $\Delta PAU$ for top intronic or 3' UTR PAS per gene plotted against differential effect size from differential expression analysis for genes with significant differences in each phenotype at 5\% FDR. {\bf (C)} Total mRNA $\Delta PAU$ for top intronic or 3' UTR PAS per gene plotted against differential effect size from differential expression analysis. {\bf (D)} Total mRNA $\Delta PAU$ for top intronic or 3' UTR PAS per gene plotted against differential effect size from differential expression analysis for genes with significant differences in each phenotype at 5\% FDR. In all panels, I calculated the linear regression and Pearson's correlation with the r package ggpubr. In B and D, I  colored the points and regression line by genic location. In all panels, negative $\Delta PAU$ and DE effect sizes represent upregulation in chimpanzees.}
+\label{fig:ch03-totalDPASDE}
+\end{figure}
+\clearpage
+
 
 \begin{figure}[!htb]
 \centering
@@ -131,7 +394,7 @@
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=5in]{img/ch03/Fig2-figSup6.pdf}
-\caption[Relationship between Simpson diversity index and PAS number]{\textbf{Relationship between Simpson diversity index and PAS number} Simpson's diversity index plotted against the number of PAS detect for each gene. Pearson?s correlation and significance in black.}
+\caption[Relationship between Simpson diversity index and PAS number]{\textbf{Relationship between Simpson diversity index and PAS number} Simpson's diversity index plotted against the number of PAS detect for each gene. Pearson's correlation and significance in black.}
 \label{fig:ch03-simpNum}
 \end{figure}
 \clearpage
@@ -140,25 +403,11 @@
 \centering
 \includegraphics[width=5in]{img/ch03/Fig2_figSup7.pdf}
 \caption[Intersection between genes with PAS and isoform diversity differences]{\textbf{Intersection between genes with PAS and isoform diversity differences} 1251 genes have significant differences in PAS usage at between human and chimpanzee (left). 454 genes have significant differences in APA between humans and chimpanzee in PAS usage and in isoform diversity (middle). 427 genes with differences in isoform diversity level only (right).}
-\label{fig:ch03-simpNum}
+\label{fig:ch03-upsetr}
 \end{figure}
 \clearpage
 
-\begin{figure}[!htb]
-\centering
-\includegraphics[width=5in]{img/ch03/Fig3-figSup1.pdf}
-\caption[Figure 3 relationships expanded to total usage]{\textbf{Figure 3 relationships expanded to total usage} {\bf (A)}  Total mRNA  $\Delta PAU$ for top intronic or 3' UTR PAS per gene plotted against differential effect size from differential expression analysis. {\bf (B)} Total mRNA $\Delta PAU$ for top intronic or 3' UTR PAS per gene plotted against differential effect size from differential expression analysis for genes with significant differences in each phenotype at 5\% FDR. {\bf (C)} Total mRNA $\Delta PAU$ for top intronic or 3' UTR PAS per gene plotted against differential effect size from differential expression analysis. {\bf (D)} Total mRNA $\Delta PAU$ for top intronic or 3' UTR PAS per gene plotted against differential effect size from differential expression analysis for genes with significant differences in each phenotype at 5\% FDR. In all panels, I calculated the linear regression and pearson's correlation with the r package ggpubr. In B and D, I  colored the points and regression line by genic location. In all panels, negative $\Delta PAU$ and DE effect sizes represent upregulation in chimpanzees.}
-\label{fig:ch03-totalDPASDE}
-\end{figure}
-\clearpage
 
-\begin{figure}[!htb]
-\centering
-\includegraphics[width=5in]{img/ch03/Fig3-figSup2.pdf}
-\caption[Relationship between APA differences and protein decay mark]{\textbf{Relationship between APA differences and protein decay mark} {\bf (A)} Absolute value of $\Delta PAU$ for 3' UTR PAS with significant difference at site level plotted against the number of ubiquitination marks in the gene standardized by the number of amino acids. Regression line and Pearson's correlation are plotted in red.{\bf (B)} Absolute value of $\Delta PAU$ for intronic PAS with significant difference at site level plotted against the number of ubiquitination marks in the gene standardized by the number of amino acids. Regression line and Pearson?s correlation are plotted in blue.}
-\label{fig:ch03-ubiq}
-\end{figure}
-\clearpage
 
 \begin{figure}[!htb]
 \centering
@@ -173,6 +422,14 @@
 \includegraphics[width=5in]{img/ch03/Fig4-figSup2.pdf}
 \caption[Relationship between $\Delta PAU$  and differential translation effect sizes]{\textbf{Relationship between $\Delta PAU$  and differential translation effect sizes} {\bf (A)} $\Delta PAU$ for top 3' UTR and intronic PAS plotted against differential translation \emph{(TE)} effect size as reported by Wang \emph{et al.}\citep{wang_post-translational_2018} {\bf (B)} $\Delta PAU$ for top 3' UTR and intronic PAS plotted against TE effect size as reported by Wang \emph{et al.} \citep{wang_post-translational_2018} separated by genic location.  {\bf (C)} $\Delta PAU$ for top 3' UTR and intronic PAS with significant differences in usage plotted against TE effect size for significant genes (5\% FWER) as reported by Wang \emph{et al.}\citep{wang_post-translational_2018}. {\bf (D)}  $\Delta PAU$ for top 3' UTR and intronic PAS with significant differences in usage plotted against TE effect size for significant genes (5\% FWER) as reported by Wang \emph{et al.}\citep{wang_post-translational_2018} separated by genic location. Linear regression line was plotted and Pearson's correlation was calculated for data in each panel.}
 \label{fig:ch03-TEdAPA}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=5in]{img/ch03/Fig3-figSup2.pdf}
+\caption[Relationship between APA differences and protein decay mark]{\textbf{Relationship between APA differences and protein decay mark} {\bf (A)} Absolute value of $\Delta PAU$ for 3' UTR PAS with significant difference at site level plotted against the number of ubiquitination marks in the gene standardized by the number of amino acids. Regression line and Pearson's correlation are plotted in red.{\bf (B)} Absolute value of $\Delta PAU$ for intronic PAS with significant difference at site level plotted against the number of ubiquitination marks in the gene standardized by the number of amino acids. Regression line and Pearson's correlation are plotted in blue.}
+\label{fig:ch03-ubiq}
 \end{figure}
 \clearpage
 
@@ -193,13 +450,6 @@
 \end{figure}
 \clearpage
 
-\begin{figure}[!htb]
-\centering
-\includegraphics[width=5in]{img/ch03/Fig1_figSup11.pdf}
-\caption[NA18499 removed from analysis due to low correlation between fractions]{\textbf{NA18499 removed from analysis due to low correlation between fractions} Pearson's correlation between PAS usage calculated using nuclear 3' seq libraries and total mRNA 3' seq libraries, calculated using sites reaching 5\% in one species in both fractions. (Plot from previous commit 30ff122 on Aril 9, 2020). }
-\label{fig:ch03-removeInd}
-\end{figure}
-\clearpage
 
 \begin{figure}[!htb]
 \centering
@@ -212,18 +462,8 @@
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=5in]{img/ch03/Fig3-figSup3.pdf}
-\caption[Figure 3 without genes affected by liftover]{\textbf{Figure 3 without genes affected by liftover} {\bf (A)} $\Delta PAU$ for top intronic or 3' UTR PAS per gene plotted against differential effect size from differential expression analysis.  {\bf (B)}  $\Delta PAU$ for top intronic or 3' UTR PAS per gene plotted against differential effect size from differential expression analysis for genes with significant differences in each phenotype at 5\% FDR. {\bf (C)}  $\Delta PAU$ for top intronic or 3' UTR PAS per gene plotted against differential effect size from differential expression analysis. {\bf (D)}  $\Delta PAU$ for top intronic or 3' UTR PAS per gene plotted against differential effect size from differential expression analysis for genes with significant differences in each phenotype at 5\% FDR. In all panels, I calculated the linear regression and pearson's correlation with the r package ggpubr. In B and D, I  colored the points and regression line by genic location. In all panels, negative $\Delta PAU$ and DE effect sizes represent upregulation in chimpanzees.}
+\caption[Figure 3.3 without genes affected by liftover]{\textbf{Figure 3.3 without genes affected by liftover} {\bf (A)} $\Delta PAU$ for top intronic or 3' UTR PAS per gene plotted against differential effect size from differential expression analysis.  {\bf (B)}  $\Delta PAU$ for top intronic or 3' UTR PAS per gene plotted against differential effect size from differential expression analysis for genes with significant differences in each phenotype at 5\% FDR. {\bf (C)}  $\Delta PAU$ for top intronic or 3' UTR PAS per gene plotted against differential effect size from differential expression analysis. {\bf (D)}  $\Delta PAU$ for top intronic or 3' UTR PAS per gene plotted against differential effect size from differential expression analysis for genes with significant differences in each phenotype at 5\% FDR. In all panels, I calculated the linear regression and Pearson's correlation with the r package ggpubr. In B and D, I  colored the points and regression line by genic location. In all panels, negative $\Delta PAU$ and DE effect sizes represent upregulation in chimpanzees.}
 \label{fig:ch03-unliftfig3}
-\end{figure}
-\clearpage
-
-
-
-\begin{figure}[!htb]
-\centering
-\includegraphics[width=5in]{img/ch03/Fig4-figSup3.pdf}
-\caption[Figure 4 without genes affected by liftover]{\textbf{Figure 4 without genes affected by liftover} {\bf (A)} Enrichment of genes with differences in isoform diversity, PAS usage, or both within differential expressed genes and differentially translated genes after removing genes likely affected by liftover. Differentially translated genes reported by Wang \emph{et al.}\citep{wang_post-translational_2018}. {\bf (B)}  $-log_{10}(p-values)$ for enrichments in A calculated with hypergeometric tests. Horizontal line represents $p= 0.05$.}
-\label{fig:ch03-unliftfig4}
 \end{figure}
 \clearpage
 
@@ -231,15 +471,24 @@
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=5in]{img/ch03/Fig5-figSup1.pdf}
-\caption[Figure 5 without genes affected by liftover]{\textbf{Figure 5 without genes affected by liftover} {\bf (A)}  Enrichment of genes with the different (left) or same (right) dominant PAS by dominant cutoff in differentially expressed genes after removing genes likely affected by liftover. {\bf (B)} $-log_{10}(p-values)$ for enrichments in A calculated with hypergeometric tests. Horizontal line represents $p= 0.05$.}
-\label{fig:ch03-unliftfig4}
+\caption[Figure 3.4 without genes affected by liftover]{\textbf{Figure 3.4 without genes affected by liftover} {\bf (A)}  Enrichment of genes with the different (left) or same (right) dominant PAS by dominant cutoff in differentially expressed genes after removing genes likely affected by liftover. {\bf (B)} $-log_{10}(p-values)$ for enrichments in A calculated with hypergeometric tests. Horizontal line represents $p= 0.05$.}
+\label{fig:ch03-unliftfig5}
 \end{figure}
 \clearpage
 
 \begin{figure}[!htb]
 \centering
+\includegraphics[width=5in]{img/ch03/Fig4-figSup3.pdf}
+\caption[Figure 3.5 without genes affected by liftover]{\textbf{Figure 3.5 without genes affected by liftover} {\bf (A)} Enrichment of genes with differences in isoform diversity, PAS usage, or both within differential expressed genes and differentially translated genes after removing genes likely affected by liftover. Differentially translated genes reported by Wang \emph{et al.}\citep{wang_post-translational_2018}. {\bf (B)}  $-log_{10}(p-values)$ for enrichments in A calculated with hypergeometric tests. Horizontal line represents $p= 0.05$.}
+\label{fig:ch03-unliftfig4}
+\end{figure}
+\clearpage
+
+
+\begin{figure}[!htb]
+\centering
 \includegraphics[width=5in]{img/ch03/Fig6-figSup2.pdf}
-\caption[Figure 6 without genes affected by liftover]{\textbf{Figure 6 without genes affected by liftover} {\bf (A)} Number of genes with differences in isoform diversity, PAS usage or both differentially expressed in protein (5\% FDR) but not in mRNA (5\% FDR). Genes differentially expressed in protein from Khan \emph{et al.}\citep{khan_primate_2013} {\bf (B)} Proportion of genes with differential isoform diversity, PAS usage or both that are differentially expressed in protein (5\% FDR), but not mRNA (5\% FDR). {\bf (C)} Genes reported in separated by genes differentially translated at 5\% FDR. Differentially translated gene reported in Wang \emph{et al.}\citep{wang_post-translational_2018}. {\bf (D)} Genes differentially expressed in protein but not in mRNA, colored by differences in APA. Proportion of genes in the set differentially translated at 5\% FDR.}
+\caption[Figure 3.6 without genes affected by liftover]{\textbf{Figure 3.6 without genes affected by liftover} {\bf (A)} Number of genes with differences in isoform diversity, PAS usage or both differentially expressed in protein (5\% FDR) but not in mRNA (5\% FDR). Genes differentially expressed in protein from Khan \emph{et al.}\citep{khan_primate_2013} {\bf (B)} Proportion of genes with differential isoform diversity, PAS usage or both that are differentially expressed in protein (5\% FDR), but not mRNA (5\% FDR). {\bf (C)} Genes reported in separated by genes differentially translated at 5\% FDR. Differentially translated gene reported in Wang \emph{et al.}\citep{wang_post-translational_2018}. {\bf (D)} Genes differentially expressed in protein but not in mRNA, colored by differences in APA. Proportion of genes in the set differentially translated at 5\% FDR.}
 \label{fig:ch03-unliftfig6}
 \end{figure}
 \clearpage
@@ -258,15 +507,31 @@
 \section{Supplementary Tables}\label{ch03-supplementary-tables}
 
 \begin{table}[!htb]
-\caption[3' Seq metadata]{\textbf{3' Seq metadata} 
-(see supplementary file associated with this dissertation) Metadata for 3' Seq data. Column names as described- Species:Cell line species , Lines: Cell line ID, Fraction: Cellular fraction, CollectionDate: Date of cell harvest and nuclear isolation, Extraction\_date: Date of RNA extraction, Collection\_person: Author initial for who processed cell harvest and nuclear isolation, UndilutedAverage: Average of 2 cell count measurements $1x10^6$, AverageAlive: Average of 2 cell live dead counts - calculated with trypan blue stain, Concentration: Extracted RNA concentration (ng/ml), RIN: RIN score for extracted RNA, 260.280.Ratio: 260/280 ratio calculated on nanodrop, Library: 3' Seq library date, Reads: Number of sequenced reads, Mapped\_wMP: Number of Mapped reads before removing reads likely due to misprimming, Mapped\_Clean: Number of Mapped reads after removing reads likely due to misprimming}
+\caption[PAS differential usage]{\textbf{PAS differential usage} 
+(see supplementary file associated with this dissertation) Differential PAS usage results. Column names as described- PAS: polyadenylation site, gene: gene (cluster in leafcutter), PAS\_logeffectsize: log effect size for differential usage of the PAS between human and chimpanzee, PAS\_deltaPAU: difference in polyadenylation site usage between human and chimpanzee (delta PSI in leafcutter), Gene\_lohLR: log likelihood ratio for differential usage of any PAS in the gene. (cluster likelihood ratio in leafcutter), Gene\_adjustedPvalue: adjusted pvalue for differential usage of the any PAS in the gene (cluster pvalue in leafcutter)}
 \label{tab:ch03-s1}
 \end{table}
 
 
+
 \begin{table}[!htb]
-\caption[Expression Independent eQTLs]{\textbf{RNA sequencing metadata} 
-(see supplementary file associated with this dissertation) Metadata for RNA sequencing data. Column names as described- Species:Cell line species , Lines: Cell line ID, Collection\_person: Author initial for who processed cell harvest and nuclear isolation, UndilutedAverage: Average of 2 cell count measurements $1x10^6$, AverageAlive: Average of 2 cell live dead counts - calculated with trypan blue stain, CollectionDate: Date of cell harvest and nuclear isolation, Extraction: Date of RNA extraction,  RIN: RIN score for extracted RNA, BioAConc: RNA concentration (ng/ul), Reads: Number of Sequenced reads, Mapped: Number of mapped reads, AssignedOrtho: Number of mapped reads assigned to orthologous exons.}
+\caption[3' Seq metadata]{\textbf{3' Seq metadata} 
+(see supplementary file associated with this dissertation) Metadata for 3' Seq data. Column names as described- Species:Cell line species , Lines: Cell line ID, Fraction: Cellular fraction, CollectionDate: Date of cell harvest and nuclear isolation, Extraction\_date: Date of RNA extraction, Collection\_person: Author initial for who processed cell harvest and nuclear isolation, UndilutedAverage: Average of 2 cell count measurements $1x10^6$, AverageAlive: Average of 2 cell live dead counts - calculated with trypan blue stain, Concentration: Extracted RNA concentration (ng/ml), RIN: RIN score for extracted RNA, 260.280.Ratio: 260/280 ratio calculated on nanodrop, Library: 3' Seq library date, Reads: Number of sequenced reads, Mapped\_wMP: Number of Mapped reads before removing reads likely due to misprimming, Mapped\_Clean: Number of Mapped reads after removing reads likely due to misprimming}
 \label{tab:ch03-s2}
 \end{table}
+
+
+\begin{table}[!htb]
+\caption[RNA sequencing metadata]{\textbf{RNA sequencing metadata} 
+(see supplementary file associated with this dissertation) Metadata for RNA sequencing data. Column names as described- Species:Cell line species , Lines: Cell line ID, Collection\_person: Author initial for who processed cell harvest and nuclear isolation, UndilutedAverage: Average of 2 cell count measurements $1x10^6$, AverageAlive: Average of 2 cell live dead counts - calculated with trypan blue stain, CollectionDate: Date of cell harvest and nuclear isolation, Extraction: Date of RNA extraction,  RIN: RIN score for extracted RNA, BioAConc: RNA concentration (ng/ul), Reads: Number of Sequenced reads, Mapped: Number of mapped reads, AssignedOrtho: Number of mapped reads assigned to orthologous exons.}
+\label{tab:ch03-s3}
+\end{table}
+
+\begin{table}[!htb]
+\caption[Differential expression results]{\textbf{Differential expression results} 
+(see supplementary file associated with this dissertation) Differential expression results from limma. gene: tested gene, logFC: log 2 fold change in normalized gene expression, adj.P.Val: BH adjusted pvalue from t test, B: Beta value, t: t statistic }
+\label{tab:ch03-s4}
+\end{table}
+
+
 

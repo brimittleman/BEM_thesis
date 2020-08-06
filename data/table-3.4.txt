@@ -1,0 +1,7 @@
+Human Chimpanzee Differential expression analysis results	
+Modeling available at https://brimittleman.github.io/Comparative_APA/diffExpression.html	
+gene	tested gene 
+logFC	log 2 fold change in normalized  gene expression
+adj.P.Val	BH adjusted pvalue from t test
+B	Beta value
+t	t statistic

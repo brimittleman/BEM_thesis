@@ -1,16 +1,7 @@
-ID	3' Seq library id
-Species	
-Lines	
-Fraction	
-CollectionDate	
-Extraction_date	
-Collection_person	
-UndilutedAvergage	
-Concentration	
-RIN	
-260.280.Ratio	
-Library	
-Library_concentration	
-Reads	
-Mapped_wMP	
-Mapped_Clean	
+Results from nuclear PAS differential isoform analysis between human and chimpanzee	
+PAS	polyadenylation site
+gene	gene (cluster in leafcutter)
+PAS_logeffectsize	log effect size for differential usage of the PAS between human and chimpanzee
+PAS_deltaPAU	difference in polyadenylation site usage between human and chimpanzee (delta PSI in leafcutter)
+Gene_logLR	log liklihood ratio for differential usage of any PAS in the gene. (cluster liklihood ratio in leafcutter)
+Gene_adjustedPvalue	adjusted pvalue for differential usage of the any PAS in the gene (cluster pvalue in leafcutter)

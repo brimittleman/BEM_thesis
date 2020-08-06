@@ -1,12 +1,16 @@
-Line	Cell line ID
-Species	Cell line species 
-Collection	Author initial who proccessed cell harvest and nuclear isolation 
-UndilutedAverage	Average of 2 cell count measurements (1X10^6)  
-AverageAlive	Average 2 cell live dead counts- calculated with trypan blue stain
-CollectionDate	Date of cell harvest and nuclear isolation
-Extraction	Date of RNA extraction
-RIN	RNA RIN score
-BioAConc	RNA concentration ng/ul
-Reads	Number of Sequenced reads
-Mapped	Number of mapped reads
-AssignedOrtho	Number of mapped reads assigned to orthologous exos 
+ID	3' Seq library id
+Species	
+Lines	
+Fraction	
+CollectionDate	
+Extraction_date	
+Collection_person	
+UndilutedAvergage	
+Concentration	
+RIN	
+260.280.Ratio	
+Library	
+Library_concentration	
+Reads	
+Mapped_wMP	
+Mapped_Clean	
